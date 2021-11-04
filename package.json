@@ -1,6 +1,6 @@
 {
   "name": "joelhans-com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "next-remote-watch ./data",
@@ -20,7 +20,7 @@
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
     "mdx-bundler": "^6.0.1",
-    "next": "11.1.0",
+    "next": "12.0.1",
     "next-seo": "^4.26.0",
     "next-themes": "^0.0.14",
     "next-transpile-modules": "^8.0.0",
@@ -44,12 +44,12 @@
     "unist-util-visit": "^4.0.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "11.1.0",
+    "@next/bundle-analyzer": "12.0.1",
     "@svgr/webpack": "^5.5.0",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
     "eslint": "^7.29.0",
-    "eslint-config-next": "11.1.0",
+    "eslint-config-next": "12.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
