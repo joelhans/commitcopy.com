@@ -5,17 +5,8 @@ import { BlogSeo } from '@components/SEO'
 import Tag from '@components/Tag'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
-import ConvertKit from '@components/ConvertKit'
 
 import LinkData from '@data/links.json'
-
-const config = {
-  formId: 2474731,
-  template: 'clare',
-  submitText: 'Sign up',
-  stack: false,
-  buttonBackground: '#20b2aa',
-}
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -81,7 +72,6 @@ export default function PostLayout({ children, frontMatter }) {
                 </CustomLink>
               </footer>
             </div>
-            {/* <ConvertKit /> */}
           </div>
         </div>
       </article>

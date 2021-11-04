@@ -20,29 +20,17 @@ export default function Home({ posts }) {
       />
       <div className="bg-green-100 w-full"></div>
 
-      <div id="hero" className="pt-24 pb-16">
-        <div className="prose prose-md lg:prose-lg dark:prose-dark">
-          <p className="text-xl lg:text-2xl text-steel">
-            I'm a fiction writer and freelance copywriter &amp; content designer living in Tucson,
-            Arizona.
-          </p>
-          <p>
-            Read some of my <CustomLink href="/fiction">fiction</CustomLink>, read an{' '}
-            <CustomLink href="/articles" className="hover:text-sea">
-              article
-            </CustomLink>
-            , learn a bit more{' '}
-            <CustomLink href="/about" className="hover:text-sea">
-              about me
-            </CustomLink>
-            , or see what I'm up to{' '}
-            <CustomLink href="/now" className="hover:text-sea">
-              now
-            </CustomLink>
-            .
-          </p>
-        </div>
-      </div>
+      <header id="hero" className="text-center pt-32 pb-64">
+        <h1 className="text-5xl leading-tight font-bold mb-12">
+          Turn <code className="text-sea font-bold bg-gray-100 px-4 py-2 rounded">git clone</code>{' '}
+          into clients, champions, and spirited communities
+        </h1>
+        <span className="block text-2xl font-mono font-bold mb-12">{`</>`}</span>
+        <p className="w-3/5 text-gray-700 text-lg font-bold leading-relaxed tracking-widest uppercase mx-auto">
+          Technical and creative copywriting for companies and startups building future-enriching
+          products through open source.
+        </p>
+      </header>
       <div className="mb-24">
         <h2 className="text-lg text-sea font-display font-bold uppercase mb-8">Recent articles</h2>
         <ul>

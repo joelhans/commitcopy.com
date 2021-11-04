@@ -17,6 +17,9 @@ const LayoutWrapper = ({ children }) => {
                   <Link href="/" aria-label="Joel Hans">
                     <div className="text-2xl font-sans font-medium leading-none text-sea hover:text-steel">
                       Joel Hans
+                      <span className="block text-xs text-gray-900 font-mono">
+                        The open-source copywriter
+                      </span>
                     </div>
                   </Link>
                 </div>
