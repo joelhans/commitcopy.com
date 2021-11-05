@@ -20,20 +20,22 @@ export default function Home({ posts }) {
       />
       <div className="bg-green-100 w-full"></div>
 
-      <header id="hero" className="text-center pt-32 pb-64">
-        <h1 className="text-5xl leading-tight font-bold mb-12">
-          Turn <code className="text-sea font-bold bg-gray-100 px-4 py-2 rounded">git clone</code>{' '}
-          into clients, champions, and spirited communities
+      <header id="hero" className="mx-auto pt-32 pb-64">
+        <h1 className="text-purple text-6xl leading-tight font-black mb-8 dark:text-gray-100">
+          Turn{' '}
+          <code className="text-5xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+            git clone
+          </code>{' '}
+          into spirited clients, champions, and communities.
         </h1>
-        <span className="block text-2xl font-mono font-bold mb-12">{`</>`}</span>
-        <p className="w-3/5 text-gray-700 text-lg font-bold leading-relaxed tracking-widest uppercase mx-auto">
-          Technical and creative copywriting for companies and startups building future-enriching
-          products through open source.
+        <p className="max-w-screen text-gray-900 dark:text-gray-200 text-xl font-medium leading-relaxed mx-auto">
+          Technical copywriting for companies &amp; startups building future-enriching products
+          through open source.
         </p>
       </header>
       <div className="mb-24">
         <h2 className="text-lg text-sea font-display font-bold uppercase mb-8">Recent articles</h2>
-        <ul>
+        <ul className="grid grid-cols-3 gap-8">
           {posts.slice(0, 3).map((frontMatter) => {
             const { slug, draft, title, summary, tags } = frontMatter
             return (
@@ -48,7 +50,7 @@ export default function Home({ posts }) {
                     <Tag key={tag} text={tag} />
                   ))}
                 </div>
-                <p className="prose prose-md lg:prose-lg dark:prose-dark text-gray-500 dark:text-gray-400 mb-1">
+                <p className="prose prose-md dark:prose-dark text-gray-500 dark:text-gray-400 mb-1">
                   {summary}
                 </p>
                 <CustomLink

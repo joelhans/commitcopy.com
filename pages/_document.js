@@ -24,8 +24,20 @@ class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" href="/index.xml" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Inconsolata:wght@400,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400,700&display=swap"
             rel="stylesheet"
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/archia-bold-webfont.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/archia-regular-webfont.woff2"
+            as="font"
+            crossOrigin=""
           />
         </Head>
         <body className="antialiased font-sans text-gray-900 dark:bg-gray-900 dark:text-white">

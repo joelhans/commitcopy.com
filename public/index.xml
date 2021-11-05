@@ -1,9 +1,9 @@
 
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>Joel Hans</title>
+      <title>Joel Hans | The open-source copywriter</title>
       <link>https://joelhans.com/articles</link>
-      <description>I'm Joel. I'm an author, copywriter, and technical writer living in Tucson, Arizona.</description>
+      <description>I'm Joel—the open-source copywriter who turns 'git clone' into spirited clients, champions, and communities.</description>
       <language>en-us</language>
       <managingEditor>j@joelhans.com (Joel Hans)</managingEditor>
       <webMaster>j@joelhans.com (Joel Hans)</webMaster>

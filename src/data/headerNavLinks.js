@@ -1,9 +1,15 @@
 const headerNavLinks = [
-  { href: '/fiction', title: 'Fiction' },
-  { href: '/articles', title: 'Articles' },
+  { href: '/services', title: 'Work with me' },
   { href: '/portfolio', title: 'Portfolio' },
-  { href: '/now', title: 'Now' },
-  { href: '/about', title: 'About' },
+  { href: '/articles', title: 'Articles' },
+  {
+    href: '/about',
+    title: 'About',
+    items: [
+      { href: '/fiction', title: 'Fiction' },
+      { href: '/now', title: "What I'm doing now" },
+    ],
+  },
 ]
 
 export default headerNavLinks

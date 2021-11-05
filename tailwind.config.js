@@ -19,12 +19,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Archia', 'Inter', ...defaultTheme.fontFamily.sans],
         display: ['Inter', ...defaultTheme.fontFamily.sans],
         serif: ['Alegreya', ...defaultTheme.fontFamily.serif],
         mono: ['Inconsolata', ...defaultTheme.fontFamily.mono],
       },
       colors: {
+        orange: '#f27370',
+        purple: '#442b75',
         steel: '#4682B4',
         sea: '#20B2AA',
         blue: colors.sky,
