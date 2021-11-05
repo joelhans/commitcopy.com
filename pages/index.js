@@ -29,8 +29,8 @@ export default function Home({ posts }) {
           into spirited clients, champions, and communities.
         </h1>
         <p className="max-w-screen text-gray-900 dark:text-gray-200 text-xl font-medium leading-relaxed mx-auto">
-          Technical copywriting for companies &amp; startups building future-enriching products
-          through open source.
+          The open-source copywriter for companies &amp; startups building future-enriching products
+          with transparency.
         </p>
       </header>
       <div className="mb-24">
