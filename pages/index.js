@@ -34,14 +34,14 @@ export default function Home({ posts }) {
         </p>
       </header>
       <div className="mb-24">
-        <h2 className="text-lg text-sea font-display font-bold uppercase mb-8">Recent articles</h2>
+        <h2 className="text-lg text-sea font-bold uppercase mb-8">Recent articles</h2>
         <ul className="grid grid-cols-3 gap-8">
           {posts.slice(0, 3).map((frontMatter) => {
             const { slug, draft, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="block mb-16">
                 <CustomLink href={`/articles/${slug}`}>
-                  <h3 className="text-xl lg:text-2xl font-display font-bold mb-2 hover:text-sea transition-all">
+                  <h3 className="text-xl lg:text-2xl font-bold mb-2 hover:text-sea transition-all">
                     {title}
                   </h3>
                 </CustomLink>

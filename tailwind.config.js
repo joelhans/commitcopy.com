@@ -19,8 +19,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Archia', 'Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Archia', ...defaultTheme.fontFamily.sans],
+        display: ['Archia', ...defaultTheme.fontFamily.sans],
         serif: ['Alegreya', ...defaultTheme.fontFamily.serif],
         mono: ['Inconsolata', ...defaultTheme.fontFamily.mono],
       },
