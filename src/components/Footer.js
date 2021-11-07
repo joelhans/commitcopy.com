@@ -40,6 +40,14 @@ export default function Footer() {
               )}
             </div>
           ))}
+          <div className="relative mt-6 mb-4">
+            <Link
+              href="/get-started/"
+              className="text-gray-100 dark:text-gray-200 text-xl leading-none font-medium hover:text-sea dark:hover:text-sea transition-all"
+            >
+              Start a project
+            </Link>
+          </div>
           <div className="text-sm text-gray-100 font-medium mt-8 pt-8 border-t border-orange">
             <div>
               {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>
