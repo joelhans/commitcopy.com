@@ -25,6 +25,19 @@ export default function Footer() {
               >
                 {link.title}
               </Link>
+              {link.items && (
+                <div className="flex flex-col items-start mt-4 pl-4">
+                  {link.items.map((link) => (
+                    <Link
+                      key={link.title}
+                      href={link.href}
+                      className="text-gray-100 dark:text-gray-900 text-lg leading-none font-medium hover:text-sea dark:hover:text-sea transition-all first:mb-4"
+                    >
+                      {link.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
           <div className="text-sm text-gray-100 font-medium mt-8 pt-8 border-t border-orange">

@@ -39,7 +39,7 @@ const LayoutWrapper = ({ children }) => {
                       {link.title}
                     </Link>
                     {link.items && (
-                      <div className="hidden absolute -top-0 w-60 min-w-full group-hover:flex flex-col mt-12 p-4 -ml-4 bg-white dark:bg-gray-800 border border-gray-200 rounded shadow-lg">
+                      <div className="hidden absolute -top-0 w-60 min-w-full group-hover:flex flex-col mt-12 p-6 -ml-6 bg-white dark:bg-gray-800 border border-gray-200 rounded shadow-lg">
                         {link.items.map((link) => (
                           <Link
                             key={link.title}
