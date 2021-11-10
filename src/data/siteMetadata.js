@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Joel Hans | The open-source copywriter',
-  author: 'Joel Hans',
-  headerTitle: 'Joel Hans | The open-source copywriter',
+  title: 'Commit Copy | Conversion copywriting for open-source and B2B SaaS',
+  author: 'Commit Copy & Joel Hans',
+  headerTitle: 'Commit Copy',
   description:
     "I'm Joel—the open-source copywriter who turns `git clone` into spirited clients, champions, and communities.",
   language: 'en-us',

@@ -25,7 +25,7 @@ export default function Footer() {
               >
                 {link.title}
               </Link>
-              {link.items && (
+              {/* {link.items && (
                 <div className="flex flex-col items-start mt-4 pl-4">
                   {link.items.map((link) => (
                     <Link
@@ -37,10 +37,10 @@ export default function Footer() {
                     </Link>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
-          <div className="relative mt-6 mb-4">
+          <div className="relative mt-4 mb-4">
             <Link
               href="/get-started/"
               className="text-gray-100 dark:text-gray-200 text-xl leading-none font-medium hover:text-sea dark:hover:text-sea transition-all"
@@ -59,7 +59,18 @@ export default function Footer() {
                   👋
                 </span>
               </p>
-              <p className="mt-2">Built with Next.js, MDX, Tailwind, and Vercel.</p>
+              <p className="mt-2">
+                Built with Next.js, MDX, Tailwind, and Vercel. View the{' '}
+                <a
+                  className="text-orange hover:text-white transition-all"
+                  href="https://github.com/joelhans/commitcopy.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  source
+                </a>{' '}
+                on GitHub.
+              </p>
             </div>
           </div>
         </div>

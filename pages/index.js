@@ -33,7 +33,10 @@ export default function Home({ posts }) {
           with transparency.
         </p>
       </header>
-      <div className="mb-24">
+      <div className=""></div>
+
+      {/* Recent articles section—save this for later. */}
+      {/* <div className="mb-24">
         <h2 className="text-lg text-sea font-bold uppercase mb-8">Recent articles</h2>
         <ul className="grid grid-cols-3 gap-8">
           {posts.slice(0, 3).map((frontMatter) => {
@@ -63,7 +66,7 @@ export default function Home({ posts }) {
             )
           })}
         </ul>
-      </div>
+      </div> */}
     </>
   )
 }
