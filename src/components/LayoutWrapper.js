@@ -11,17 +11,20 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col h-screen">
         <div className="flex-1 w-full mx-auto">
           <header className="z-40 lg:z-50 lg:mx-auto">
-            <div className="max-w-screen-xl flex items-center justify-start pt-6 px-6 mx-auto">
+            <div className="max-w-screen-xl flex items-center justify-start pt-12 px-6 mx-auto">
               <div className="flex items-baseline mr-auto">
                 <div className="mr-6 lg:mr-12">
                   <Link href="/" aria-label="Joel Hans">
-                    <div className="text-2xl font-sans font-medium leading-none text-sea hover:text-steel">
-                      Commit Copy
-                      <span className="block text-xs text-purple dark:text-gray-100 font-mono font-bold">
-                        From Joel Hans, the open-source copywriter.
+                    <div className="group text-3xl font-sans font-medium leading-none hover:text-steel">
+                      <span className="text-orange text-mono font-bold bg-gray-100 dark:bg-gray-800 mr-1 px-1 py-0.5">
+                        Commit
                       </span>
+                      <span>Copy</span>
                     </div>
                   </Link>
+                  <span className="block text-xs text-purple dark:text-gray-100 mt-2">
+                    From Joel Hans&mdash;the open-source copywriter.
+                  </span>
                 </div>
               </div>
               <div className="flex items-center mr-8">
@@ -59,7 +62,7 @@ const LayoutWrapper = ({ children }) => {
               </div>
             </div>
           </header>
-          <main className="max-w-screen-xl mx-auto mb-auto px-6">{children}</main>
+          <main>{children}</main>
         </div>
         <Footer />
       </div>
