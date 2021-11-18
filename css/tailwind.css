@@ -26,9 +26,9 @@
   font-style: normal;
 }
 
-/* .prose {
+.prose {
   max-width: 100%;
-} */
+}
 
 .prose p > img[src*='icon/assets/'] {
   @apply inline-block m-0;

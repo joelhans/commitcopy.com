@@ -18,7 +18,7 @@ const MobileNav = () => {
   }
 
   return (
-    <div className="sm:hidden">
+    <div className="md:hidden">
       <button
         type="button"
         className="w-8 h-8 p-1 ml-1 mr-1 rounded sm:ml-4"
@@ -47,7 +47,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed w-full h-full top-16 right-0 bg-gray-100 dark:bg-gray-800 opacity-95 z-10 transform ease-in-out duration-300 ${
+        className={`fixed w-full h-full top-32 right-0 bg-gray-100 dark:bg-gray-800 bg-opacity-95 z-10 transform ease-in-out duration-300 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -69,6 +69,9 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
+          <button className="text-white font-bold bg-orange mt-4 ml-6 px-6 py-4 rounded hover:bg-sea transition-all">
+            <Link href="/get-started/">Start a project</Link>
+          </button>
         </nav>
       </div>
     </div>

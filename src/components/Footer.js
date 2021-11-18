@@ -5,9 +5,9 @@ import NewsletterForm from '@components/NewsletterForm'
 
 export default function Footer() {
   return (
-    <footer className="font-sans bg-purple dark:bg-gray-800 dark:bg-opacity-100 px-6 py-16">
-      <div className="grid grid-cols-6 gap-8 place-items-start max-w-screen-xl mx-auto px-6">
-        <div className="col-span-2 text-gray-100">
+    <footer className="font-sans bg-purple dark:bg-gray-900 px-6 py-16">
+      <div className="grid grid-cols-12 gap-8 place-items-start max-w-screen-xl mx-auto px-6">
+        <div className="col-span-12 lg:col-span-4 text-gray-100">
           <h3 className="text-orange text-3xl font-medium mb-6">Navigate</h3>
           <div className="relative mb-4">
             <Link
@@ -74,10 +74,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="col-span-4 grid grid-cols-6 gap-8 text-sm text-gray-600 dark:text-gray-200 px-12 py-16 bg-gray-100 dark:bg-gray-700 rounded shadow-lg">
-          <div className="col-span-3 prose prose-lg">
-            <h3 className="!text-orange !text-4xl font-bold mb-2">Subscribe to my release notes</h3>
-            <p className="text-xl dark:text-gray-100">
+        <div className="col-span-12 lg:col-span-8 grid grid-cols-6 gap-8 text-sm text-gray-600 dark:text-gray-200 mt-8 lg:mt-0 px-6 lg:px-12 py-8 lg:py-16 bg-gray-100 dark:bg-gray-700 rounded shadow-lg">
+          <div className="col-span-6 lg:col-span-3 prose prose-lg">
+            <h3 className="!text-orange !text-3xl !lg:text-4xl font-bold mb-2">
+              Subscribe to my release notes
+            </h3>
+            <p className="text-lg lg:text-xl dark:text-gray-100">
               Get weekly tips, quips, and news on copywriting, storytelling, open-source, and the
               source of it all.
             </p>

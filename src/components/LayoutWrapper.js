@@ -27,12 +27,12 @@ const LayoutWrapper = ({ children }) => {
                   </span>
                 </div>
               </div>
-              <div className="flex items-center mr-8">
+              <div className="flex items-center lg:mr-8">
                 <ThemeSwitch />
-                <RSS />
+                {/* <RSS /> */}
                 <MobileNav />
               </div>
-              <div className="hidden sm:flex items-center justify-end">
+              <div className="hidden md:flex items-center justify-end">
                 {headerNavLinks.map((link) => (
                   <div key={link.title} className="group relative py-4 pr-4 md:pr-8 leading-none">
                     <Link
