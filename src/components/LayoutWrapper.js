@@ -11,7 +11,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col h-screen">
         <div className="flex-1 w-full mx-auto">
           <header className="z-40 lg:z-50 lg:mx-auto">
-            <div className="max-w-screen-xl flex items-center justify-start pt-12 px-6 mx-auto">
+            <div className="max-w-screen-xl flex items-center justify-start pt-12 px-6 lg:px-12 mx-auto">
               <div className="flex items-baseline mr-auto">
                 <div className="mr-6 lg:mr-12">
                   <Link href="/" aria-label="Joel Hans">

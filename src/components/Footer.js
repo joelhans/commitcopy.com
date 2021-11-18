@@ -5,8 +5,8 @@ import NewsletterForm from '@components/NewsletterForm'
 
 export default function Footer() {
   return (
-    <footer className="font-sans bg-purple dark:bg-gray-900 px-6 py-16">
-      <div className="grid grid-cols-12 gap-8 place-items-start max-w-screen-xl mx-auto px-6">
+    <footer className="font-sans bg-purple dark:bg-gray-900 px-6 lg:px-12 py-16">
+      <div className="grid grid-cols-12 gap-8 place-items-start max-w-screen-xl mx-auto">
         <div className="col-span-12 lg:col-span-4 text-gray-100">
           <h3 className="text-orange text-3xl font-medium mb-6">Navigate</h3>
           <div className="relative mb-4">
