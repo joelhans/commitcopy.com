@@ -16,7 +16,7 @@ const LayoutWrapper = ({ children }) => {
                 <div className="mr-6 lg:mr-12">
                   <Link href="/" aria-label="Joel Hans">
                     <div className="group text-3xl font-sans font-medium leading-none hover:text-steel">
-                      <span className="text-orange text-mono font-bold bg-gray-100 dark:bg-gray-800 mr-1 px-1 py-0.5">
+                      <span className="text-orange text-mono font-bold bg-gray-100 dark:bg-gray-800 mr-1 px-1 py-0.5 rounded-lg">
                         Commit
                       </span>
                       <span>Copy</span>
