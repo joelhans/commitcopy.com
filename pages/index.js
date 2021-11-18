@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
+import Link from '@components/Link'
+import { MDXExport } from '@components/MDXComponents'
 import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
 import { getSingleContent, getFrontMatter } from '@/lib/mdx'
@@ -55,7 +56,7 @@ export default function Home({
 
       <header id="hero" className="mx-auto pt-32 lg:pt-48">
         <Container>
-          <h1 className="text-purple text-4xl lg:text-5xl leading-snug lg:leading-snug font-black mb-8 dark:text-gray-100">
+          <h1 className="text-purple text-4xl lg:text-5xl !leading-snug font-black mb-8 dark:text-gray-100">
             Turn{' '}
             <code className="text-4xl lg:text-5xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
               git clone
@@ -70,53 +71,45 @@ export default function Home({
       </header>
       <section className="mt-32 lg:mt-48 py-16 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <Container className="relative">
-          <div className="grid grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-            <h2 className="col-span-4 text-orange text-5xl lg:text-7xl font-medium leading-tight">
+          <div className="grid grid-cols-12 gap-8 items-center">
+            <h2 className="col-span-12 text-orange text-5xl lg:text-7xl font-medium !leading-tight">
               Marketing an open-source business is unlike any other
             </h2>
-            <div className="col-span-4 prose prose-lg dark:prose-dark">
-              <p className="">
-                You can't just focus on converting customers or 10X-ing your MRR. You're running a
-                company using an innovative, complex business model that relies on both paying
-                customers <em>and</em> a group of free-loving developers and engineers who will
-                either spend their time contributing to your project for free or figuring out how to
-                fork you.
+            <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
+              <p className="text-2xl font-medium">
+                It's about way more that converting anyone or 10x-ing anything.
+              </p>
+              <p>
+                You're running a company using an innovative, complex business model that relies on
+                both paying customers <em>and</em> a group of free-loving developers and engineers
+                who will either spend their time contributing to your project for free or figuring
+                out how to fork you.
+              </p>
+              <p className="text-sea text-xl lg:text-2xl leading-tight font-medium">
+                Paid or free, the tech world is full of people who want to commit their time and
+                money to companies that operate transparently.
               </p>
               <p className="">
                 But they need to know that you're in open-source for the right reasons. They want to
                 know how you'll prioritize everyone's needs. They want assurances you're not going
-                to change up your licensing in a way that affects their operations. The want you to
+                to change up your licensing in a way that affects their operations. They want you to
                 actually be transparent.
               </p>
             </div>
           </div>
         </Container>
       </section>
-      <section className="py-16">
-        <Container className="relative">
-          <div className="lg:w-3/4 mx-auto text-center">
-            <p className="text-sea text-3xl lg:text-4xl leading-tight font-medium">
-              Paid or free, the tech world is full of people who want to commit their time and money
-              to companies that operate transparently.
-            </p>
-          </div>
-        </Container>
-      </section>
-      <section className="py-16 bg-sea bg-opacity-5 dark:bg-gray-800">
-        <Container className="relative">
-          <div className="lg:w-1/2 prose prose-lg dark:prose-dark mr-auto">
-            <p className="">More content goes here</p>
-          </div>
-        </Container>
-      </section>
       <section className="relative py-16">
         <Container>
-          <p className="text-sea text-4xl lg:text-6xl font-medium mb-6">
-            Are you talking about your open-source story in a way your clients, contributors, and
-            communities want to commit to?
-          </p>
-          <div className="grid grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-            <div className="col-span-4 lg:col-span-6">
+          <div className="grid grid-cols-12 gap-8 items-center">
+            <div className="col-span-9 col-end-12 text-right">
+              <p className="text-sea text-4xl lg:text-6xl font-medium !leading-tight !mb-0">
+                Are you talking about your open-source story in a way that{' '}
+                <span className="text-orange">inspires commitment</span> from your customers,
+                contributors, and communities?
+              </p>
+            </div>
+            <div className="col-span-8 col-end-12 text-right">
               <p className="text-orange text-3xl lg:text-4xl font-bold mb-4">No?</p>
               <p className="text-orange text-2xl font-medium italic">
                 I get it. Open-source messaging is complex. It's make-or-break. It's everything for
@@ -130,11 +123,14 @@ export default function Home({
         <Container>
           <div className="grid grid-cols-4 lg:grid-cols-8 gap-8 items-center">
             <div className="col-span-4 lg:col-span-6 mb-12">
-              <h2 className="text-purple dark:text-gray-100 text-4xl lg:text-5xl font-bold mb-8">
-                Here's how I help
-              </h2>
+              <div className="flex items-center mb-8">
+                <h2 className="text-purple dark:text-gray-100 text-xl lg:text-2xl font-mono font-bold whitespace-nowrap mr-6">
+                  What I do
+                </h2>
+                <span className="block h-1 w-full bg-purple rounded-full"></span>
+              </div>
               <div className="prose prose-lg dark:prose-dark">
-                <p>
+                <p className="!text-4xl !lg:text-6xl !text-orange !font-medium">
                   I help open-source companies and startups tell the story behind their source code
                   to get more commitments from the people who matter most.
                 </p>
@@ -184,7 +180,7 @@ export default function Home({
           </div>
         </Container>
       </section>
-      <section className="mt-16">
+      <section id="portfolio" className="py-16">
         <Container>
           <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-8 ml-auto text-right">
             Whether open-source at their core or on the periphery, I've worked with some amazing
@@ -219,15 +215,18 @@ export default function Home({
               height="30"
             />
           </div>
+          <div className="grid grid-cols-12 gap-8 mt-16">
+            <div className="col-span-6 lg:col-span-5 lg:col-start-2 p-4 bg-gray-50 rounded-lg">
+              <h3>IMG SRVR</h3>
+            </div>
+            <div className="col-span-6 lg:col-span-5 p-4 bg-gray-50 rounded-lg">
+              <h3>IBM</h3>
+            </div>
+          </div>
+          <p className="text-xl text-center mt-12">More samples available upon request.</p>
         </Container>
       </section>
-      <section id="portfolio" className="py-16 bg-gray-100 dark:bg-gray-900">
-        <Container>
-          <h2>Portfolio</h2>
-          <p></p>
-        </Container>
-      </section>
-      <section id="about" className="mb-16 py-16 dark:bg-gray-800">
+      <section id="about" className="py-16 dark:bg-gray-800">
         <Container>
           <div className="grid grid-cols-12 gap-8 items-center mt-16">
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark pr-8">
@@ -252,12 +251,36 @@ export default function Home({
               />
             </div>
           </div>
-          <div className="grid grid-cols-8 gap-8 mt-16">
-            <div className="col-span-4 prose prose-lg dark:prose-dark p-8 bg-sea bg-opacity-5 rounded-lg">
+          <div className="grid grid-cols-12 gap-8 mt-24">
+            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
+              <h3 className="absolute !text-sea !text-4xl !font-medium !-mt-20">Creative, eh?</h3>
               <MDXExport code={mdxAboutCreative} />
             </div>
-            <div className="col-span-4 prose prose-lg dark:prose-dark p-8 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded">
+            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-24 lg:mt-12 p-8 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded">
+              <h3 className="absolute !text-orange !text-4xl !font-medium !-mt-20">
+                Just how technical?
+              </h3>
               <MDXExport code={mdxAboutTech} />
+            </div>
+          </div>
+        </Container>
+      </section>
+      <section className="py-16 bg-orange">
+        <Container>
+          <div className="grid grid-cols-12 gap-8 items-center">
+            <div className="col-span-8 col-start-3 text-center">
+              <h2 className="text-purple text-4xl lg:text-6xl font-medium !leading-tight mb-6">
+                Ready to discover your open-source story?
+              </h2>
+              <p className="text-white text-xl leading-normal mb-6">
+                My uncanny combination of technical skills, storytelling-based copywriting
+                techniques, and experience in open-source is the contribution you've been after to
+                get more customers, contributors, and communities to commit to the amazing things
+                you're building.
+              </p>
+              <button className="text-white text-2xl font-bold px-6 py-4 rounded bg-purple hover:bg-sea transition-all">
+                <Link href="/get-started/">Start a project</Link>
+              </button>
             </div>
           </div>
         </Container>
