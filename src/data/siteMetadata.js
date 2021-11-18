@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Commit Copy | Conversion copywriting for open-source and B2B SaaS',
+  title: 'Commit Copy | Copywriting for open-source companies and startups',
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
   description:
-    "I'm Joel—the open-source copywriter who turns `git clone` into spirited clients, champions, and communities.",
+    "I'm Joel—the open-source copywriter who turns `git clone` into spirited customers, champions, and communities.",
   language: 'en-us',
   siteUrl: 'https://joelhans.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',
@@ -31,22 +31,3 @@ const siteMetadata = {
 }
 
 module.exports = siteMetadata
-
-// {
-//   "title": "",
-//   "author": "Joel Hans",
-//   "headerTitle": "Joel Hans",
-//   "description": "I'm Joel—the open-source copywriter who turns 'git clone' into spirited clients, champions, and communities.",
-//   "language": "en-us",
-//   "siteUrl": "https://joelhans.com",
-//   "siteRepo": "https://github.com/joelhans/joelhans.com",
-//   "image": "/static/images/avatar.jpg",
-//   "socialBanner": "/static/images/twitter-card.png",
-//   "email": "j@joelhans.com",
-//   "locale": "en-US",
-//   "newsletter": {
-//     // supports mailchimp, buttondown, convertkit
-//     // Please add your .env file and modify it according to your selection
-//     provider: 'buttondown',
-//   }
-// }
