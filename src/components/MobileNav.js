@@ -57,9 +57,9 @@ const MobileNav = () => {
           className="fixed w-full h-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
         ></button>
-        <nav className="fixed h-full mt-8">
+        <nav className="fixed h-full mt-8 px-6">
           {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-6 py-2">
+            <div key={link.title} className="py-2">
               <Link
                 href={link.href}
                 className="text-xl font-medium tracking-wide text-gray-900 dark:text-gray-100 hover:text-sea"
@@ -69,7 +69,7 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
-          <button className="text-white font-bold bg-orange mt-4 ml-6 px-6 py-4 rounded hover:bg-sea transition-all">
+          <button className="text-white font-bold bg-orange mt-4 px-6 py-4 rounded hover:bg-sea transition-all">
             <Link href="/get-started/">Start a project</Link>
           </button>
         </nav>
