@@ -15,6 +15,10 @@ export async function getStaticProps() {
     BASE_CONTENT_PATH,
     'index-service-source-copy'
   )
+  const IndexWorkIMGSRVR = await getSingleContent(BASE_CONTENT_PATH, 'work/img-srvr-short')
+  const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
+  const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
+  const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
   const IndexAbout = await getSingleContent(BASE_CONTENT_PATH, 'index-about')
   const IndexAboutCreative = await getSingleContent(BASE_CONTENT_PATH, 'index-about-creative')
   const IndexAboutTech = await getSingleContent(BASE_CONTENT_PATH, 'index-about-technical')
@@ -23,6 +27,10 @@ export async function getStaticProps() {
     props: {
       IndexServiceOne,
       IndexServiceSourceCopy,
+      IndexWorkIMGSRVR,
+      IndexWorkIBM,
+      IndexWorkOpentext,
+      IndexWorkNetdata,
       IndexAbout,
       IndexAboutCreative,
       IndexAboutTech,
@@ -34,6 +42,10 @@ export async function getStaticProps() {
 export default function Home({
   IndexServiceOne,
   IndexServiceSourceCopy,
+  IndexWorkIMGSRVR,
+  IndexWorkIBM,
+  IndexWorkOpentext,
+  IndexWorkNetdata,
   IndexAbout,
   IndexAboutCreative,
   IndexAboutTech,
@@ -41,6 +53,10 @@ export default function Home({
 }) {
   const { mdxSource: mdxServiceOne } = IndexServiceOne
   const { mdxSource: mdxServiceSourceCopy } = IndexServiceSourceCopy
+  const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
+  const { mdxSource: mdxWorkIBM } = IndexWorkIBM
+  const { mdxSource: mdxWorkOpentext } = IndexWorkOpentext
+  const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
   const { mdxSource: mdxAbout } = IndexAbout
   const { mdxSource: mdxAboutCreative } = IndexAboutCreative
   const { mdxSource: mdxAboutTech } = IndexAboutTech
@@ -216,19 +232,33 @@ export default function Home({
             />
           </div>
           <div className="grid grid-cols-12 gap-8 mt-16">
-            <div className="col-span-6 lg:col-span-5 lg:col-start-2 p-4 bg-gray-50 rounded-lg">
-              <h3>IMG SRVR</h3>
+            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <article className="prose dark:prose-dark">
+                <MDXExport code={mdxWorkIMGSRVR} />
+              </article>
             </div>
-            <div className="col-span-6 lg:col-span-5 p-4 bg-gray-50 rounded-lg">
-              <h3>IBM</h3>
+            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <article className="prose dark:prose-dark">
+                <MDXExport code={mdxWorkNetdata} />
+              </article>
+            </div>
+            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <article className="prose dark:prose-dark">
+                <MDXExport code={mdxWorkIBM} />
+              </article>
+            </div>
+            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <article className="prose dark:prose-dark">
+                <MDXExport code={mdxWorkOpentext} />
+              </article>
             </div>
           </div>
           <p className="text-xl text-center mt-12">More samples available upon request.</p>
         </Container>
       </section>
-      <section id="about" className="py-16 dark:bg-gray-800">
-        <Container>
-          <div className="grid grid-cols-12 gap-8 items-center mt-16">
+      <section id="about" className="py-16">
+        <Container className="py-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark pr-8">
               <h2 className="!text-orange !text-3xl font-mono !font-bold !mb-4">
                 Hello{' '}
@@ -251,7 +281,7 @@ export default function Home({
               />
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-8 mt-24">
+          <div className="grid grid-cols-12 gap-8 mt-16">
             <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
               <h3 className="absolute !text-sea !text-4xl !font-medium !-mt-20">Creative, eh?</h3>
               <MDXExport code={mdxAboutCreative} />
@@ -265,20 +295,20 @@ export default function Home({
           </div>
         </Container>
       </section>
-      <section className="py-16 bg-orange">
+      <section className="py-16 bg-sea dark:bg-opacity-20">
         <Container>
           <div className="grid grid-cols-12 gap-8 items-center">
             <div className="col-span-8 col-start-3 text-center">
-              <h2 className="text-purple text-4xl lg:text-6xl font-medium !leading-tight mb-6">
+              <h2 className="text-purple dark:text-orange text-4xl lg:text-6xl font-medium !leading-tight mb-6">
                 Ready to discover your open-source story?
               </h2>
-              <p className="text-white text-xl leading-normal mb-6">
+              <p className="text-purple dark:text-white text-xl leading-normal mb-6">
                 My uncanny combination of technical skills, storytelling-based copywriting
                 techniques, and experience in open-source is the contribution you've been after to
                 get more customers, contributors, and communities to commit to the amazing things
                 you're building.
               </p>
-              <button className="text-white text-2xl font-bold px-6 py-4 rounded bg-purple hover:bg-sea transition-all">
+              <button className="text-white text-2xl font-bold px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
                 <Link href="/get-started/">Start a project</Link>
               </button>
             </div>
