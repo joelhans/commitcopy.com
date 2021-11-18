@@ -6,6 +6,7 @@ import siteMetadata from '@data/siteMetadata'
 import { getSingleContent, getFrontMatter } from '@/lib/mdx'
 import Container from '@components/Container'
 import Client from '@components/index/Client'
+import Testimonial from '@components/Testimonial'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/index/Service'
 import { BASE_CONTENT_PATH, ARTICLES_CONTENT_PATH } from '@config/constants'
 
@@ -196,13 +197,13 @@ export default function Home({
           </div>
         </Container>
       </section>
-      <section id="portfolio" className="py-16">
+      <section id="portfolio" className="pt-16 pb-12">
         <Container>
           <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-8 ml-auto text-right">
             Whether open-source at their core or on the periphery, I've worked with some amazing
             tech, SaaS, and B2B companies, including:
           </h2>
-          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around py-8 dark:rounded dark:bg-gray-700">
+          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around pt-8 dark:rounded dark:bg-gray-700">
             <Client src="ibm.svg" name="IBM" width="100" height="40" />
             <Client src="redhat.svg" name="Red Hat" width="106" height="30" />
             <Client
@@ -231,7 +232,25 @@ export default function Home({
               height="30"
             />
           </div>
-          <div className="grid grid-cols-12 gap-8 mt-16">
+        </Container>
+      </section>
+      <section className="pb-8">
+        <Container>
+          <Testimonial
+            name="Jennifer Briston"
+            title="Marketing Manager, Netdata"
+            img="jennifer-briston.jpg"
+          >
+            Joel did an amazing job with collaborating on creating the Netdata website. He has a
+            unique skillset of understanding technical products with the ability to translate the
+            value to a wide range of audiences. I'd gladly work with Joel again, he goes out of his
+            way to provide his team support and the materials needed to execute projects.
+          </Testimonial>
+        </Container>
+      </section>
+      <section id="portfolio" className="mb-16">
+        <Container>
+          <div className="grid grid-cols-12 gap-8 mt-8">
             <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
               <article className="prose dark:prose-dark">
                 <MDXExport code={mdxWorkIMGSRVR} />
@@ -253,10 +272,10 @@ export default function Home({
               </article>
             </div>
           </div>
-          <p className="text-xl text-center mt-12">More samples available upon request.</p>
+          <p className="text-lg text-center mt-8 italic">More samples available upon request.</p>
         </Container>
       </section>
-      <section id="about" className="py-16">
+      <section id="about" className="">
         <Container className="py-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark pr-8">
@@ -295,10 +314,23 @@ export default function Home({
           </div>
         </Container>
       </section>
+      <section className="py-16">
+        <Container>
+          <Testimonial
+            name="Matt Connor"
+            title="CEO, Strasmore &amp; SSD Nodes"
+            img="matt-connor.jpg"
+          >
+            Joel was our first marketing hire and has been a key member of our marketing team since
+            2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I
+            strongly recommend taking the opportunity to work with him.
+          </Testimonial>
+        </Container>
+      </section>
       <section className="py-16 bg-sea dark:bg-opacity-20">
         <Container>
           <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-8 col-start-3 text-center">
+            <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
               <h2 className="text-purple dark:text-orange text-4xl lg:text-6xl font-medium !leading-tight mb-6">
                 Ready to discover your open-source story?
               </h2>
