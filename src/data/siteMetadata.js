@@ -3,11 +3,11 @@ const siteMetadata = {
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
   description:
-    "I'm Joel—the open-source copywriter who turns `git clone` into spirited customers, champions, and communities.",
+    "I'm Joel—the open-source copywriter for companies and startups companies & startups building future-enriching products with transparency.",
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/favicons/favicon-512x512.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'j@joelhans.com',

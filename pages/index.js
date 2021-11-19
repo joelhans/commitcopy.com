@@ -62,6 +62,8 @@ export default function Home({
   const { mdxSource: mdxAboutCreative } = IndexAboutCreative
   const { mdxSource: mdxAboutTech } = IndexAboutTech
 
+  console.log(siteMetadata.title)
+
   return (
     <>
       <PageSeo
