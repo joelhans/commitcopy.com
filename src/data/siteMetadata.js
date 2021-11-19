@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     "I'm Joel—the open-source copywriter who turns `git clone` into spirited customers, champions, and communities.",
   language: 'en-us',
-  siteUrl: 'https://joelhans.com',
+  siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
