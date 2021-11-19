@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "next-remote-watch ./data",
+    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
     "dev": "next dev",
     "build": "next build",
     "serve": "next start",
@@ -60,7 +60,9 @@
     "inquirer": "^8.1.1",
     "lint-staged": "^11.2.0",
     "next-remote-watch": "^1.0.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "socket.io": "^4.4.0",
+    "socket.io-client": "^4.4.0"
   },
   "husky": {
     "hooks": {
