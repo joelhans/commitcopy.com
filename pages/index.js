@@ -62,8 +62,6 @@ export default function Home({
   const { mdxSource: mdxAboutCreative } = IndexAboutCreative
   const { mdxSource: mdxAboutTech } = IndexAboutTech
 
-  console.log(siteMetadata.title)
-
   return (
     <>
       <PageSeo
@@ -190,7 +188,7 @@ export default function Home({
             <ServiceGo>
               <ServicePrice>$7,495+</ServicePrice>
               <ServiceButton to="/get-started/">
-                <code className="text-xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
+                <code className="text-lg text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
                   init
                 </code>{' '}
                 a new project

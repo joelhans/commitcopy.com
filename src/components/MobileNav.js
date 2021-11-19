@@ -69,8 +69,10 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
-          <button className="text-white font-bold bg-orange mt-4 px-6 py-4 rounded hover:bg-sea transition-all">
-            <Link href="/get-started/">Start a project</Link>
+          <button className="text-white font-bold bg-orange mt-4 rounded hover:bg-sea transition-all">
+            <Link className="block px-6 py-4" href="/get-started/">
+              Start a project
+            </Link>
           </button>
         </nav>
       </div>
