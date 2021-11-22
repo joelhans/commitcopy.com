@@ -78,7 +78,7 @@ export default function Home({
             <code className="text-4xl lg:text-5xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
               git clone
             </code>{' '}
-            into committed customers, contributors, and communities
+            into spirited commitments from your customers, developers, and contributors
           </h1>
           <p className="max-w-screen text-gray-900 dark:text-gray-200 text-lg lg:text-xl font-medium leading-relaxed mx-auto">
             The open-source copywriter for companies &amp; startups building future-enriching
