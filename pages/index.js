@@ -94,7 +94,7 @@ export default function Home({
             </h2>
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
               <p className="text-2xl font-medium">
-                It's about way more that converting anyone or 10x-ing anything.
+                It's about way more than converting anyone or 10x-ing anything.
               </p>
               <p>
                 You're running a company using an innovative, complex business model that relies on
