@@ -123,7 +123,7 @@ export default function Home({
               <p className="text-sea text-4xl lg:text-6xl font-medium !leading-tight !mb-0">
                 Are you talking about your open-source story in a way that{' '}
                 <span className="text-orange">inspires commitment</span> from your customers,
-                contributors, and communities?
+                developers, and contributors?
               </p>
             </div>
             <div className="col-span-8 col-end-12 text-right">
@@ -203,7 +203,7 @@ export default function Home({
             Whether open-source at their core or on the periphery, I've worked with some amazing
             tech, SaaS, and B2B companies, including:
           </h2>
-          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around pt-8 dark:rounded dark:bg-gray-700">
+          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around py-8 dark:rounded dark:bg-gray-700">
             <Client src="ibm.svg" name="IBM" width="100" height="40" />
             <Client src="redhat.svg" name="Red Hat" width="106" height="30" />
             <Client
@@ -336,8 +336,8 @@ export default function Home({
               </h2>
               <p className="text-purple dark:text-white text-xl leading-normal mb-6">
                 My uncanny combination of technical skills, storytelling-based copywriting
-                techniques, and experience in open-source is the contribution you've been after to
-                get more customers, contributors, and communities to commit to the amazing things
+                techniques, and experience in open source is the contribution you've been after to
+                get more customers, developers, and contributors to commit to the amazing things
                 you're building.
               </p>
               <button className="text-white text-2xl font-bold px-6 py-4 rounded bg-purple hover:bg-orange transition-all">

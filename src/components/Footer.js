@@ -60,7 +60,7 @@ export default function Footer() {
                 </span>
               </p>
               <p className="mt-2">
-                Built with Next.js, MDX, Tailwind, and Vercel. View the{' '}
+                Built with Next.js, MDX, Tailwind, Vercel, and Plausible. View the{' '}
                 <a
                   className="text-orange hover:text-white transition-all"
                   href="https://github.com/joelhans/commitcopy.com"
