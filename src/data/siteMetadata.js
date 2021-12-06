@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Commit Copy | Copywriting for open-source companies and startups',
+  title: 'Commit Copy | Copywriting for open-source companies',
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
   description:
-    "I'm Joel—the open-source copywriter for companies and startups companies & startups building future-enriching products with transparency.",
+    "I'm Joel—the open-source copywriter for companies & startups building future-enriching products with transparency.",
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',
