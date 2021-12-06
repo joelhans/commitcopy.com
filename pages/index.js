@@ -81,8 +81,8 @@ export default function Home({
             into spirited commitments from your customers, developers, and contributors
           </h1>
           <p className="max-w-screen text-gray-900 dark:text-gray-200 text-lg lg:text-xl font-medium leading-relaxed mx-auto">
-            The open-source copywriter for companies &amp; startups building future-enriching
-            products with transparency
+            The open-source copywriter for companies building future-enriching products with
+            transparency
           </p>
         </Container>
       </header>
@@ -90,7 +90,7 @@ export default function Home({
         <Container className="relative">
           <div className="grid grid-cols-12 gap-8 items-center">
             <h2 className="col-span-12 text-orange text-5xl lg:text-7xl font-medium !leading-tight">
-              Marketing an open-source business is unlike any other
+              Marketing an open-source company is unlike any other
             </h2>
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
               <p className="text-2xl font-medium">
@@ -148,8 +148,8 @@ export default function Home({
               </div>
               <div className="prose prose-lg dark:prose-dark">
                 <p className="!text-4xl !lg:text-6xl !text-orange !font-medium">
-                  I help open-source companies and startups tell the story behind their source code
-                  to get more commitments from the people who matter most.
+                  I help open-source companies tell the story behind their source code to get more
+                  commitments from the people who matter most.
                 </p>
                 <p>
                   It's about so more than{' '}
