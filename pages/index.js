@@ -126,13 +126,13 @@ export default function Home({
                 developers, and contributors?
               </p>
             </div>
-            <div className="col-span-8 col-end-12 text-right">
+            {/* <div className="col-span-8 col-end-12 text-right">
               <p className="text-orange text-3xl lg:text-4xl font-bold mb-4">No?</p>
               <p className="text-orange text-2xl font-medium italic">
                 I get it. Open-source messaging is complex. It's make-or-break. It's everything for
                 your business.
               </p>
-            </div>
+            </div> */}
           </div>
         </Container>
       </section>
