@@ -89,7 +89,7 @@ export default function Home({
       <section className="mt-32 lg:mt-48 py-16 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <Container className="relative">
           <div className="grid grid-cols-12 gap-8 items-center">
-            <h2 className="col-span-12 text-orange text-5xl lg:text-7xl font-medium !leading-tight">
+            <h2 className="col-span-12 text-orange text-4xl lg:text-6xl font-medium !leading-tight">
               Marketing an open-source company is unlike any other
             </h2>
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">

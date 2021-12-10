@@ -3,11 +3,11 @@ import { InlineWidget } from 'react-calendly'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
-import PageTitle from '@components/PageTitle'
 import siteMetadata from '@data/siteMetadata'
 import Link from '@components/Link'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
+import Testimonial from '@components/Testimonial'
 import {
   Accordion,
   AccordionItem,
@@ -76,6 +76,16 @@ export default function GetStarted({ content }) {
           <div className="prose prose-md lg:prose-lg dark:prose-dark">
             <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
           </div>
+        </Container>
+      </section>
+      <section className=" pb-16">
+        <Container>
+          <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
+            Joel took our content strategy into beautiful language! He was attentive, prompt and
+            genuinely cared about delivering high-quality work for our clients. If you need someone
+            both creatively strategic and executional to do good work, you're silly to be on the
+            fence!
+          </Testimonial>
         </Container>
       </section>
       <section className="bg-gray-50 dark:bg-gray-800 pt-16">
