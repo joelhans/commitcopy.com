@@ -1,4 +1,11 @@
 import Link from '@components/Link'
+import { Grid, Eight } from '@components/Grid'
+
+export const Service = ({ children, className }) => (
+  <Grid>
+    <Eight className={`${className}`}>{children}</Eight>
+  </Grid>
+)
 
 export const ServiceGo = ({ children }) => <div className="flex items-center">{children}</div>
 

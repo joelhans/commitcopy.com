@@ -13,6 +13,8 @@ import Video from '@components/mdx/Video'
 import Statement from '@components/mdx/Statement'
 import StoryQuote from '@components/mdx/StoryQuote'
 import { Tags, Tag } from '@components/mdx/Tags'
+import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
+import { Grid, Eight } from '@components/Grid'
 
 export const MDXComponents = {
   Image,
@@ -29,6 +31,12 @@ export const MDXComponents = {
   StoryQuote,
   Tags,
   Tag,
+  Service,
+  ServiceGo,
+  ServicePrice,
+  ServiceButton,
+  Grid,
+  Eight,
   // wrapper: ({ components, layout, ...rest }) => {
   //   const Layout = require(`../layouts/${layout}`).default
   //   return <Layout {...rest} />

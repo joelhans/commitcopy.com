@@ -7,15 +7,9 @@ import { getSingleContent, getFrontMatter } from '@/lib/mdx'
 import Container from '@components/Container'
 import Client from '@components/index/Client'
 import Testimonial from '@components/Testimonial'
-import { ServiceGo, ServicePrice, ServiceButton } from '@components/index/Service'
 import { BASE_CONTENT_PATH, ARTICLES_CONTENT_PATH } from '@config/constants'
 
 export async function getStaticProps() {
-  const IndexServiceOne = await getSingleContent(BASE_CONTENT_PATH, 'index-service-one-day')
-  const IndexServiceSourceCopy = await getSingleContent(
-    BASE_CONTENT_PATH,
-    'index-service-source-copy'
-  )
   const IndexWorkIMGSRVR = await getSingleContent(BASE_CONTENT_PATH, 'work/img-srvr-short')
   const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
   const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
@@ -26,8 +20,6 @@ export async function getStaticProps() {
   const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
   return {
     props: {
-      IndexServiceOne,
-      IndexServiceSourceCopy,
       IndexWorkIMGSRVR,
       IndexWorkIBM,
       IndexWorkOpentext,
@@ -41,8 +33,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({
-  IndexServiceOne,
-  IndexServiceSourceCopy,
   IndexWorkIMGSRVR,
   IndexWorkIBM,
   IndexWorkOpentext,
@@ -52,8 +42,6 @@ export default function Home({
   IndexAboutTech,
   posts,
 }) {
-  const { mdxSource: mdxServiceOne } = IndexServiceOne
-  const { mdxSource: mdxServiceSourceCopy } = IndexServiceSourceCopy
   const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
   const { mdxSource: mdxWorkIBM } = IndexWorkIBM
   const { mdxSource: mdxWorkOpentext } = IndexWorkOpentext
@@ -136,7 +124,7 @@ export default function Home({
           </div>
         </Container>
       </section>
-      <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800">
+      {/* <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800">
         <Container>
           <div className="grid grid-cols-4 lg:grid-cols-8 gap-8 items-center">
             <div className="col-span-4 lg:col-span-6 mb-12">
@@ -196,7 +184,7 @@ export default function Home({
             </ServiceGo>
           </div>
         </Container>
-      </section>
+      </section> */}
       <section id="portfolio" className="pt-16 pb-12">
         <Container>
           <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-8 ml-auto text-right">
