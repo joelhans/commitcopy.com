@@ -121,16 +121,18 @@ export default function GetStarted({ content }) {
                   <p>
                     <strong>
                       My minimum project rate for new clients is $1,995, with the{' '}
-                      <Link className="text-orange font-medium" href="/#one-day-commit">
+                      <Link className="text-orange font-medium" href="/services/#one-day-commit">
                         One-Day Commit
                       </Link>
                       .
                     </strong>
                   </p>
                   <p>
-                    Other open-source copywriting projects always begin with the{' '}
-                    <Link href="/#source-copy">Source Story</Link>, leading in to{' '}
-                    <strong>Commit-Ready Copy</strong>, which are custom-build and start at $7495.
+                    <strong>
+                      Other open-source copywriting projects have a minimum project rate of $4,000.{' '}
+                    </strong>
+                    In these cases, my quote and deliverables are customized to what's going to
+                    deliver the most impact for your company.
                   </p>
                   <p>
                     And if all you need is someone to put a spit-shine on an existing sales page,
@@ -146,7 +148,7 @@ export default function GetStarted({ content }) {
                   <p>I'm typically booked 3-4 weeks in advance.</p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
-                    <Link className="text-orange font-medium" href="/#one-day-commit">
+                    <Link className="text-orange font-medium" href="/services/#one-day-commit">
                       One-Day Commit
                     </Link>
                     ? You'll get to skip the waitlist and get new copywriting in 24 hours once we
@@ -190,8 +192,8 @@ export default function GetStarted({ content }) {
                   <p>
                     You bet. I'm not exclusive to the open-source/open-core companies. Even if{' '}
                     <em>
-                      turn <code>git clone</code> into spirited customers, champions, and
-                      communities
+                      turn <code>git clone</code> into spirited commitments from your customers,
+                      developers, and contributors
                     </em>{' '}
                     doesn't ring true to you, the idea is the same.
                   </p>

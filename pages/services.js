@@ -12,11 +12,15 @@ import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Ser
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
-  return { props: { content } }
+  const ServiceOneDay = await getSingleContent(BASE_CONTENT_PATH, 'services/one-day-commit')
+  const ServiceSourceCopy = await getSingleContent(BASE_CONTENT_PATH, 'services/source-copy')
+  return { props: { content, ServiceOneDay, ServiceSourceCopy } }
 }
 
-export default function Services({ content }) {
+export default function Services({ content, ServiceOneDay, ServiceSourceCopy }) {
   const { mdxSource, frontMatter } = content
+  const { mdxSource: mdxServiceOneDay } = ServiceOneDay
+  const { mdxSource: mdxServiceSourceCopy } = ServiceSourceCopy
 
   return (
     <>
@@ -43,35 +47,60 @@ export default function Services({ content }) {
       </header>
       <section className="mb-16">
         <Container>
-          <div className="prose prose-md lg:prose-lg dark:prose-dark">
-            <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
+          <Grid>
+            <Eight>
+              <div className="prose prose-md lg:prose-lg dark:prose-dark">
+                <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
+              </div>
+            </Eight>
+          </Grid>
+        </Container>
+      </section>
+      <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800">
+        <Container>
+          <div
+            id="source-copy"
+            className="lg:w-2/3 px-8 py-12 bg-purple bg-opacity-5 dark:bg-opacity-20 rounded-lg"
+          >
+            <h3 className="text-orange text-4xl font-mono font-bold mb-4">
+              Source Story &amp;&amp; Commit-Ready Copy
+            </h3>
+            <div className="prose dark:prose-dark mb-8">
+              <MDXExport code={mdxServiceSourceCopy} />
+            </div>
+            <ServiceGo>
+              <ServicePrice>$7,495+</ServicePrice>
+              <ServiceButton to="/get-started/">
+                <code className="text-lg text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
+                  init
+                </code>{' '}
+                a new project
+              </ServiceButton>
+            </ServiceGo>
           </div>
         </Container>
       </section>
-      {/* <section id="services" className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
         <Container>
-          <div
-            id="one-day-commit"
-            className="lg:w-2/3 lg:ml-auto px-8 py-12   mb-16"
-          >
-            <h3 className="text-orange text-4xl font-mono font-bold mb-4"></h3>
-            <div className="prose dark:prose-dark mb-8">
-            </div>
-            
-          </div>
-          <div
-            id="source-copy"
-            className="lg:w-2/3 "
-          >
-            <h3 className="text-orange text-4xl font-mono font-bold mb-4">
-              
-            </h3>
-            <div className="prose dark:prose-dark mb-8">
-            </div>
-           
-          </div>
+          <Grid>
+            <Eight>
+              <h2 className="text-purple dark:text-gray-100 text-lg lg:text-xl font-mono font-bold whitespace-nowrap mr-6">
+                Need copy <em>right now</em>? Not ready for a full open-source copywriting project?
+              </h2>
+              <h3 className="text-orange text-4xl lg:text-5xl font-mono font-bold mt-4 mb-4">
+                The One-Day Commit
+              </h3>
+              <div className="prose dark:prose-dark mb-8">
+                <MDXExport code={mdxServiceOneDay} />
+              </div>
+              <ServiceGo>
+                <ServicePrice>$1,995</ServicePrice>
+                <ServiceButton to="/get-started/">Commit to it</ServiceButton>
+              </ServiceGo>
+            </Eight>
+          </Grid>
         </Container>
-      </section> */}
+      </section>
     </>
   )
 }
