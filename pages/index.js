@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from '@components/Link'
 import { MDXExport } from '@components/MDXComponents'
 import { PageSeo } from '@components/SEO'
@@ -14,42 +13,15 @@ export async function getStaticProps() {
   const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
   const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
   const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
-  const IndexAbout = await getSingleContent(BASE_CONTENT_PATH, 'index-about')
-  const IndexAboutCreative = await getSingleContent(BASE_CONTENT_PATH, 'index-about-creative')
-  const IndexAboutTech = await getSingleContent(BASE_CONTENT_PATH, 'index-about-technical')
   const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
   return {
     props: {
-      IndexWorkIMGSRVR,
-      IndexWorkIBM,
-      IndexWorkOpentext,
-      IndexWorkNetdata,
-      IndexAbout,
-      IndexAboutCreative,
-      IndexAboutTech,
       posts,
     },
   }
 }
 
-export default function Home({
-  IndexWorkIMGSRVR,
-  IndexWorkIBM,
-  IndexWorkOpentext,
-  IndexWorkNetdata,
-  IndexAbout,
-  IndexAboutCreative,
-  IndexAboutTech,
-  posts,
-}) {
-  const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
-  const { mdxSource: mdxWorkIBM } = IndexWorkIBM
-  const { mdxSource: mdxWorkOpentext } = IndexWorkOpentext
-  const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
-  const { mdxSource: mdxAbout } = IndexAbout
-  const { mdxSource: mdxAboutCreative } = IndexAboutCreative
-  const { mdxSource: mdxAboutTech } = IndexAboutTech
-
+export default function Home({ posts }) {
   return (
     <>
       <PageSeo
@@ -107,7 +79,7 @@ export default function Home({
       <section className="relative py-16">
         <Container>
           <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-9 col-end-12 text-right">
+            <div className="col-span-12 text-center">
               <p className="text-sea text-4xl lg:text-6xl font-medium !leading-tight !mb-0">
                 Are you talking about your open-source story in a way that{' '}
                 <span className="text-orange">inspires commitment</span> from your customers,
@@ -185,7 +157,7 @@ export default function Home({
           </div>
         </Container>
       </section> */}
-      <section id="portfolio" className="pt-16 pb-12">
+      <section id="portfolio" className="bg-gray-50 pt-16 pb-16">
         <Container>
           <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-8 ml-auto text-right">
             Whether open-source at their core or on the periphery, I've worked with some amazing
@@ -220,9 +192,14 @@ export default function Home({
               height="30"
             />
           </div>
+          <div className="text-center mt-8">
+            <button className="text-white text-2xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
+              <Link href="/work">See my work</Link>
+            </button>
+          </div>
         </Container>
       </section>
-      <section className="pb-8">
+      {/* <section className="pb-8">
         <Container>
           <Testimonial
             name="Jennifer Briston"
@@ -262,8 +239,8 @@ export default function Home({
           </div>
           <p className="text-lg text-center mt-8 italic">More samples available upon request.</p>
         </Container>
-      </section>
-      <section id="about" className="">
+      </section> */}
+      {/* <section id="about" className="">
         <Container className="py-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark pr-8">
@@ -301,7 +278,7 @@ export default function Home({
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
       <section className="py-16">
         <Container>
           <Testimonial
@@ -319,16 +296,16 @@ export default function Home({
         <Container>
           <div className="grid grid-cols-12 gap-8 items-center">
             <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
-              <h2 className="text-purple dark:text-orange text-4xl lg:text-6xl font-medium !leading-tight mb-6">
-                Ready to discover your open-source story?
+              <h2 className="text-purple dark:text-orange text-4xl lg:text-5xl font-medium !leading-tight mb-6">
+                Ready to discover &amp; shout your open-source story?
               </h2>
               <p className="text-purple dark:text-white text-xl leading-normal mb-6">
                 My uncanny combination of technical skills, storytelling-based copywriting
                 techniques, and experience in open source is the contribution you've been after to
                 get more customers, developers, and contributors to commit to the amazing things
-                you're building.
+                you're building in the open.
               </p>
-              <button className="text-white text-2xl font-bold px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
+              <button className="text-white text-2xl font-medium px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
                 <Link href="/get-started/">Start a project</Link>
               </button>
             </div>
