@@ -1,24 +1,15 @@
 import Link from '@components/Link'
-import { MDXExport } from '@components/MDXComponents'
 import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
-import { getSingleContent, getFrontMatter } from '@/lib/mdx'
+import { getFrontMatter } from '@/lib/mdx'
 import Container from '@components/Container'
-import Client from '@components/index/Client'
 import Testimonial from '@components/Testimonial'
-import { BASE_CONTENT_PATH, ARTICLES_CONTENT_PATH } from '@config/constants'
+import ClientLogo from '@components/ClientLogo'
+import { ARTICLES_CONTENT_PATH } from '@config/constants'
 
 export async function getStaticProps() {
-  const IndexWorkIMGSRVR = await getSingleContent(BASE_CONTENT_PATH, 'work/img-srvr-short')
-  const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
-  const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
-  const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
   const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
-  return {
-    props: {
-      posts,
-    },
-  }
+  return { props: { posts } }
 }
 
 export default function Home({ posts }) {
@@ -164,27 +155,27 @@ export default function Home({ posts }) {
             tech, SaaS, and B2B companies, including:
           </h2>
           <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around py-8 dark:rounded dark:bg-gray-700">
-            <Client src="ibm.svg" name="IBM" width="100" height="40" />
-            <Client src="redhat.svg" name="Red Hat" width="106" height="30" />
-            <Client
+            <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
+            <ClientLogo src="redhat.svg" name="Red Hat" width="106" height="30" />
+            <ClientLogo
               src="johnson-johnson.svg"
               name="Johnson &amp; Johnson"
               width="198"
               height="36"
             />
-            <Client src="autodesk.svg" name="Autodesk" width="193" height="25" />
-            <Client src="netdata.svg" name="Netdata" width="164" height="32" />
-            <Client src="ssd-nodes.svg" name="SSD Nodes" width="173" height="20" />
-            <Client src="img-srvr.png" name="IMG SRVR" width="82" height="42" />
-            <Client src="athens-research.png" name="Athens Research" width="128" height="31" />
-            <Client
+            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
+            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
+            <ClientLogo src="ssd-nodes.svg" name="SSD Nodes" width="173" height="20" />
+            <ClientLogo src="img-srvr.png" name="IMG SRVR" width="82" height="42" />
+            <ClientLogo src="athens-research.png" name="Athens Research" width="128" height="31" />
+            <ClientLogo
               className="lg:col-start-2"
               src="opentext.svg"
               name="OpenText"
               width="137"
               height="28"
             />
-            <Client
+            <ClientLogo
               className="lg:col-start-3"
               src="sumo-logic.svg"
               name="Sumo Logic"
@@ -193,92 +184,13 @@ export default function Home({ posts }) {
             />
           </div>
           <div className="text-center mt-8">
-            <button className="text-white text-2xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
+            <button className="text-white text-xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
               <Link href="/work">See my work</Link>
             </button>
           </div>
         </Container>
       </section>
-      {/* <section className="pb-8">
-        <Container>
-          <Testimonial
-            name="Jennifer Briston"
-            title="Marketing Manager, Netdata"
-            img="jennifer-briston.jpg"
-          >
-            Joel did an amazing job with collaborating on creating the Netdata website. He has a
-            unique skillset of understanding technical products with the ability to translate the
-            value to a wide range of audiences. I'd gladly work with Joel again, he goes out of his
-            way to provide his team support and the materials needed to execute projects.
-          </Testimonial>
-        </Container>
-      </section>
-      <section id="portfolio" className="mb-16">
-        <Container>
-          <div className="grid grid-cols-12 gap-8 mt-8">
-            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkIMGSRVR} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkNetdata} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkIBM} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkOpentext} />
-              </article>
-            </div>
-          </div>
-          <p className="text-lg text-center mt-8 italic">More samples available upon request.</p>
-        </Container>
-      </section> */}
-      {/* <section id="about" className="">
-        <Container className="py-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark pr-8">
-              <h2 className="!text-orange !text-3xl font-mono !font-bold !mb-4">
-                Hello{' '}
-                <code className="text-3xl lg:text-4xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-                  &amp;&amp;
-                </code>{' '}
-                welcome!
-              </h2>
-              <h3 className="!text-sea !text-6xl !font-medium !mb-8">
-                Joel here&mdash;the open-source copywriter.
-              </h3>
-              <MDXExport code={mdxAbout} />
-            </div>
-            <div className="col-span-6 lg:col-span-4">
-              <Image
-                className="rounded-lg"
-                src="/static/images/joel-large.jpg"
-                width={750}
-                height={1000}
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-12 gap-8 mt-16">
-            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
-              <h3 className="absolute !text-sea !text-4xl !font-medium !-mt-20">Creative, eh?</h3>
-              <MDXExport code={mdxAboutCreative} />
-            </div>
-            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-24 lg:mt-12 p-8 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded">
-              <h3 className="absolute !text-orange !text-4xl !font-medium !-mt-20">
-                Just how technical?
-              </h3>
-              <MDXExport code={mdxAboutTech} />
-            </div>
-          </div>
-        </Container>
-      </section> */}
+
       <section className="py-16">
         <Container>
           <Testimonial
@@ -312,7 +224,6 @@ export default function Home({ posts }) {
           </div>
         </Container>
       </section>
-
       {/* Recent articles section—save this for later. */}
       {/* <div className="mb-24">
         <h2 className="text-lg text-sea font-bold uppercase mb-8">Recent articles</h2>

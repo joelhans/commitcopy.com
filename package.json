@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./data",
+    "start": "cross-env SOCKET=true node ./scripts/next-remote-watch.js ./content",
     "dev": "next dev",
     "build": "next build",
     "serve": "next start",

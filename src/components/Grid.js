@@ -5,3 +5,7 @@ export const Grid = ({ children, className }) => (
 export const Eight = ({ children, className }) => (
   <div className={`col-span-12 lg:col-span-8 ${className}`}>{children}</div>
 )
+
+export const Six = ({ children, className }) => (
+  <div className={`col-span-12 lg:col-span-6 ${className}`}>{children}</div>
+)

@@ -5,8 +5,9 @@ import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Eight } from '@components/Grid'
+import { Grid, Eight, Six } from '@components/Grid'
 import Testimonial from '@components/Testimonial'
+import ClientLogo from '@components/ClientLogo'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'work/work')
@@ -14,8 +15,32 @@ export async function getStaticProps() {
   const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
   const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
   const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
-  return { props: { content, IndexWorkIMGSRVR, IndexWorkIBM, IndexWorkOpentext, IndexWorkNetdata } }
+  const WorkRTInsights = await getSingleContent(BASE_CONTENT_PATH, 'work/rtinsights-short')
+  const WorkSSDNodes = await getSingleContent(BASE_CONTENT_PATH, 'work/ssdnodes-short')
+  return {
+    props: {
+      content,
+      IndexWorkIMGSRVR,
+      IndexWorkIBM,
+      IndexWorkOpentext,
+      IndexWorkNetdata,
+      WorkRTInsights,
+      WorkSSDNodes,
+    },
+  }
 }
+
+const WorkItem = ({ code, src, name, width, height }) => (
+  <Six className="p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+    <h2 className="mb-4">
+      <span className="invisible">{name}</span>
+      <ClientLogo className="!justify-start" src={src} name={name} width={width} height={height} />
+    </h2>
+    <article className="prose dark:prose-dark">
+      <MDXExport code={code} />
+    </article>
+  </Six>
+)
 
 export default function Services({
   content,
@@ -23,12 +48,16 @@ export default function Services({
   IndexWorkIBM,
   IndexWorkOpentext,
   IndexWorkNetdata,
+  WorkRTInsights,
+  WorkSSDNodes,
 }) {
   const { mdxSource, frontMatter } = content
   const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
   const { mdxSource: mdxWorkIBM } = IndexWorkIBM
   const { mdxSource: mdxWorkOpentext } = IndexWorkOpentext
   const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
+  const { mdxSource: mdxRTInsights } = WorkRTInsights
+  const { mdxSource: mdxSSDNodes } = WorkSSDNodes
 
   return (
     <>
@@ -66,32 +95,50 @@ export default function Services({
       </section>
       <section id="portfolio" className="mb-16">
         <Container>
-          <div className="grid grid-cols-12 gap-8 mt-8">
-            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkIMGSRVR} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkNetdata} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 lg:col-start-2 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkIBM} />
-              </article>
-            </div>
-            <div className="col-span-12 lg:col-span-5 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <article className="prose dark:prose-dark">
-                <MDXExport code={mdxWorkOpentext} />
-              </article>
-            </div>
-          </div>
-          <p className="text-lg text-center mt-8 italic">More samples available upon request.</p>
+          <Grid className="items-stretch">
+            <WorkItem
+              code={mdxWorkIMGSRVR}
+              src="img-srvr.png"
+              name="IMG SRVR"
+              width="82"
+              height="42"
+            />
+            <WorkItem
+              code={mdxWorkNetdata}
+              src="netdata.svg"
+              name="Netdata"
+              width="164"
+              height="32"
+            />
+            <WorkItem code={mdxWorkIBM} src="ibm.svg" name="IBM" width="100" height="40" />
+            <WorkItem
+              code={mdxWorkOpentext}
+              src="opentext.svg"
+              name="OpenText"
+              width="137"
+              height="28"
+            />
+            <WorkItem
+              code={mdxSSDNodes}
+              src="ssd-nodes.svg"
+              name="SSD Nodes"
+              width="173"
+              height="20"
+            />
+            <WorkItem
+              code={mdxRTInsights}
+              src="opentext.svg"
+              name="OpenText"
+              width="137"
+              height="28"
+            />
+          </Grid>
+          <p className="text-purple text-lg font-medium mt-8 italic text-center">
+            More samples available upon request.
+          </p>
         </Container>
       </section>
-      <section className="py-16">
+      <section className="pb-16">
         <Container>
           <Testimonial
             name="Jennifer Briston"

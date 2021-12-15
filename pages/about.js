@@ -63,16 +63,14 @@ export default function About({ content, AboutCreative, AboutTech }) {
           </Grid>
         </Container>
       </header>
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <Container className="">
           <Grid>
-            <div className="relative col-span-12 lg:col-span-10 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
+            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
               <h3 className="absolute !text-sea !text-4xl !font-medium !-mt-20">Creative, eh?</h3>
               <MDXExport code={mdxAboutCreative} />
             </div>
-          </Grid>
-          <Grid className="mt-24">
-            <div className="relative col-span-12 lg:col-span-10 prose prose-lg dark:prose-dark mt-32 lg:mt-12 p-8 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded">
+            <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-32 lg:mt-12 p-8 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded">
               <h3 className="absolute !text-orange !text-4xl !font-medium !-mt-20">
                 Just how technical?
               </h3>
