@@ -70,12 +70,12 @@ export default function Services({
         <Container>
           <Grid>
             <Eight>
-              <h1 className="text-orange text-3xl lg:text-6xl font-medium leading-snug mb-8">
+              <h1 className="text-purple text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
-                <p className="text-sea text-xl lg:text-3xl font-medium">
-                  {frontMatter.summary} {frontMatter.summary_cont}
+                <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
+                  {frontMatter.summary}
                 </p>
               </div>
             </Eight>

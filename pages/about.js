@@ -4,7 +4,6 @@ import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
-import Link from '@components/Link'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Eight } from '@components/Grid'
@@ -38,15 +37,18 @@ export default function About({ content, AboutCreative, AboutTech }) {
         <Container>
           <Grid>
             <Eight>
-              <h2 className="!text-orange !text-3xl font-mono !font-bold !mb-4">
+              <h2 className="text-purple text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 Hello{' '}
-                <code className="text-3xl lg:text-4xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
+                <code className="text-xl lg:text-2xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
                   &amp;&amp;
                 </code>{' '}
                 welcome!
               </h2>
-              <h1 className="!text-sea !text-6xl !font-medium !mb-8">
-                Joel here&mdash;the open-source copywriter.
+              <h1 className="text-sea text-3xl lg:text-4xl font-medium !leading-snug mb-8">
+                I'm here to help a new wave of open-source companies, with all the unique challenges
+                that business model presents{' '}
+                <span className="text-purple">(and the advantages it creates!)</span> build with
+                community and transparency.
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
