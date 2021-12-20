@@ -103,6 +103,7 @@ export default function Services({
               width="82"
               height="42"
             />
+            <WorkItem code={mdxWorkIBM} src="ibm.svg" name="IBM" width="100" height="40" />
             <WorkItem
               code={mdxWorkNetdata}
               src="netdata.svg"
@@ -110,20 +111,19 @@ export default function Services({
               width="164"
               height="32"
             />
-            <WorkItem code={mdxWorkIBM} src="ibm.svg" name="IBM" width="100" height="40" />
-            <WorkItem
-              code={mdxWorkOpentext}
-              src="opentext.svg"
-              name="OpenText"
-              width="137"
-              height="28"
-            />
             <WorkItem
               code={mdxSSDNodes}
               src="ssd-nodes.svg"
               name="SSD Nodes"
               width="173"
               height="20"
+            />
+            <WorkItem
+              code={mdxWorkOpentext}
+              src="opentext.svg"
+              name="OpenText"
+              width="137"
+              height="28"
             />
             <WorkItem
               code={mdxRTInsights}
