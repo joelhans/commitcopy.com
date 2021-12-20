@@ -70,7 +70,7 @@ export default function Services({
         <Container>
           <Grid>
             <Eight>
-              <h1 className="text-purple text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
+              <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
@@ -133,7 +133,7 @@ export default function Services({
               height="28"
             />
           </Grid>
-          <p className="text-purple text-lg font-medium mt-8 italic text-center">
+          <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
             More samples available upon request.
           </p>
         </Container>

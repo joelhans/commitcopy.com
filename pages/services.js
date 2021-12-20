@@ -1,14 +1,13 @@
 import React from 'react'
+import Image from 'next/image'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
-import Link from '@components/Link'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Eight } from '@components/Grid'
-import Testimonial from '@components/Testimonial'
-import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
+import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
@@ -33,7 +32,7 @@ export default function Services({ content, ServiceOneDay, ServiceSourceCopy }) 
         <Container>
           <Grid>
             <Eight>
-              <h1 className="text-purple text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
+              <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
@@ -98,6 +97,9 @@ export default function Services({ content, ServiceOneDay, ServiceSourceCopy }) 
                 <ServiceButton to="/get-started/">Commit to it</ServiceButton>
               </ServiceGo>
             </Eight>
+            <div className="hidden lg:block col-span-4 opacity-20">
+              <Image src="/static/images/services-one-day.svg" height={512} width={512} />
+            </div>
           </Grid>
         </Container>
       </section>

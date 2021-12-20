@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from '@components/Link'
 import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
@@ -67,6 +68,9 @@ export default function Home({ posts }) {
                 </p>
               </div>
             </Eight>
+            <div className="col-span-4">
+              <Image src="/static/images/index-globe.svg" height={512} width={512} />
+            </div>
           </Grid>
         </Container>
       </section>

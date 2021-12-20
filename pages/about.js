@@ -37,7 +37,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
         <Container>
           <Grid>
             <Eight>
-              <h2 className="text-purple text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
+              <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 Hello{' '}
                 <code className="text-xl lg:text-2xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
                   &amp;&amp;
@@ -65,9 +65,9 @@ export default function About({ content, AboutCreative, AboutTech }) {
           </Grid>
         </Container>
       </header>
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <Container className="">
-          <Grid>
+          <Grid className="!items-start">
             <div className="relative col-span-12 lg:col-span-6 prose prose-lg dark:prose-dark mt-12 p-8 bg-sea bg-opacity-5 rounded-lg">
               <h3 className="absolute !text-sea !text-4xl !font-medium !-mt-20">Creative, eh?</h3>
               <MDXExport code={mdxAboutCreative} />
