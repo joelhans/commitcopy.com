@@ -60,12 +60,12 @@ export default function Home({ posts }) {
                   They need to know that you're in open source for the right reasons. That you care
                   about the developer experience and know how to prioritize each community's needs.
                   That you aren't going to change up your licensing in a way that affects their
-                  operations. They want you to actually be transparent.
+                  operations. They want you to be transparent.
                 </p>
                 <p className="text-sea text-lg lg:text-xl font-medium">
                   Paid or free, the tech world is full of people who want to commit their time and
                   money to companies that operate transparently. But these are developers and
-                  engineers we're talking about&mdash;he standard marketing operating procedure
+                  engineers we're talking about&mdash;the standard marketing operating procedure
                   doesn't work.
                 </p>
               </div>
@@ -99,8 +99,8 @@ export default function Home({ posts }) {
                 developers, and contributors?
               </p>
               <p>
-                Open-source copywriting is about so much more than unique value propositions and
-                target personas.
+                Open-source copywriting is about more than unique value propositions and target
+                personas.
               </p>
               <p>
                 And no, I don't mean I'm all about{' '}
