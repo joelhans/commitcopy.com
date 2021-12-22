@@ -47,8 +47,10 @@ export default function About({ content, AboutCreative, AboutTech }) {
               <h1 className="text-sea text-3xl lg:text-4xl font-medium !leading-snug mb-8">
                 I'm here to help a new wave of open-source companies, with all the unique challenges
                 that business model presents{' '}
-                <span className="text-purple">(and the advantages it creates!)</span> build with
-                community and transparency.
+                <span className="text-purple dark:text-white">
+                  (and the advantages it creates!)
+                </span>{' '}
+                build with community and transparency.
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />

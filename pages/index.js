@@ -47,7 +47,7 @@ export default function Home({ posts }) {
                 Marketing an open-source company is unlike any other
               </h2>
               <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
-                <p className="text-purple text-lg lg:text-xl font-medium">
+                <p className="text-purple dark:text-white text-lg lg:text-xl font-medium">
                   It's way more complex than converting anyone or 10x-ing anything.
                 </p>
                 <p>
@@ -116,6 +116,15 @@ export default function Home({ posts }) {
                 developer audience. A clear vision that makes many disparate, decentralized groups
                 line up to commit their time, money, and expertise.
               </p>
+              <button className="!text-white text-xl font-medium px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
+                <Link className="!text-white" href="/services/">
+                  Ready to{' '}
+                  <code className="!text-lg !text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
+                    fetch
+                  </code>{' '}
+                  some more details?
+                </Link>
+              </button>
             </Eight>
           </Grid>
         </Container>
