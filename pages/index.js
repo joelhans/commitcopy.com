@@ -4,7 +4,7 @@ import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
 import { getFrontMatter } from '@/lib/mdx'
 import Container from '@components/Container'
-import { Grid, Eight, Six } from '@components/Grid'
+import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
 import Testimonial from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
 import { ARTICLES_CONTENT_PATH } from '@config/constants'
@@ -56,45 +56,65 @@ export default function Home({ posts }) {
                   engineers who will either spend their time contributing to your project for free
                   or figuring out how to fork you.
                 </p>
+                <p>
+                  They need to know that you're in open source for the right reasons. That you care
+                  about the developer experience and know how to prioritize each community's needs.
+                  That you aren't going to change up your licensing in a way that affects their
+                  operations. They want you to actually be transparent.
+                </p>
                 <p className="text-sea text-lg lg:text-xl font-medium">
                   Paid or free, the tech world is full of people who want to commit their time and
-                  money to companies that operate transparently.
-                </p>
-                <p className="">
-                  But they need to know that you're in open-source for the right reasons. They want
-                  to know how you'll prioritize everyone's needs. They want assurances you're not
-                  going to change up your licensing in a way that affects their operations. They
-                  want you to actually be transparent.
+                  money to companies that operate transparently. But these are developers and
+                  engineers we're talking about&mdash;he standard marketing operating procedure
+                  doesn't work.
                 </p>
               </div>
             </Eight>
-            <div className="col-span-4">
-              <Image src="/static/images/index-globe.svg" height={512} width={512} />
+            <div className="hidden lg:block lg:col-span-4">
+              <Image
+                className="opacity-50"
+                src="/static/images/index-globe.svg"
+                height={512}
+                width={512}
+              />
             </div>
           </Grid>
-        </Container>
-      </section>
-      <section className="relative py-16">
-        <Container>
-          <div className="grid grid-cols-12 gap-8 items-center justify-items-center">
-            <div className="col-start-3 col-end-10 text-center">
-              <p className="text-sea text-3xl lg:text-4xl font-medium !leading-tight !mb-0">
-                Are you talking about your open-source story in a way that{' '}
-                <span className="text-orange">inspires commitment</span> from your customers,
-                developers, and contributors?
-              </p>
-            </div>
-          </div>
         </Container>
       </section>
       <section className="relative bg-purple bg-opacity-5 py-16">
         <Container>
           <Grid>
-            <Eight className="!col-start-4">
-              <p className="text-3xl lg:text-4xl font-bold mb-4">No?</p>
-              <p className="text-2xl font-medium italic">
-                I get it. Open-source messaging is complex. It's make-or-break. It's everything for
-                your business.
+            <div className="hidden lg:block lg:col-span-4">
+              <Image
+                className="opacity-40"
+                src="/static/images/index-dots.svg"
+                height={512}
+                width={512}
+              />
+            </div>
+            <Eight className="lg:!col-end-13 prose prose-lg dark:prose-dark">
+              <p className="text-sea text-3xl lg:text-4xl font-medium !leading-tight !mb-0">
+                Are you talking about your open-source story in a way that{' '}
+                <span className="text-orange">inspires commitment</span> from your customers,
+                developers, and contributors?
+              </p>
+              <p>
+                Open-source copywriting is about so much more than unique value propositions and
+                target personas.
+              </p>
+              <p>
+                And no, I don't mean I'm all about{' '}
+                <span className="text-orange font-bold italic">
+                  hockey-stick GitHub star growth
+                </span>
+                .
+              </p>
+              <p>
+                You need transparent messaging around your business model, whether that's open-core
+                or service-based. Powerful wayfinding devices to help your community and
+                contributors self-organize around your brand. Clear educational pathways for your
+                developer audience. A clear vision that makes many disparate, decentralized groups
+                line up to commit their time, money, and expertise.
               </p>
             </Eight>
           </Grid>
@@ -106,7 +126,7 @@ export default function Home({ posts }) {
             Whether open-source at their core or on the periphery, I've worked with some amazing
             tech, SaaS, and B2B companies, including:
           </h2>
-          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-8 justify-around py-8 dark:rounded dark:bg-gray-700">
+          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
             <ClientLogo src="redhat.svg" name="Red Hat" width="106" height="30" />
             <ClientLogo
@@ -142,7 +162,7 @@ export default function Home({ posts }) {
           </div>
         </Container>
       </section>
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <Testimonial
             name="Matt Connor"
@@ -157,9 +177,9 @@ export default function Home({ posts }) {
       </section>
       <section className="py-16 bg-sea dark:bg-opacity-20">
         <Container>
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-8 lg:col-start-3 text-center">
-              <h2 className="text-purple dark:text-orange text-4xl lg:text-5xl font-medium !leading-tight mb-6">
+          <Grid>
+            <Eight>
+              <h2 className="text-white dark:text-orange text-4xl lg:text-5xl font-medium !leading-tight mb-6">
                 Ready to discover &amp; shout your open-source story?
               </h2>
               <p className="text-purple dark:text-white text-xl leading-normal mb-6">
@@ -171,8 +191,16 @@ export default function Home({ posts }) {
               <button className="text-white text-2xl font-medium px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
                 <Link href="/get-started/">Start a project</Link>
               </button>
-            </div>
-          </div>
+            </Eight>
+            <Four>
+              <Image
+                className="opacity-40"
+                src="/static/images/index-cta.svg"
+                height={512}
+                width={512}
+              />
+            </Four>
+          </Grid>
         </Container>
       </section>
       {/* Recent articles section—save this for later. */}

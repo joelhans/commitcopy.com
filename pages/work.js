@@ -5,7 +5,7 @@ import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Eight, Six } from '@components/Grid'
+import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
 import Testimonial from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
 
@@ -138,7 +138,7 @@ export default function Services({
           </p>
         </Container>
       </section>
-      <section className="pb-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <Testimonial
             name="Jennifer Briston"
