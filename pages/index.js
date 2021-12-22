@@ -122,7 +122,7 @@ export default function Home({ posts }) {
       </section>
       <section id="portfolio" className="py-16">
         <Container>
-          <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-8 ml-auto text-right">
+          <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
             Whether open-source at their core or on the periphery, I've worked with some amazing
             tech, SaaS, and B2B companies, including:
           </h2>
