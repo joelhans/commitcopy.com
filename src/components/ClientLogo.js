@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import Link from '@components/Link'
 
-const Client = ({ className, name, src, width, height }) => (
+const ClientLogo = ({ className, name, src, width, height }) => (
   <div
     className={`${className} flex items-center justify-center text-center py-4 dark:filter dark:invert dark:brightness-0`}
   >
@@ -9,4 +8,4 @@ const Client = ({ className, name, src, width, height }) => (
   </div>
 )
 
-export default Client
+export default ClientLogo
