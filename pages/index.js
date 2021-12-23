@@ -116,8 +116,8 @@ export default function Home({ posts }) {
                 developer audience. A clear vision that makes many disparate, decentralized groups
                 line up to commit their time, money, and expertise.
               </p>
-              <button className="!text-white text-xl font-medium px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
-                <Link className="!text-white" href="/services/">
+              <button className="!text-white text-xl font-medium rounded bg-purple hover:bg-orange transition-all">
+                <Link className="block !text-white px-6 py-4" href="/services/">
                   Ready to{' '}
                   <code className="!text-lg !text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
                     fetch
@@ -197,8 +197,10 @@ export default function Home({ posts }) {
                 get more customers, developers, and contributors to commit to the amazing things
                 you're building in the open.
               </p>
-              <button className="text-white text-2xl font-medium px-6 py-4 rounded bg-purple hover:bg-orange transition-all">
-                <Link href="/get-started/">Start a project</Link>
+              <button className="text-white text-2xl font-medium rounded bg-purple hover:bg-orange transition-all">
+                <Link className="block !text-white px-6 py-4" href="/get-started/">
+                  Start a project
+                </Link>
               </button>
             </Eight>
             <Four>
