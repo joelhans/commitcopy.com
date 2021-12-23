@@ -127,10 +127,10 @@ export default function Services({
             />
             <WorkItem
               code={mdxRTInsights}
-              src="opentext.svg"
-              name="OpenText"
-              width="137"
-              height="28"
+              src="rt-insights.svg"
+              name="RTInsights"
+              width="140"
+              height="36"
             />
           </Grid>
           <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
