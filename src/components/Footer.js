@@ -48,7 +48,9 @@ export default function Footer() {
               Start a project
             </Link>
           </div>
-          <div className="text-sm text-gray-100 font-medium mt-8 pt-8 border-t border-orange">
+        </div>
+        <div className="col-span12 lg:col-span-8">
+          <div className="text-sm text-gray-100 font-medium pt-8 border-t border-orange">
             <div>
               {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>
             </div>
@@ -74,7 +76,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-8 grid grid-cols-6 gap-8 text-sm text-gray-600 dark:text-gray-200 mt-8 lg:mt-0 px-6 lg:px-12 py-8 lg:py-16 bg-gray-100 dark:bg-gray-700 rounded shadow-lg">
+        {/* <div className="col-span-12 lg:col-span-8 grid grid-cols-6 gap-8 text-sm text-gray-600 dark:text-gray-200 mt-8 lg:mt-0 px-6 lg:px-12 py-8 lg:py-16 bg-gray-100 dark:bg-gray-700 rounded shadow-lg">
           <div className="col-span-6 lg:col-span-3 prose prose-lg">
             <h3 className="!text-orange !text-3xl !lg:text-4xl font-bold mb-2">
               Subscribe to my release notes
@@ -85,7 +87,7 @@ export default function Footer() {
             </p>
           </div>
           <NewsletterForm />
-        </div>
+        </div> */}
       </div>
     </footer>
   )
