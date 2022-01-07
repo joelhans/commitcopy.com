@@ -22,9 +22,9 @@ const LayoutWrapper = ({ children }) => {
                       <span>Copy</span>
                     </div>
                   </Link>
-                  <span className="block text-xs text-purple dark:text-gray-100 mt-2">
+                  {/* <span className="block text-xs text-purple dark:text-gray-100 mt-2">
                     From Joel Hans&mdash;the open-source copywriter.
-                  </span>
+                  </span> */}
                 </div>
               </div>
               <div className="flex items-center lg:mr-8">
