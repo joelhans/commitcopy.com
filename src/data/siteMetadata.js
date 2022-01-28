@@ -1,9 +1,9 @@
 const siteMetadata = {
-  title: 'Commit Copy | Copywriting for open-source companies',
+  title: 'Commit Copy | Product-led storytelling for B2B, B2D, and SaaS brands',
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
   description:
-    "I'm Joel—the open-source copywriter for companies & startups building future-enriching products with transparency.",
+    'Copywriting forB2B, B2D, and SaaS tech brands in need of generating commitment through educational, product-led storytelling.',
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',

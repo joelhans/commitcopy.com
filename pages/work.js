@@ -66,6 +66,7 @@ export default function Services({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
+
       <header className="mt-24 mb-12">
         <Container>
           <Grid>
@@ -141,14 +142,13 @@ export default function Services({
       <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <Testimonial
-            name="Jennifer Briston"
-            title="Marketing Manager, Netdata"
-            img="jennifer-briston.jpg"
+            name="Matt Connor"
+            title="CEO, Strasmore &amp; SSD Nodes"
+            img="matt-connor.jpg"
           >
-            Joel did an amazing job with collaborating on creating the Netdata website. He has a
-            unique skillset of understanding technical products with the ability to translate the
-            value to a wide range of audiences. I'd gladly work with Joel again, he goes out of his
-            way to provide his team support and the materials needed to execute projects.
+            Joel was our first marketing hire and has been a key member of our marketing team since
+            2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I
+            strongly recommend taking the opportunity to work with him.
           </Testimonial>
         </Container>
       </section>

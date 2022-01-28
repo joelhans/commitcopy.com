@@ -22,51 +22,77 @@ export default function Home({ posts }) {
         description={siteMetadata.description}
         url={siteMetadata.siteUrl}
       />
-      <div className="bg-green-100 w-full"></div>
+      <div className="z-30 absolute top-0 w-full h-32 bg-gray-50 dark:bg-gray-900"></div>
 
-      <header id="hero" className="mx-auto pt-24 lg:pt-36">
+      <header
+        id="hero"
+        className="relative z-0 mx-auto pt-24 lg:pt-36 pb-36 bg-gray-50 dark:bg-gray-900"
+      >
         <Container>
-          <h1 className="text-purple text-4xl lg:text-5xl !leading-snug font-medium mb-8 dark:text-gray-100">
-            Turn{' '}
-            <code className="text-4xl lg:text-5xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
-              git clone
-            </code>{' '}
-            into spirited commitments from your customers, developers, and contributors
-          </h1>
-          <p className="max-w-screen text-gray-900 dark:text-gray-200 text-lg lg:text-xl font-medium leading-relaxed mx-auto">
-            With the <span className="text-sea">open-source copywriter</span> for companies building
-            future-enriching products with transparency
-          </p>
+          <Grid>
+            <Six className="relative z-20 p-12 -mx-8 bg-white dark:bg-gray-800 rounded-lg">
+              <h1 className="text-purple text-4xl lg:text-5xl font-semibold !leading-tight font-medium mb-4 dark:text-gray-100">
+                Copywriting for tech companies in need of{' '}
+                <span className="!text-sea">commitment</span>
+              </h1>
+              <p className="text-gray-900 dark:text-gray-200 lg:text-lg leading-relaxed italic mb-6">
+                Product-led storytelling for B2B, B2D, and SaaS brands
+              </p>
+              <button className="!text-white text-xl font-medium rounded bg-purple hover:bg-orange transition-all">
+                <Link className="block !text-white px-6 py-4" href="/get-started/">
+                  Schedule a call
+                </Link>
+              </button>
+            </Six>
+            <div className="absolute -top-20 right-12 w-8/12">
+              <Image
+                className="z-0 rounded-lg"
+                src="/static/images/index_hero-2.jpg"
+                height={800}
+                width={1200}
+              />
+            </div>
+          </Grid>
         </Container>
       </header>
-      <section className="mt-32 lg:mt-36 py-16 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+      <section className="relative z-10 py-16 dark:bg-gray-800 overflow-hidden">
         <Container className="relative">
           <Grid>
             <Eight>
-              <h2 className="col-span-12 text-orange text-4xl lg:text-5xl font-medium !leading-tight mb-6">
-                Marketing an open-source company is unlike any other
+              <h2 className="col-span-12 text-orange text-3xl lg:text-4xl font-medium !leading-tight mb-6">
+                Your standard-issue tech copy &amp; content generates all the wrong attention
               </h2>
               <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
-                <p className="text-purple dark:text-white text-lg lg:text-xl font-medium">
-                  It's way more complex than converting anyone or 10x-ing anything.
+                <p>
+                  As a founder or marketer trying to pitch a complex and oftentimes expensive tech
+                  product, you might <em>think</em> your goal is to drive visits, clicks,
+                  stickiness, qualified leads, and conversions.
                 </p>
                 <p>
-                  You're running a company using an innovative, complex business model that relies
-                  on both paying customers <em>and</em> a group of free-loving developers and
-                  engineers who will either spend their time contributing to your project for free
-                  or figuring out how to fork you.
+                  You're not wrong. But you also know it's more complicated than flipping a switch.
                 </p>
+                <p className="text-sea font-bold">
+                  You need people to see what your product helps them become. You need them to
+                  commit to that future.
+                </p>
+                <p>A future where they:</p>
+                <ul>
+                  <li>
+                    <span className="text-orange font-medium">Take a big leap</span> into a product
+                    demo
+                  </li>
+                  <li>
+                    <span className="text-orange font-medium">Upgrade to your enterprise plan</span>{' '}
+                    and onboarding their whole team
+                  </li>
+                  <li>
+                    <span className="text-orange font-medium">Champion your product</span> among
+                    their communities
+                  </li>
+                </ul>
                 <p>
-                  They need to know that you're in open source for the right reasons. That you care
-                  about the developer experience and know how to prioritize each community's needs.
-                  That you aren't going to change up your licensing in a way that affects their
-                  operations. They want you to be transparent.
-                </p>
-                <p className="text-sea text-lg lg:text-xl font-medium">
-                  Paid or free, the tech world is full of people who want to commit their time and
-                  money to companies that operate transparently. But these are developers and
-                  engineers we're talking about&mdash;the standard marketing operating procedure
-                  doesn't work.
+                  Commitment&mdash;not conversions&mdash;is what truly drives your tech brand
+                  forward.
                 </p>
               </div>
             </Eight>
@@ -81,7 +107,7 @@ export default function Home({ posts }) {
           </Grid>
         </Container>
       </section>
-      <section className="relative bg-purple bg-opacity-5 py-16">
+      {/* <section className="relative bg-gray-50 py-16">
         <Container>
           <Grid>
             <div className="hidden lg:block lg:col-span-4">
@@ -93,49 +119,59 @@ export default function Home({ posts }) {
               />
             </div>
             <Eight className="lg:!col-end-13 prose prose-lg dark:prose-dark">
-              <p className="text-sea text-3xl lg:text-4xl font-medium !leading-tight !mb-0">
-                Are you talking about your open-source story in a way that{' '}
-                <span className="text-orange">inspires commitment</span> from your customers,
-                developers, and contributors?
+              <p className="text-purple text-3xl lg:text-4xl font-medium !leading-tight !mb-0">
+                You need to dream up some big ideas and commit to a path
+              </p>
+              <p>Struggling with your brand voice?</p>
+              <p>
+                Maybe you're looking for a consistent voice that resonates with your various (and sometimes incompatible!) audiences of developers, engineers, or tech leadership.
               </p>
               <p>
-                Open-source copywriting is about more than unique value propositions and target
-                personas.
+                Too buried in the weeds of features and capabilities to tal
               </p>
               <p>
-                And no, I don't mean I'm all about{' '}
-                <span className="text-orange font-bold italic">
-                  hockey-stick GitHub star growth
-                </span>
-                .
+                I work with you 
               </p>
-              <p>
-                You need transparent messaging around your business model, whether that's open-core
-                or service-based. Powerful wayfinding devices to help your community and
-                contributors self-organize around your brand. Clear educational pathways for your
-                developer audience. A clear vision that makes many disparate, decentralized groups
-                line up to commit their time, money, and expertise.
-              </p>
-              <button className="!text-white text-xl font-medium rounded bg-purple hover:bg-orange transition-all">
-                <Link className="block !text-white px-6 py-4" href="/services/">
-                  Ready to{' '}
-                  <code className="!text-lg !text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
-                    fetch
-                  </code>{' '}
-                  some more details?
-                </Link>
-              </button>
+              <ul>
+                <li><span className="text-orange font-medium">Educational and inspiring</span> TK</li>
+                <li><span className="text-orange font-medium">Product-led</span> TK</li>
+                <li><span className="text-orange font-medium">TK</span> TK</li>
+              </ul>
+              <p>So that you can scale up your marketing—and get those elusive visits, clicks, and conversions your KPI dashboard demands—with the confidence that you're treating people like people.</p>
             </Eight>
           </Grid>
         </Container>
       </section>
-      <section id="portfolio" className="py-16">
+      <section>
         <Container>
-          <h2 className="lg:w-3/4 text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
-            Whether open-source at their core or on the periphery, I've worked with some amazing
-            tech, SaaS, and B2B companies, including:
+          <Grid>
+            <Eight className="!col-start-3 prose prose-lg dark:prose-dark">
+              <p className="text-purple text-3xl lg:text-4xl font-medium !leading-tight text-center !mb-0">
+                I'm here to help with commitment-generating copy
+              </p>
+              <p>A</p>
+              <p>
+                Maybe you're looking for a consistent voice that resonates with your various (and sometimes incompatible!) audiences of developers, engineers, or tech leadership.
+              </p>
+              <p>
+                I work with you 
+              </p>
+              <ul>
+                <li><span className="text-orange font-medium">Educational and inspiring</span> TK</li>
+                <li><span className="text-orange font-medium">Product-led</span> TK</li>
+                <li><span className="text-orange font-medium">TK</span> TK</li>
+              </ul>
+              <p>So that you can scale up your marketing—and get those elusive visits, clicks, and conversions your KPI dashboard demands—with the confidence that you're treating people like people.</p>
+            </Eight>
+          </Grid>
+        </Container>
+      </section> */}
+      <section id="portfolio" className="py-16 bg-gray-50">
+        <Container>
+          <h2 className="lg:w-2/3 text-sea dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
+            Generating commitment with amazing B2B, B2D, and SaaS tech brands
           </h2>
-          <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
+          <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
             <ClientLogo src="redhat.svg" name="Red Hat" width="106" height="30" />
             <ClientLogo
@@ -145,24 +181,31 @@ export default function Home({ posts }) {
               height="36"
             />
             <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
-            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
-            <ClientLogo src="ssd-nodes.svg" name="SSD Nodes" width="173" height="20" />
-            <ClientLogo src="img-srvr.png" name="IMG SRVR" width="82" height="42" />
-            <ClientLogo src="athens-research.png" name="Athens Research" width="128" height="31" />
             <ClientLogo
-              className="lg:col-start-2"
+              className="col-start-3"
               src="opentext.svg"
               name="OpenText"
               width="137"
               height="28"
             />
             <ClientLogo
-              className="lg:col-start-3"
+              className=""
               src="sumo-logic.svg"
               name="Sumo Logic"
               width="161"
               height="30"
             />
+            <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
+            <ClientLogo
+              className="col-start-1"
+              src="netdata.svg"
+              name="Netdata"
+              width="164"
+              height="32"
+            />
+            <ClientLogo src="ssd-nodes.svg" name="SSD Nodes" width="173" height="20" />
+            <ClientLogo src="img-srvr.png" name="IMG SRVR" width="82" height="42" />
+            <ClientLogo src="athens-research.png" name="Athens Research" width="128" height="31" />
           </div>
           <div className="text-center mt-8">
             <button className="text-white text-xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
@@ -171,20 +214,17 @@ export default function Home({ posts }) {
           </div>
         </Container>
       </section>
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      <section className="bg-white dark:bg-gray-800 py-16">
         <Container>
-          <Testimonial
-            name="Matt Connor"
-            title="CEO, Strasmore &amp; SSD Nodes"
-            img="matt-connor.jpg"
-          >
-            Joel was our first marketing hire and has been a key member of our marketing team since
-            2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I
-            strongly recommend taking the opportunity to work with him.
+          <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
+            Joel took our content strategy into beautiful language! He was attentive, prompt and
+            genuinely cared about delivering high-quality work for our clients. If you need someone
+            both creatively strategic and executional to do good work, you're silly to be on the
+            fence!
           </Testimonial>
         </Container>
       </section>
-      <section className="py-16 bg-sea dark:bg-opacity-20">
+      {/* <section className="py-16 bg-sea dark:bg-opacity-20">
         <Container>
           <Grid>
             <Eight>
@@ -213,7 +253,7 @@ export default function Home({ posts }) {
             </Four>
           </Grid>
         </Container>
-      </section>
+      </section> */}
       {/* Recent articles section—save this for later. */}
       {/* <div className="mb-24">
         <h2 className="text-lg text-sea font-bold uppercase mb-8">Recent articles</h2>

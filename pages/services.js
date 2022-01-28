@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from '@components/Link'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
@@ -8,25 +9,31 @@ import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
+import Testimonial from '@components/Testimonial'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
   const ServiceWebsiteCopy = await getSingleContent(BASE_CONTENT_PATH, 'services/website-copy')
+  const ServiceContent = await getSingleContent(BASE_CONTENT_PATH, 'services/content')
   const ServiceSourceStory = await getSingleContent(BASE_CONTENT_PATH, 'services/source-story')
   const ServiceOneDay = await getSingleContent(BASE_CONTENT_PATH, 'services/one-day-commit')
 
-  return { props: { content, ServiceWebsiteCopy, ServiceSourceStory, ServiceOneDay } }
+  return {
+    props: { content, ServiceWebsiteCopy, ServiceContent, ServiceSourceStory, ServiceOneDay },
+  }
 }
 
 export default function Services({
   content,
   ServiceWebsiteCopy,
+  ServiceContent,
   ServiceSourceStory,
   ServiceOneDay,
 }) {
   const { mdxSource, frontMatter } = content
   const { mdxSource: mdxServiceWebsiteCopy } = ServiceWebsiteCopy
   const { mdxSource: mdxServiceSourceStory } = ServiceSourceStory
+  const { mdxSource: mdxServiceContent } = ServiceContent
   const { mdxSource: mdxServiceOneDay } = ServiceOneDay
 
   return (
@@ -36,10 +43,10 @@ export default function Services({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="mt-24 mb-20">
         <Container>
           <Grid>
-            <Eight>
+            <Six>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
@@ -49,34 +56,39 @@ export default function Services({
                 </p>
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
-            </Eight>
-            <Four>
+            </Six>
+            <Six>
               <Image
-                className="opacity-50"
-                src="/static/images/services-waves.svg"
-                width={250}
-                height={500}
+                className="rounded-lg"
+                src="/static/images/services_hero.jpg"
+                height={1200}
+                width={800}
               />
-            </Four>
+            </Six>
           </Grid>
         </Container>
       </header>
       <section id="services" className="pb-16 dark:bg-gray-900">
         <Container>
-          <Grid className="mb-12">
-            <Two className="text-center">
+          <h2 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-16">
+            Here's how I help:
+          </h2>
+          <Grid className="mb-16">
+            <Four className="text-center">
               <Image
                 className="opacity-50"
                 src="/static/images/services-website.svg"
                 width={52}
                 height={165}
               />
-            </Two>
-            <Ten
+            </Four>
+            <Eight
               id="website-copy"
               className="px-8 py-12 bg-purple bg-opacity-5 dark:bg-opacity-20 rounded"
             >
-              <h3 className="text-orange text-4xl font-mono font-bold mb-4">Website copywriting</h3>
+              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
+                Website copy
+              </h3>
               <div className="prose dark:prose-dark mb-8">
                 <MDXExport code={mdxServiceWebsiteCopy} />
               </div>
@@ -88,30 +100,70 @@ export default function Services({
                   a new website
                 </ServiceButton>
               </ServiceGo>
-            </Ten>
+            </Eight>
           </Grid>
-          <Grid>
-            <Ten
-              id="source-story"
+          <Grid className="mb-16">
+            <Eight
+              id="content"
               className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
             >
-              <h3 className="text-orange text-4xl font-mono font-bold mb-4">Source Story</h3>
+              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
+                Content &amp; strategy
+              </h3>
               <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceSourceStory} />
+                <MDXExport code={mdxServiceContent} />
               </div>
               <ServiceGo>
-                <ServiceButton to="/get-started/">Discover your source</ServiceButton>
+                <ServiceButton to="/get-started/">Commit to content</ServiceButton>
               </ServiceGo>
-            </Ten>
-            <Two className="text-center">
+            </Eight>
+            <Four className="text-center">
+              <Image
+                className="opacity-75"
+                src="/static/images/services-waves.svg"
+                width={150}
+                height={300}
+              />
+            </Four>
+          </Grid>
+          <Grid>
+            <Four className="text-center">
               <Image
                 className=""
                 src="/static/images/services-source.svg"
                 width={80}
                 height={142}
               />
-            </Two>
+            </Four>
+            <Eight
+              id="source-story"
+              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
+            >
+              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
+                Brand strategy
+              </h3>
+              <div className="prose dark:prose-dark mb-8">
+                <MDXExport code={mdxServiceSourceStory} />
+              </div>
+              <ServiceGo>
+                <ServiceButton to="/get-started/">Discover your source</ServiceButton>
+              </ServiceGo>
+            </Eight>
           </Grid>
+        </Container>
+      </section>
+      <section className=" pb-16">
+        <Container>
+          <Testimonial
+            name="Jennifer Briston"
+            title="Marketing Manager, Netdata"
+            img="jennifer-briston.jpg"
+          >
+            Joel did an amazing job with collaborating on creating the Netdata website. He has a
+            unique skillset of understanding technical products with the ability to translate the
+            value to a wide range of audiences. I'd gladly work with Joel again&mdash;he goes out of
+            his way to provide his team support and the materials needed to execute projects.
+          </Testimonial>
         </Container>
       </section>
       <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
@@ -119,7 +171,7 @@ export default function Services({
           <Grid>
             <Eight>
               <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug whitespace-nowrap mr-6">
-                Need copy <em>right now</em>? Not ready for a full open-source copywriting project?
+                Need copy <em>right now</em>? Not ready for a full copywriting project?
               </h2>
               <h3 className="text-orange text-4xl lg:text-5xl font-mono font-bold mt-4 mb-4">
                 The One-Day Commit
@@ -128,7 +180,7 @@ export default function Services({
                 <MDXExport code={mdxServiceOneDay} />
               </div>
               <ServiceGo>
-                <ServicePrice>$1,995</ServicePrice>
+                <ServicePrice>$1,495</ServicePrice>
                 <ServiceButton to="/get-started/">Commit to it</ServiceButton>
               </ServiceGo>
             </Eight>
