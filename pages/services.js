@@ -61,6 +61,7 @@ export default function Services({
               <Image
                 className="rounded-lg"
                 src="/static/images/services_hero.jpg"
+                alt="Joel Hans, B2B copywriter for generating commitment"
                 height={1200}
                 width={800}
               />
@@ -78,6 +79,7 @@ export default function Services({
               <Image
                 className="opacity-50"
                 src="/static/images/services-website.svg"
+                alt="Website copy"
                 width={52}
                 height={165}
               />
@@ -121,6 +123,7 @@ export default function Services({
               <Image
                 className="opacity-75"
                 src="/static/images/services-waves.svg"
+                alt="Content strategy &amp; execution"
                 width={150}
                 height={300}
               />
@@ -131,6 +134,7 @@ export default function Services({
               <Image
                 className=""
                 src="/static/images/services-source.svg"
+                alt="Brand strategy"
                 width={80}
                 height={142}
               />
@@ -185,7 +189,12 @@ export default function Services({
               </ServiceGo>
             </Eight>
             <div className="hidden lg:block col-span-4 opacity-20">
-              <Image src="/static/images/services-one-day.svg" height={512} width={512} />
+              <Image
+                src="/static/images/services-one-day.svg"
+                alt="The One-Day Commit"
+                height={512}
+                width={512}
+              />
             </div>
           </Grid>
         </Container>

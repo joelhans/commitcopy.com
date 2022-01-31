@@ -55,6 +55,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
               <Image
                 className="rounded-lg"
                 src="/static/images/about_hero.jpg"
+                alt="Joel Hans, copywriter specialized in generating commitment for B2B, B2D, and SaaS tech brands"
                 width={800}
                 height={1200}
               />

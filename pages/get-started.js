@@ -67,6 +67,7 @@ export default function GetStarted({ content }) {
               <Image
                 className="rounded-lg"
                 src="/static/images/get-started_hero.jpg"
+                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
                 height={1800}
                 width={1200}
               />

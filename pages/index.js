@@ -48,6 +48,7 @@ export default function Home({ posts }) {
               <Image
                 className="z-0 rounded-lg"
                 src="/static/images/index_hero-2.jpg"
+                alt="Commit Copy: Product-led storytelling for B2B, B2D, and SaaS brands"
                 height={800}
                 width={1200}
               />
@@ -100,6 +101,7 @@ export default function Home({ posts }) {
               <Image
                 className="opacity-50"
                 src="/static/images/index-globe.svg"
+                alt="Your standard-issue tech copy &amp; content generates all the wrong attention"
                 height={512}
                 width={512}
               />
