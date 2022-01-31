@@ -57,7 +57,7 @@ export default function Services({
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
             </Six>
-            <Six>
+            <Six className="hidden md:block">
               <Image
                 className="rounded-lg"
                 src="/static/images/services_hero.jpg"
@@ -74,7 +74,7 @@ export default function Services({
             Here's how I help:
           </h2>
           <Grid className="mb-16">
-            <Four className="text-center">
+            <Four className="hidden md:block text-center">
               <Image
                 className="opacity-50"
                 src="/static/images/services-website.svg"
@@ -108,7 +108,7 @@ export default function Services({
               className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
             >
               <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Content &amp; strategy
+                Content strategy &amp; execution
               </h3>
               <div className="prose dark:prose-dark mb-8">
                 <MDXExport code={mdxServiceContent} />
@@ -117,7 +117,7 @@ export default function Services({
                 <ServiceButton to="/get-started/">Commit to content</ServiceButton>
               </ServiceGo>
             </Eight>
-            <Four className="text-center">
+            <Four className="hidden md:block text-center">
               <Image
                 className="opacity-75"
                 src="/static/images/services-waves.svg"
@@ -127,7 +127,7 @@ export default function Services({
             </Four>
           </Grid>
           <Grid>
-            <Four className="text-center">
+            <Four className="hidden md:block text-center">
               <Image
                 className=""
                 src="/static/images/services-source.svg"
@@ -170,7 +170,7 @@ export default function Services({
         <Container>
           <Grid>
             <Eight>
-              <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug whitespace-nowrap mr-6">
+              <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mr-6">
                 Need copy <em>right now</em>? Not ready for a full copywriting project?
               </h2>
               <h3 className="text-orange text-4xl lg:text-5xl font-mono font-bold mt-4 mb-4">
