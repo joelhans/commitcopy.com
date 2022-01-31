@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { InlineWidget } from 'react-calendly'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
@@ -8,7 +9,6 @@ import Link from '@components/Link'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
-import Testimonial from '@components/Testimonial'
 import {
   Accordion,
   AccordionItem,
@@ -63,6 +63,15 @@ export default function GetStarted({ content }) {
       <header className="mt-24 mb-12">
         <Container>
           <Grid>
+            <Four className="hidden lg:block">
+              <Image
+                className="rounded-lg"
+                src="/static/images/get-started_hero.jpg"
+                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
+                height={1800}
+                width={1200}
+              />
+            </Four>
             <Eight>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
@@ -71,28 +80,12 @@ export default function GetStarted({ content }) {
                 <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
                   {frontMatter.summary}
                 </p>
+                <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
             </Eight>
           </Grid>
         </Container>
       </header>
-      <section className="mb-16">
-        <Container>
-          <div className="prose prose-md lg:prose-lg dark:prose-dark">
-            <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
-          </div>
-        </Container>
-      </section>
-      <section className=" pb-16">
-        <Container>
-          <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
-            Joel took our content strategy into beautiful language! He was attentive, prompt and
-            genuinely cared about delivering high-quality work for our clients. If you need someone
-            both creatively strategic and executional to do good work, you're silly to be on the
-            fence!
-          </Testimonial>
-        </Container>
-      </section>
       <section className="bg-gray-50 dark:bg-gray-800 pt-16">
         <Container>
           <div className="grid grid-cols-12 gap-8">
@@ -101,31 +94,8 @@ export default function GetStarted({ content }) {
               <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
                 <FAQItem title="Copywriting rates">
                   <p>
-                    Every project is custom, and every custom project gets its own quote and
-                    deliverables.
-                  </p>
-                  <p>
-                    I don't bill by hour, and I don't have a rate sheet for every type of
-                    deliverable.
-                  </p>
-                  <p>Why?</p>
-                  <p>
-                    I quote for the value that my work provides—the value you'll get out of having
-                    polished copywriting that helps you accomplish your goals in growing your
-                    business.
-                  </p>
-                  <p>
-                    If I bill per hour, that means I work faster—not smarter—to minimize your costs.
-                  </p>
-                  <p>
-                    With project pricing, we both know exactly what we're going to work on, how much
-                    it'll cost, when it'll get done, and what we're hoping to achieve.
-                  </p>
-                </FAQItem>
-                <FAQItem title="Minimum project rates">
-                  <p>
                     <strong>
-                      My minimum project rate for new clients is $1,995, with the{' '}
+                      As a new client, your minimum investment is $1,495, with the{' '}
                       <Link className="text-orange font-medium" href="/services/#one-day-commit">
                         One-Day Commit
                       </Link>
@@ -134,23 +104,66 @@ export default function GetStarted({ content }) {
                   </p>
                   <p>
                     <strong>
-                      Other open-source copywriting projects have a minimum project rate of $3,000.{' '}
+                      All other copywriting projects have a minimum investment of $3,000.{' '}
                     </strong>
+                  </p>
+                  <p>
                     In these cases, my quote and deliverables are customized to what's going to
                     deliver the most impact for your company.
+                  </p>
+                  <p>
+                    I don't bill by hour, and I don't have a rate sheet for every type of
+                    deliverable.
+                  </p>
+                  <p>Why?</p>
+                  <p>
+                    I quote for the value that my work provides&mdash;the value you'll get out of
+                    having polished copywriting that helps you accomplish your goals in growing your
+                    business.
+                  </p>
+                  <p>
+                    If I bill per hour, that means I work faster&mdash;not smarter&mdash;to minimize
+                    your costs.
+                  </p>
+                  <p>
+                    With project pricing, we both know exactly what we're going to work on, how much
+                    it'll cost, when it'll get done, and what we're hoping to achieve.
                   </p>
                   <p>
                     And if all you need is someone to put a spit-shine on an existing sales page,
                     then we're not a good fit!
                   </p>
                   <p>
-                    Think of me—or any copywriter—as a strategic partner, one who goes deep on
-                    research and plotting your company's growth before putting down a single word.
+                    Think of me&mdash;or any copywriter&mdash;as a strategic partner, one who goes
+                    deep on research and plotting your company's growth before putting down a single
+                    word.
                   </p>
                   <p>It takes commitment (and time), but it creates results.</p>
                 </FAQItem>
-                <FAQItem title="Timelines &amp; start dates">
-                  <p>I'm typically booked 3-4 weeks in advance.</p>
+                <FAQItem title="Content &amp; strategy rates">
+                  <p>
+                    <strong>
+                      Your minimum investment in content creation and/or content strategy is
+                      $3,000/mo.
+                    </strong>
+                  </p>
+                  <p>
+                    In these cases, I work on a retainer basis, collaborating every month on
+                    high-value technical content, such as complex tutorials, white papers, eBooks,
+                    and other evergreen assets for you to use to generate commitment across your
+                    marketing channels.
+                  </p>
+                  <p>
+                    Once we hop on a call and discuss your goals and your gaps&mdash;such as whether
+                    you just need someone to create content for you, someone to oversee an editorial
+                    calendar, or both&mdash;we can create the perfect package of deliverables and
+                    investment.
+                  </p>
+                </FAQItem>
+                <FAQItem title="Availability &amp; timelines">
+                  <p>
+                    <strong>I'm currently booked until April 2022.</strong>
+                  </p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
                     <Link className="text-orange font-medium" href="/services/#one-day-commit">
@@ -163,29 +176,14 @@ export default function GetStarted({ content }) {
                     If you're willing to wait, a 50% deposit is all I need to hold your spot on my
                     calendar to ensure you get my full focus when our day comes.
                   </p>
-                </FAQItem>
-                <FAQItem title="Do you do content, too?">
-                  <p>For certain clients, yes!</p>
                   <p>
-                    I'm on retainer with them, collaborating every month on high-value technical
-                    content, such as complex tutorials, white papers, eBooks, and other lead-gen
-                    assets that they use in mission-critical funnels.
-                  </p>
-                  <p>But it's not something I usually jump into with new clients.</p>
-                  <p>
-                    The problem with a content-first approach is that you don't often know what
-                    you're working toward until you've done some source-level thinking.
-                  </p>
-                  <p>
-                    And the last thing I want to do is invoice you for big-ticket technical content
-                    that doesn't drive toward the right goals.
-                  </p>
-                  <p>
-                    So let's chat, get some work going, make sure we're a good fit, and then we'll
-                    find the perfect content for you!
+                    Copywriting projects typically take 2-3 weeks to account for research,
+                    copywriting, and two rounds of revision. Content creation or execution is an
+                    ongoing process, but you can expect the first deliverable roughly one week we
+                    start our engagement.
                   </p>
                 </FAQItem>
-                <FAQItem title="What about non-open source companies?">
+                {/* <FAQItem title="What about non-open source companies?">
                   <p>
                     Ah, you mean the 99.9% of businesses that <em>don't</em> publish all their
                     intellectual property online for the world to see.
@@ -203,7 +201,7 @@ export default function GetStarted({ content }) {
                     doesn't ring true to you, the idea is the same.
                   </p>
                   <p>I get more visitors and readers to commit to your product and your vision.</p>
-                </FAQItem>
+                </FAQItem> */}
               </Accordion>
             </div>
             <div className="col-span-12 lg:col-span-8 overflow-hidden -mt-16">

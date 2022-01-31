@@ -45,11 +45,11 @@ export default function Footer() {
               href="/get-started/"
               className="text-gray-100 dark:text-gray-200 text-xl leading-none font-medium hover:text-sea dark:hover:text-sea transition-all"
             >
-              Start a project
+              Schedule a call
             </Link>
           </div>
         </div>
-        <div className="col-span12 lg:col-span-8">
+        <div className="col-span-12 lg:col-span-8">
           <div className="text-sm text-gray-100 font-medium pt-8 border-t border-orange">
             <div>
               {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>

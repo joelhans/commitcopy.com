@@ -6,7 +6,7 @@ import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Eight } from '@components/Grid'
+import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'about/about')
@@ -36,7 +36,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
       <header className="mt-24 mb-16">
         <Container>
           <Grid>
-            <Eight>
+            <Six>
               <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 Hello{' '}
                 <code className="text-xl lg:text-2xl text-orange font-bold bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">
@@ -44,24 +44,20 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 </code>{' '}
                 welcome!
               </h2>
-              <h1 className="text-sea text-3xl lg:text-4xl font-medium !leading-snug mb-8">
-                I'm here to help a new wave of open-source companies, with all the unique challenges
-                that business model presents{' '}
-                <span className="text-purple dark:text-white">
-                  (and the advantages it creates!)
-                </span>{' '}
-                build with community and transparency.
-              </h1>
+              <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug mb-6">
+                {frontMatter.summary}
+              </p>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
-            </Eight>
-            <div className="col-span-6 col-start-4 lg:col-span-4">
+            </Six>
+            <div className="col-span-6 col-start-4 lg:col-start-auto">
               <Image
                 className="rounded-lg"
-                src="/static/images/joel-large.jpg"
-                width={750}
-                height={1000}
+                src="/static/images/about_hero.jpg"
+                alt="Joel Hans, copywriter specialized in generating commitment for B2B, B2D, and SaaS tech brands"
+                width={800}
+                height={1200}
               />
             </div>
           </Grid>
