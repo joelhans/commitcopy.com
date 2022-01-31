@@ -63,9 +63,9 @@ export default function GetStarted({ content }) {
       <header className="mt-24 mb-12">
         <Container>
           <Grid>
-            <Four>
+            <Four className="hidden lg:block">
               <Image
-                className=""
+                className="rounded-lg"
                 src="/static/images/get-started_hero.jpg"
                 height={1800}
                 width={1200}

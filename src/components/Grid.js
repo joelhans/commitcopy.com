@@ -1,5 +1,9 @@
 export const Grid = ({ children, className }) => (
-  <div className={`grid grid-cols-12 gap-16 items-center ${className}`}>{children}</div>
+  <div
+    className={`grid grid-cols-12 gap-x-0 gap-y-4 md:gap-x-16 md:gap-y-8 items-center ${className}`}
+  >
+    {children}
+  </div>
 )
 
 export const Ten = ({ children, className }) => (

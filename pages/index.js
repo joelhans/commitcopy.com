@@ -26,12 +26,12 @@ export default function Home({ posts }) {
 
       <header
         id="hero"
-        className="relative z-0 mx-auto pt-24 lg:pt-36 pb-36 bg-gray-50 dark:bg-gray-900"
+        className="relative z-0 mx-auto pt-24 lg:pt-36 pb-16 lg:pb-36 bg-white lg:bg-gray-50 dark:bg-gray-900"
       >
         <Container>
           <Grid>
-            <Six className="relative z-20 p-12 -mx-8 bg-white dark:bg-gray-800 rounded-lg">
-              <h1 className="text-purple text-4xl lg:text-5xl font-semibold !leading-tight font-medium mb-4 dark:text-gray-100">
+            <Six className="relative z-20 p-12 -mx-12 bg-white dark:bg-gray-800 rounded-lg">
+              <h1 className="text-purple text-4xl xl:text-5xl font-semibold !leading-tight font-medium mb-4 dark:text-gray-100">
                 Copywriting for tech companies in need of{' '}
                 <span className="!text-sea">commitment</span>
               </h1>
@@ -44,7 +44,7 @@ export default function Home({ posts }) {
                 </Link>
               </button>
             </Six>
-            <div className="absolute -top-20 right-12 w-8/12">
+            <div className="col-span-12 lg:absolute lg:-top-12 xl:-top-20 lg:right-12 h-auto lg:w-8/12">
               <Image
                 className="z-0 rounded-lg"
                 src="/static/images/index_hero-2.jpg"
@@ -166,7 +166,7 @@ export default function Home({ posts }) {
           </Grid>
         </Container>
       </section> */}
-      <section id="portfolio" className="py-16 bg-gray-50">
+      <section id="portfolio" className="py-16 bg-gray-50 dark:bg-gray-900">
         <Container>
           <h2 className="lg:w-2/3 text-sea dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
             Generating commitment with amazing B2B, B2D, and SaaS tech brands

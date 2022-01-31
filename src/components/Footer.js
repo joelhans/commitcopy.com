@@ -49,7 +49,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span12 lg:col-span-8">
+        <div className="col-span-12 lg:col-span-8">
           <div className="text-sm text-gray-100 font-medium pt-8 border-t border-orange">
             <div>
               {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>

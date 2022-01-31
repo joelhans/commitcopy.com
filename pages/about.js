@@ -51,14 +51,14 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
             </Six>
-            <Six>
+            <div className="col-span-6 col-start-4 lg:col-start-auto">
               <Image
                 className="rounded-lg"
                 src="/static/images/about_hero.jpg"
                 width={800}
                 height={1200}
               />
-            </Six>
+            </div>
           </Grid>
         </Container>
       </header>
