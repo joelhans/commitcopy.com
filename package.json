@@ -12,8 +12,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.1",
+    "@typeform/embed-react": "^1.2.6",
     "autoprefixer": "^10.2.5",
     "esbuild": "^0.12.15",
     "gray-matter": "^4.0.2",
