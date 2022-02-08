@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Widget } from '@typeform/embed-react'
 import { InlineWidget } from 'react-calendly'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
@@ -86,7 +87,7 @@ export default function GetStarted({ content }) {
           </Grid>
         </Container>
       </header>
-      <section className="bg-gray-50 dark:bg-gray-800 pt-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <div className="grid grid-cols-12 gap-8">
             <div className="prose col-span-12 lg:col-span-4 order-last lg:order-first mb-24 lg:mb-0">
@@ -162,7 +163,7 @@ export default function GetStarted({ content }) {
                 </FAQItem>
                 <FAQItem title="Availability &amp; timelines">
                   <p>
-                    <strong>I'm currently booked until April 2022.</strong>
+                    <strong>I'm currently booked until May 2022.</strong>
                   </p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
@@ -183,37 +184,13 @@ export default function GetStarted({ content }) {
                     start our engagement.
                   </p>
                 </FAQItem>
-                {/* <FAQItem title="What about non-open source companies?">
-                  <p>
-                    Ah, you mean the 99.9% of businesses that <em>don't</em> publish all their
-                    intellectual property online for the world to see.
-                  </p>
-                  <p>
-                    Like IBM, Sumo Logic, Autodesk, and Johnson &amp; Johnson&mdash;just a few of my
-                    past B2B clients?
-                  </p>
-                  <p>
-                    You bet. I'm not exclusive to the open-source/open-core companies. Even if{' '}
-                    <em>
-                      turn <code>git clone</code> into spirited commitments from your customers,
-                      developers, and contributors
-                    </em>{' '}
-                    doesn't ring true to you, the idea is the same.
-                  </p>
-                  <p>I get more visitors and readers to commit to your product and your vision.</p>
-                </FAQItem> */}
               </Accordion>
             </div>
-            <div className="col-span-12 lg:col-span-8 overflow-hidden -mt-16">
-              <InlineWidget
-                styles={{
-                  height: '1080px',
-                }}
-                pageSettings={{
-                  primaryColor: '00a2ff',
-                  textColor: '4d5055',
-                }}
-                url="https://calendly.com/commitcopy/introductions"
+            <div className="relative min-h-max col-span-12 lg:col-span-8 border border-gray-400 rounded-lg">
+              <Widget
+                id="kyVqRz9I"
+                style={{ position: 'relative', width: '100%', height: 500 }}
+                className="my-form"
               />
             </div>
           </div>

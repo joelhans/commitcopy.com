@@ -1,6 +1,5 @@
 import CustomLink from '@components/Link'
 import PageTitle from '@components/PageTitle'
-import SectionContainer from '@components/SectionContainer'
 import { BlogSeo } from '@components/SEO'
 import Tag from '@components/Tag'
 import siteMetadata from '@data/siteMetadata'

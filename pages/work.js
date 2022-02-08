@@ -17,6 +17,7 @@ export async function getStaticProps() {
   const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
   const WorkRTInsights = await getSingleContent(BASE_CONTENT_PATH, 'work/rtinsights-short')
   const WorkSSDNodes = await getSingleContent(BASE_CONTENT_PATH, 'work/ssdnodes-short')
+  const WorkLatest = await getSingleContent(BASE_CONTENT_PATH, 'work/latest-content')
   return {
     props: {
       content,
@@ -26,6 +27,7 @@ export async function getStaticProps() {
       IndexWorkNetdata,
       WorkRTInsights,
       WorkSSDNodes,
+      WorkLatest,
     },
   }
 }
@@ -50,6 +52,7 @@ export default function Services({
   IndexWorkNetdata,
   WorkRTInsights,
   WorkSSDNodes,
+  WorkLatest,
 }) {
   const { mdxSource, frontMatter } = content
   const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
@@ -58,6 +61,7 @@ export default function Services({
   const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
   const { mdxSource: mdxRTInsights } = WorkRTInsights
   const { mdxSource: mdxSSDNodes } = WorkSSDNodes
+  const { mdxSource: mdxLatest } = WorkLatest
 
   return (
     <>
@@ -137,6 +141,17 @@ export default function Services({
           <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
             More samples available upon request.
           </p>
+        </Container>
+      </section>
+      <section className="mb-16">
+        <Container>
+          <Grid>
+            <Eight>
+              <div className="prose prose-md lg:prose-lg dark:prose-dark">
+                <MDXExport code={mdxLatest} />
+              </div>
+            </Eight>
+          </Grid>
         </Container>
       </section>
       <section className="bg-gray-50 dark:bg-gray-800 py-16">
