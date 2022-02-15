@@ -2,19 +2,12 @@ import Image from 'next/image'
 import Link from '@components/Link'
 import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
-import { getFrontMatter } from '@/lib/mdx'
 import Container from '@components/Container'
 import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
 import Testimonial from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
-import { ARTICLES_CONTENT_PATH } from '@config/constants'
 
-export async function getStaticProps() {
-  const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
-  return { props: { posts } }
-}
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <>
       <PageSeo

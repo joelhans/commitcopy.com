@@ -70,7 +70,6 @@ export default function Services({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-
       <header className="mt-24 mb-12">
         <Container>
           <Grid>
