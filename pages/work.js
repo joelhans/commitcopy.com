@@ -1,7 +1,9 @@
 import React from 'react'
-import { getSingleContent } from '@/lib/mdx'
+import Image from 'next/image'
+import { getSingleContent, getFrontMatter } from '@/lib/mdx'
+import Link from '@components/Link'
 import { PageSeo } from '@components/SEO'
-import { BASE_CONTENT_PATH } from '@config/constants'
+import { BASE_CONTENT_PATH, WORK_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
@@ -11,9 +13,8 @@ import ClientLogo from '@components/ClientLogo'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'work/work')
-  const IndexWorkIMGSRVR = await getSingleContent(BASE_CONTENT_PATH, 'work/img-srvr-short')
+  const projects = await getFrontMatter(WORK_CONTENT_PATH)
   const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
-  const IndexWorkOpentext = await getSingleContent(BASE_CONTENT_PATH, 'work/opentext-short')
   const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
   const WorkRTInsights = await getSingleContent(BASE_CONTENT_PATH, 'work/rtinsights-short')
   const WorkSSDNodes = await getSingleContent(BASE_CONTENT_PATH, 'work/ssdnodes-short')
@@ -21,9 +22,8 @@ export async function getStaticProps() {
   return {
     props: {
       content,
-      IndexWorkIMGSRVR,
+      projects,
       IndexWorkIBM,
-      IndexWorkOpentext,
       IndexWorkNetdata,
       WorkRTInsights,
       WorkSSDNodes,
@@ -44,20 +44,50 @@ const WorkItem = ({ code, src, name, width, height }) => (
   </Six>
 )
 
+const WorkItemFull = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) => (
+  <Six
+    key={title}
+    className="p-8 bg-gray-50 dark:bg-gray-800 hover:bg-purple hover:bg-opacity-5 dark:hover:bg-gray-700 rounded-lg transition-all"
+  >
+    <Link href={`/work/${slug}`}>
+      <Image
+        className="rounded-lg -ml-8"
+        src={`/static/projects/${slug}/hero.png`}
+        width="1440"
+        height="755"
+        alt={`Copywriting and content work for ${title}`}
+      />
+      <h2 className="mt-4 mb-4 h-20">
+        <span className="absolute invisible">{title}</span>
+        <ClientLogo
+          className="!justify-start"
+          src={logoSrc}
+          name={title}
+          width={logoWidth}
+          height={logoHeight}
+        />
+      </h2>
+      <article className="prose dark:prose-dark mb-4">
+        <p className="text-purple dark:text-white text-xl lg:text-2xl font-medium">{summary}</p>
+      </article>
+      {/* <button className="text-white font-medium px-4 py-2 rounded bg-sea hover:bg-orange transition-all">
+        <Link href={`/work/${slug}`}>Read more</Link>
+      </button> */}
+    </Link>
+  </Six>
+)
+
 export default function Services({
   content,
-  IndexWorkIMGSRVR,
+  projects,
   IndexWorkIBM,
-  IndexWorkOpentext,
   IndexWorkNetdata,
   WorkRTInsights,
   WorkSSDNodes,
   WorkLatest,
 }) {
   const { mdxSource, frontMatter } = content
-  const { mdxSource: mdxWorkIMGSRVR } = IndexWorkIMGSRVR
   const { mdxSource: mdxWorkIBM } = IndexWorkIBM
-  const { mdxSource: mdxWorkOpentext } = IndexWorkOpentext
   const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
   const { mdxSource: mdxRTInsights } = WorkRTInsights
   const { mdxSource: mdxSSDNodes } = WorkSSDNodes
@@ -100,13 +130,21 @@ export default function Services({
       <section id="portfolio" className="mb-16">
         <Container>
           <Grid className="items-stretch">
-            <WorkItem
-              code={mdxWorkIMGSRVR}
-              src="img-srvr.png"
-              name="IMG SRVR"
-              width="82"
-              height="42"
-            />
+            {projects.map((project) => {
+              return (
+                <WorkItemFull
+                  key={project.slug}
+                  title={project.title}
+                  slug={project.slug}
+                  summary={project.summary}
+                  logoSrc={project.logoSrc}
+                  logoWidth={project.logoWidth}
+                  logoHeight={project.logoHeight}
+                />
+              )
+            })}
+          </Grid>
+          {/* <Grid className="items-stretch">
             <WorkItem code={mdxWorkIBM} src="ibm.svg" name="IBM" width="100" height="40" />
             <WorkItem
               code={mdxWorkNetdata}
@@ -123,20 +161,13 @@ export default function Services({
               height="20"
             />
             <WorkItem
-              code={mdxWorkOpentext}
-              src="opentext.svg"
-              name="OpenText"
-              width="137"
-              height="28"
-            />
-            <WorkItem
               code={mdxRTInsights}
               src="rt-insights.svg"
               name="RTInsights"
               width="140"
               height="36"
             />
-          </Grid>
+          </Grid> */}
           <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
             More samples available upon request.
           </p>

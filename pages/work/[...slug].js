@@ -1,7 +1,6 @@
 import { getFrontMatter, getSingleContent } from '@/lib/mdx'
 import { WORK_CONTENT_PATH } from '@config/constants'
 import WorkLayout from '@/layouts/WorkLayout'
-import { MDXLayoutRenderer } from '@components/MDXComponents'
 
 export async function getStaticPaths() {
   const posts = await getFrontMatter(WORK_CONTENT_PATH)
