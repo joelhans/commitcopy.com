@@ -14,42 +14,22 @@ import ClientLogo from '@components/ClientLogo'
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'work/work')
   const projects = await getFrontMatter(WORK_CONTENT_PATH)
-  const IndexWorkIBM = await getSingleContent(BASE_CONTENT_PATH, 'work/ibm-short')
-  const IndexWorkNetdata = await getSingleContent(BASE_CONTENT_PATH, 'work/netdata-short')
-  const WorkRTInsights = await getSingleContent(BASE_CONTENT_PATH, 'work/rtinsights-short')
-  const WorkSSDNodes = await getSingleContent(BASE_CONTENT_PATH, 'work/ssdnodes-short')
   const WorkLatest = await getSingleContent(BASE_CONTENT_PATH, 'work/latest-content')
   return {
     props: {
       content,
       projects,
-      IndexWorkIBM,
-      IndexWorkNetdata,
-      WorkRTInsights,
-      WorkSSDNodes,
       WorkLatest,
     },
   }
 }
 
-const WorkItem = ({ code, src, name, width, height }) => (
-  <Six className="p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
-    <h2 className="mb-4">
-      <span className="invisible">{name}</span>
-      <ClientLogo className="!justify-start" src={src} name={name} width={width} height={height} />
-    </h2>
-    <article className="prose dark:prose-dark">
-      <MDXExport code={code} />
-    </article>
-  </Six>
-)
-
 const WorkItemFull = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) => (
   <Six
     key={title}
-    className="p-8 bg-gray-50 dark:bg-gray-800 hover:bg-purple hover:bg-opacity-5 dark:hover:bg-gray-700 rounded-lg transition-all"
+    className="bg-gray-50 dark:bg-gray-800 hover:bg-purple hover:bg-opacity-5 dark:hover:bg-gray-700 rounded-lg transition-all"
   >
-    <Link href={`/work/${slug}`}>
+    <Link className="block p-8" href={`/work/${slug}`}>
       <Image
         className="rounded-lg -ml-8"
         src={`/static/projects/${slug}/hero.png`}
@@ -70,27 +50,12 @@ const WorkItemFull = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) 
       <article className="prose dark:prose-dark mb-4">
         <p className="text-purple dark:text-white text-xl lg:text-2xl font-medium">{summary}</p>
       </article>
-      {/* <button className="text-white font-medium px-4 py-2 rounded bg-sea hover:bg-orange transition-all">
-        <Link href={`/work/${slug}`}>Read more</Link>
-      </button> */}
     </Link>
   </Six>
 )
 
-export default function Services({
-  content,
-  projects,
-  IndexWorkIBM,
-  IndexWorkNetdata,
-  WorkRTInsights,
-  WorkSSDNodes,
-  WorkLatest,
-}) {
+export default function Services({ content, projects, WorkLatest }) {
   const { mdxSource, frontMatter } = content
-  const { mdxSource: mdxWorkIBM } = IndexWorkIBM
-  const { mdxSource: mdxWorkNetdata } = IndexWorkNetdata
-  const { mdxSource: mdxRTInsights } = WorkRTInsights
-  const { mdxSource: mdxSSDNodes } = WorkSSDNodes
   const { mdxSource: mdxLatest } = WorkLatest
 
   return (

@@ -20,7 +20,7 @@ export default function WorkLayout({ children, frontMatter }) {
           <Grid>
             <Eight>
               <span className="block text-purple dark:text-gray-50 text-lg lg:text-xl font-bold uppercase leading-snug mb-8">
-                <Link className="hover:text-sea" href="/work">
+                <Link className="text-gray-500 hover:text-sea transition-all" href="/work">
                   Work
                 </Link>{' '}
                 | {frontMatter.title} • {frontMatter.type}
