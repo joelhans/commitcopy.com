@@ -109,30 +109,6 @@ export default function Services({ content, projects, WorkLatest }) {
               )
             })}
           </Grid>
-          {/* <Grid className="items-stretch">
-            <WorkItem code={mdxWorkIBM} src="ibm.svg" name="IBM" width="100" height="40" />
-            <WorkItem
-              code={mdxWorkNetdata}
-              src="netdata.svg"
-              name="Netdata"
-              width="164"
-              height="32"
-            />
-            <WorkItem
-              code={mdxSSDNodes}
-              src="ssd-nodes.svg"
-              name="SSD Nodes"
-              width="173"
-              height="20"
-            />
-            <WorkItem
-              code={mdxRTInsights}
-              src="rt-insights.svg"
-              name="RTInsights"
-              width="140"
-              height="36"
-            />
-          </Grid> */}
           <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
             More samples available upon request.
           </p>

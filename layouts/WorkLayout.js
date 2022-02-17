@@ -23,21 +23,27 @@ export default function WorkLayout({ children, frontMatter }) {
                 <Link className="text-gray-500 hover:text-sea transition-all" href="/work">
                   Work
                 </Link>{' '}
-                | {frontMatter.title} • {frontMatter.type}
+                <span className="text-gray-500">•</span> {frontMatter.title}{' '}
+                <span className="text-gray-500">•</span> {frontMatter.type}
               </span>
               <PageTitle>{frontMatter.title}</PageTitle>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
                 <p className="font-medium text-sea text-2xl">{frontMatter.summary_long}</p>
               </div>
             </Eight>
-            <Twelve className="border border-gray-200 rounded-lg">
-              <Image
-                className="rounded-lg"
-                src={`/static/projects/${frontMatter.slug}/hero.png`}
-                width="1440"
-                height="755"
-                alt={`Copywriting and content work for ${frontMatter.title}`}
-              />
+            <Twelve className="">
+              <div className="overflow-hidden border border-gray-200 rounded-lg">
+                <Image
+                  className="rounded-lg"
+                  src={`/static/projects/${frontMatter.slug}/hero.png`}
+                  width="1440"
+                  height="755"
+                  alt={`Copywriting and content work for ${frontMatter.title}`}
+                  objectFit="cover"
+                  layout={`responsive`}
+                  quality={90}
+                />
+              </div>
             </Twelve>
           </Grid>
         </Container>
