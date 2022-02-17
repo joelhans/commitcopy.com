@@ -4,6 +4,7 @@ import Image from 'next/image'
 import CustomLink from './Link'
 import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
 import { Grid, Eight } from '@components/Grid'
+import FullImage from '@components/mdx/FullImage'
 
 export const MDXComponents = {
   Image,
@@ -14,21 +15,16 @@ export const MDXComponents = {
   ServiceButton,
   Grid,
   Eight,
-  // wrapper: ({ components, layout, ...rest }) => {
-  //   const Layout = require(`../layouts/${layout}`).default
-  //   return <Layout {...rest} />
-  // },
+  FullImage,
 }
 
 export const MDXExport = ({ code }) => {
   const mdxExport = getMDXExport(code)
   const Component = useMemo(() => mdxExport.default, [code])
-
   return <Component components={MDXComponents} />
 }
 
 export const MDXLayoutRenderer = ({ mdxSource, ...rest }) => {
   const MDXLayout = useMemo(() => getMDXComponent(mdxSource), [mdxSource])
-
   return <MDXLayout components={MDXComponents} {...rest} />
 }
