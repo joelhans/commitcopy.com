@@ -164,43 +164,43 @@ export default function Home() {
       <section id="portfolio" className="py-16 bg-gray-50 dark:bg-gray-900">
         <Container>
           <h2 className="lg:w-2/3 text-sea dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
-            Generating commitment with amazing B2B, B2D, and SaaS tech brands
+            Generating commitment with amazing tech brands&mdash;from enterprise SaaS to open source
+            to fully DAO'd
           </h2>
           <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
+            <ClientLogo
+              className="col-start-3"
+              src="cncf.svg"
+              name="CNCF"
+              width="240"
+              height="40"
+            />
+            <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
-            <ClientLogo src="redhat.svg" name="Red Hat" width="106" height="30" />
+            <ClientLogo
+              className="col-start-1"
+              src="redhat.svg"
+              name="Red Hat"
+              width="106"
+              height="30"
+            />
+            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
             <ClientLogo
               src="johnson-johnson.svg"
               name="Johnson &amp; Johnson"
               width="198"
               height="36"
             />
-            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
+            <ClientLogo src="opentext.svg" name="OpenText" width="137" height="28" />
             <ClientLogo
               className="col-start-3"
-              src="opentext.svg"
-              name="OpenText"
-              width="137"
-              height="28"
-            />
-            <ClientLogo
-              className=""
               src="sumo-logic.svg"
               name="Sumo Logic"
               width="161"
               height="30"
             />
             <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
-            <ClientLogo
-              className="col-start-1"
-              src="netdata.svg"
-              name="Netdata"
-              width="164"
-              height="32"
-            />
-            <ClientLogo src="ssd-nodes.svg" name="SSD Nodes" width="173" height="20" />
-            <ClientLogo src="img-srvr.png" name="IMG SRVR" width="82" height="42" />
-            <ClientLogo src="athens-research.png" name="Athens Research" width="128" height="31" />
+            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
           </div>
           <div className="text-center mt-8">
             <button className="text-white text-xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
