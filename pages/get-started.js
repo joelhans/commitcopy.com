@@ -163,7 +163,7 @@ export default function GetStarted({ content }) {
                 </FAQItem>
                 <FAQItem title="Availability &amp; timelines">
                   <p>
-                    <strong>I'm currently booked until May 2022.</strong>
+                    <strong>I'm currently booked until August 2022.</strong>
                   </p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
