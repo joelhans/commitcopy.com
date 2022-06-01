@@ -167,5 +167,5 @@ module.exports = {
     typography: ['dark'],
     modifiers: ['md', 'lg', 'xl'],
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('daisyui')],
 }

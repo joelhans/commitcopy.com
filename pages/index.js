@@ -24,7 +24,7 @@ export default function Home() {
         <Container>
           <Grid>
             <Six className="relative z-20 p-12 -mx-12 bg-white dark:bg-gray-800 rounded-lg">
-              <h1 className="text-purple text-4xl xl:text-5xl font-semibold !leading-tight font-medium mb-4 dark:text-gray-100">
+              <h1 className="text-purple text-4xl xl:text-5xl !leading-tight font-medium mb-4 dark:text-gray-100">
                 Copywriting for tech companies in need of{' '}
                 <span className="!text-sea">commitment</span>
               </h1>
@@ -102,65 +102,6 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      {/* <section className="relative bg-gray-50 py-16">
-        <Container>
-          <Grid>
-            <div className="hidden lg:block lg:col-span-4">
-              <Image
-                className="opacity-40"
-                src="/static/images/index-dots.svg"
-                height={512}
-                width={512}
-              />
-            </div>
-            <Eight className="lg:!col-end-13 prose prose-lg dark:prose-dark">
-              <p className="text-purple text-3xl lg:text-4xl font-medium !leading-tight !mb-0">
-                You need to dream up some big ideas and commit to a path
-              </p>
-              <p>Struggling with your brand voice?</p>
-              <p>
-                Maybe you're looking for a consistent voice that resonates with your various (and sometimes incompatible!) audiences of developers, engineers, or tech leadership.
-              </p>
-              <p>
-                Too buried in the weeds of features and capabilities to tal
-              </p>
-              <p>
-                I work with you 
-              </p>
-              <ul>
-                <li><span className="text-orange font-medium">Educational and inspiring</span> TK</li>
-                <li><span className="text-orange font-medium">Product-led</span> TK</li>
-                <li><span className="text-orange font-medium">TK</span> TK</li>
-              </ul>
-              <p>So that you can scale up your marketing—and get those elusive visits, clicks, and conversions your KPI dashboard demands—with the confidence that you're treating people like people.</p>
-            </Eight>
-          </Grid>
-        </Container>
-      </section>
-      <section>
-        <Container>
-          <Grid>
-            <Eight className="!col-start-3 prose prose-lg dark:prose-dark">
-              <p className="text-purple text-3xl lg:text-4xl font-medium !leading-tight text-center !mb-0">
-                I'm here to help with commitment-generating copy
-              </p>
-              <p>A</p>
-              <p>
-                Maybe you're looking for a consistent voice that resonates with your various (and sometimes incompatible!) audiences of developers, engineers, or tech leadership.
-              </p>
-              <p>
-                I work with you 
-              </p>
-              <ul>
-                <li><span className="text-orange font-medium">Educational and inspiring</span> TK</li>
-                <li><span className="text-orange font-medium">Product-led</span> TK</li>
-                <li><span className="text-orange font-medium">TK</span> TK</li>
-              </ul>
-              <p>So that you can scale up your marketing—and get those elusive visits, clicks, and conversions your KPI dashboard demands—with the confidence that you're treating people like people.</p>
-            </Eight>
-          </Grid>
-        </Container>
-      </section> */}
       <section id="portfolio" className="py-16 bg-gray-50 dark:bg-gray-900">
         <Container>
           <h2 className="lg:w-2/3 text-sea dark:text-white text-3xl lg:text-4xl font-medium mb-8 ml-auto text-right">
@@ -211,76 +152,64 @@ export default function Home() {
       </section>
       <section className="bg-white dark:bg-gray-800 py-16">
         <Container>
-          <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
-            Joel took our content strategy into beautiful language! He was attentive, prompt and
-            genuinely cared about delivering high-quality work for our clients. If you need someone
-            both creatively strategic and executional to do good work, you're silly to be on the
-            fence!
-          </Testimonial>
+          <div className="carousel carousel-center w-full">
+            <div id="slide1" className="carousel-item relative w-full">
+              <Testimonial name="Jeff Martens" title="CEO, Metrist" img="jeff-martens.jpg">
+                As a software company building products for software developers, it is critical that
+                we work with people that have a high aptitude for deeply technical topics, and that
+                is exactly what we got from Joel. He didn't just produce the work we asked him to
+                collaborate with us on, he got us to a better product by first laying the
+                foundations of our messaging and then applied that foundation to the rest of our
+                work together.
+              </Testimonial>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide2" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+            <div id="slide2" className="carousel-item relative w-full">
+              <Testimonial name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
+                Joel helped bring new life into a drawn-out brand positioning project, helping guide
+                us towards a very strong brand story that was right under our nose the entire time.{' '}
+                <br />
+                <br />
+                Joel took time to listen, really research and drill down into our materials, then
+                and only then did he put pen to paper (so to speak). And Joel is a great partner,
+                easily receptive to feedback and willing to work together to achieve the best
+                output.
+              </Testimonial>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide3" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+            <div id="slide3" className="carousel-item relative w-full">
+              <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
+                Joel took our content strategy into beautiful language! He was attentive, prompt and
+                genuinely cared about delivering high-quality work for our clients. If you need
+                someone both creatively strategic and executional to do good work, you're silly to
+                be on the fence!
+              </Testimonial>
+              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide1" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+          </div>
         </Container>
       </section>
-      {/* <section className="py-16 bg-sea dark:bg-opacity-20">
-        <Container>
-          <Grid>
-            <Eight>
-              <h2 className="text-white dark:text-orange text-4xl lg:text-5xl font-medium !leading-tight mb-6">
-                Ready to discover &amp; shout your open-source story?
-              </h2>
-              <p className="text-purple dark:text-white text-xl leading-normal mb-6">
-                My uncanny combination of technical skills, storytelling-based copywriting
-                techniques, and experience in open source is the contribution you've been after to
-                get more customers, developers, and contributors to commit to the amazing things
-                you're building in the open.
-              </p>
-              <button className="text-white text-2xl font-medium rounded bg-purple hover:bg-orange transition-all">
-                <Link className="block !text-white px-6 py-4" href="/get-started/">
-                  Start a project
-                </Link>
-              </button>
-            </Eight>
-            <Four>
-              <Image
-                className="opacity-40"
-                src="/static/images/index-cta.svg"
-                height={512}
-                width={512}
-              />
-            </Four>
-          </Grid>
-        </Container>
-      </section> */}
-      {/* Recent articles section—save this for later. */}
-      {/* <div className="mb-24">
-        <h2 className="text-lg text-sea font-bold uppercase mb-8">Recent articles</h2>
-        <ul className="grid grid-cols-3 gap-8">
-          {posts.slice(0, 3).map((frontMatter) => {
-            const { slug, draft, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="block mb-16">
-                <CustomLink href={`/articles/${slug}`}>
-                  <h3 className="text-xl lg:text-2xl font-bold mb-2 hover:text-sea transition-all">
-                    {title}
-                  </h3>
-                </CustomLink>
-                <div className="flex flex-wrap">
-                  {tags.map((tag) => (
-                    <Tag key={tag} text={tag} />
-                  ))}
-                </div>
-                <p className="prose prose-md dark:prose-dark text-gray-500 dark:text-gray-400 mb-1">
-                  {summary}
-                </p>
-                <CustomLink
-                  href={`/articles/${slug}`}
-                  className="text-sm font-bold hover:text-sea transition-all"
-                >
-                  Read more &rarr;
-                </CustomLink>
-              </li>
-            )
-          })}
-        </ul>
-      </div> */}
     </>
   )
 }

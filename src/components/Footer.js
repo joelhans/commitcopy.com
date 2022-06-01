@@ -40,7 +40,7 @@ export default function Footer() {
               )} */}
             </div>
           ))}
-          <div className="relative mt-4 mb-4">
+          <div className="relative mt-4">
             <Link
               href="/get-started/"
               className="text-gray-100 dark:text-gray-200 text-xl leading-none font-medium hover:text-sea dark:hover:text-sea transition-all"
@@ -49,19 +49,19 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-8">
-          <div className="text-sm text-gray-100 font-medium pt-8 border-t border-orange">
-            <div>
-              {`© ${new Date().getFullYear()}`} <Link href="/">{siteMetadata.title}</Link>
-            </div>
-            <div className="block text-xs font-medium mt-4">
-              <p>
+        <div className="mt-auto col-span-12 lg:col-span-8">
+          <div className="text-gray-100 font-medium pt-8 border-t border-orange">
+            <p className="text-base mb-8">
+              <Link href="/">{siteMetadata.title}</Link>
+            </p>
+            <div className="block text-xs font-medium">
+              <p className="mb-4">
                 Thanks for stopping by!{' '}
                 <span role="img" aria-label="emoji wave">
                   👋
                 </span>
               </p>
-              <p className="mt-2">
+              <p className="mb-4">
                 Built with Next.js, MDX, Tailwind, Vercel, and Plausible. View the{' '}
                 <a
                   className="text-orange hover:text-white transition-all"
@@ -73,6 +73,7 @@ export default function Footer() {
                 </a>{' '}
                 on GitHub.
               </p>
+              <p>{`© ${new Date().getFullYear()}`} Commit Copy / Nurse Media LLC</p>
             </div>
           </div>
         </div>
