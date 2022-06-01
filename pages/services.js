@@ -75,6 +75,31 @@ export default function Services({
             Here's how I help:
           </h2>
           <Grid className="mb-16">
+            <Eight
+              id="source-story"
+              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
+            >
+              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
+                Brand strategy
+              </h3>
+              <div className="prose dark:prose-dark mb-8">
+                <MDXExport code={mdxServiceSourceStory} />
+              </div>
+              <ServiceGo>
+                <ServiceButton to="/get-started/">Discover your source</ServiceButton>
+              </ServiceGo>
+            </Eight>
+            <Four className="hidden md:block text-center">
+              <Image
+                className=""
+                src="/static/images/services-source.svg"
+                alt="Brand strategy"
+                width={80}
+                height={142}
+              />
+            </Four>
+          </Grid>
+          <Grid className="mb-16">
             <Four className="hidden md:block text-center">
               <Image
                 className="opacity-50"
@@ -104,7 +129,7 @@ export default function Services({
               </ServiceGo>
             </Eight>
           </Grid>
-          <Grid className="mb-16">
+          <Grid>
             <Eight
               id="content"
               className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
@@ -128,31 +153,6 @@ export default function Services({
                 height={300}
               />
             </Four>
-          </Grid>
-          <Grid>
-            <Four className="hidden md:block text-center">
-              <Image
-                className=""
-                src="/static/images/services-source.svg"
-                alt="Brand strategy"
-                width={80}
-                height={142}
-              />
-            </Four>
-            <Eight
-              id="source-story"
-              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
-            >
-              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Brand strategy
-              </h3>
-              <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceSourceStory} />
-              </div>
-              <ServiceGo>
-                <ServiceButton to="/get-started/">Discover your source</ServiceButton>
-              </ServiceGo>
-            </Eight>
           </Grid>
         </Container>
       </section>
