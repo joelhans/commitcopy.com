@@ -6,8 +6,8 @@ const Container = ({ children, name, title, img }) => (
       <Image
         className="rounded-full"
         src={`/static/testimonials/${img}`}
-        width={196}
-        height={196}
+        width={140}
+        height={140}
       />
     </div>
     <div className="lg:w-2/3 prose dark:prose-dark text-center mt-4">
