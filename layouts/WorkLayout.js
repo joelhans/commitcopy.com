@@ -6,6 +6,7 @@ import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
+import Testimonial from '@components/Testimonial'
 
 export default function WorkLayout({ children, frontMatter }) {
   return (
@@ -55,6 +56,21 @@ export default function WorkLayout({ children, frontMatter }) {
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
                 <MDXLayoutRenderer mdxSource={children} frontMatter={frontMatter} />
               </div>
+            </Eight>
+            <Twelve>
+              <div>
+                {frontMatter.testimonial_full && (
+                  <Testimonial
+                    name={frontMatter.testimonial_name}
+                    title={frontMatter.testimonial_title}
+                    img={frontMatter.testimonial_img}
+                  >
+                    {frontMatter.testimonial_full}
+                  </Testimonial>
+                )}
+              </div>
+            </Twelve>
+            <Eight>
               <div className="mt-12">
                 <Link className="text-sea text-lg font-medium" href="/work/">
                   &larr; Back to work

@@ -15,7 +15,7 @@ const LayoutWrapper = ({ children }) => {
               <div className="flex items-baseline mr-auto">
                 <div className="mr-6 lg:mr-12">
                   <Link href="/" aria-label="Joel Hans">
-                    <div className="group text-3xl font-sans font-medium leading-none hover:text-steel">
+                    <div className="group text-3xl font-sans font-medium leading-none hover:text-sea transition-all">
                       <span className="text-orange text-mono font-bold bg-gray-100 dark:bg-gray-800 mr-1 px-1 py-0.5 rounded-lg">
                         Commit
                       </span>
@@ -34,7 +34,7 @@ const LayoutWrapper = ({ children }) => {
                   <div key={link.title} className="group relative py-4 pr-4 md:pr-8 leading-none">
                     <Link
                       href={link.href}
-                      className="text-gray-900 dark:text-gray-200 text-base leading-none font-medium  hover:text-sea dark:hover:text-sea transition-all"
+                      className="text-gray-900 dark:text-gray-200 text-base leading-none font-medium hover:text-sea dark:hover:text-sea transition-all"
                     >
                       {link.title}
                     </Link>
