@@ -35,6 +35,9 @@ module.exports = {
         indigo: '#5790FF',
         salmon: '#FCAF3B',
       },
+      boxShadow: {
+        top: '0px -5px 10px 0px #D4D4D4',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

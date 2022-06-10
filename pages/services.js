@@ -7,7 +7,7 @@ import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Ten, Eight, Four, Six, Two } from '@components/Grid'
+import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
 import Testimonial from '@components/Testimonial'
 
@@ -168,6 +168,21 @@ export default function Services({
             value to a wide range of audiences. I'd gladly work with Joel again&mdash;he goes out of
             his way to provide his team support and the materials needed to execute projects.
           </Testimonial>
+        </Container>
+      </section>
+      <section className="py-16">
+        <Container>
+          <Grid>
+            <Ten className="hidden lg:block !col-start-2">
+              <Image
+                className="rounded-lg"
+                src="/static/images/joel-computer.jpg"
+                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
+                height={1200}
+                width={1800}
+              />
+            </Ten>
+          </Grid>
         </Container>
       </section>
       <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">

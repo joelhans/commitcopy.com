@@ -19,18 +19,18 @@ export default function Home() {
 
       <header
         id="hero"
-        className="relative z-0 mx-auto pt-24 lg:pt-36 pb-16 lg:pb-36 bg-white lg:bg-gray-50 dark:bg-gray-900"
+        className="relative z-0 overflow-hidden mx-auto pt-24 lg:pt-36 pb-16 lg:pb-24 bg-white lg:bg-gray-50 dark:bg-gray-900"
       >
         <Container>
           <Grid>
             <Six className="relative z-20 p-12 -mx-12 bg-white dark:bg-gray-800 rounded-lg">
-              <h1 className="text-purple text-4xl xl:text-5xl !leading-tight font-medium mb-4 dark:text-gray-100">
+              <h1 className="text-purple text-4xl xl:text-5xl !leading-tight font-medium mb-8 dark:text-gray-100">
                 Copywriting for tech companies in need of{' '}
                 <span className="!text-sea">commitment</span>
               </h1>
-              <p className="text-gray-900 dark:text-gray-200 lg:text-lg leading-relaxed italic mb-6">
+              {/* <p className="text-gray-900 dark:text-gray-200 lg:text-lg leading-relaxed italic mb-6">
                 Product-led storytelling for B2B, B2D, and SaaS brands
-              </p>
+              </p> */}
               <button className="!text-white text-xl font-medium rounded bg-purple hover:bg-orange transition-all">
                 <Link className="block !text-white px-6 py-4" href="/get-started/">
                   Schedule a call
@@ -42,14 +42,14 @@ export default function Home() {
                 className="z-0 rounded-lg"
                 src="/static/images/index_hero-2.jpg"
                 alt="Commit Copy: Product-led storytelling for B2B, B2D, and SaaS brands"
-                height={800}
-                width={1200}
+                height={1200}
+                width={1798}
               />
             </div>
           </Grid>
         </Container>
       </header>
-      <section className="relative z-10 py-16 dark:bg-gray-800 overflow-hidden">
+      <section className="relative z-10 py-16 dark:bg-gray-800 border-t border-gray-200 overflow-hidden">
         <Container className="relative">
           <Grid>
             <Eight>

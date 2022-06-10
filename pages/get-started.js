@@ -64,16 +64,16 @@ export default function GetStarted({ content }) {
       <header className="mt-24 mb-12">
         <Container>
           <Grid>
-            <Four className="hidden lg:block">
+            <Six className="hidden lg:block">
               <Image
                 className="rounded-lg"
-                src="/static/images/get-started_hero.jpg"
+                src="/static/images/index_hero-3.jpg"
                 alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
-                height={1800}
+                height={1200}
                 width={1200}
               />
-            </Four>
-            <Eight>
+            </Six>
+            <Six>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
@@ -83,7 +83,7 @@ export default function GetStarted({ content }) {
                 </p>
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
-            </Eight>
+            </Six>
           </Grid>
         </Container>
       </header>
