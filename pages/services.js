@@ -80,7 +80,7 @@ export default function Services({
               className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
             >
               <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Brand strategy
+                Brand messaging
               </h3>
               <div className="prose dark:prose-dark mb-8">
                 <MDXExport code={mdxServiceSourceStory} />
