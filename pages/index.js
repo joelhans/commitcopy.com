@@ -4,7 +4,7 @@ import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
-import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
+import { TestimonialHoriz } from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
 
 export default function Home() {

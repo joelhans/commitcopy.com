@@ -9,7 +9,7 @@ import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
-import Testimonial from '@components/Testimonial'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')

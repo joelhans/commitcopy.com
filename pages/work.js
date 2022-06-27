@@ -8,7 +8,7 @@ import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
-import Testimonial from '@components/Testimonial'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
 
 export async function getStaticProps() {
