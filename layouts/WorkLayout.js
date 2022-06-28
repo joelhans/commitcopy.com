@@ -16,7 +16,7 @@ export default function WorkLayout({ children, frontMatter }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/work/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="py-24">
         <Container>
           <Grid>
             <Eight>
@@ -49,7 +49,7 @@ export default function WorkLayout({ children, frontMatter }) {
           </Grid>
         </Container>
       </header>
-      <section className="mb-16">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
             <Eight>
