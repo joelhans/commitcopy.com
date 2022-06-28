@@ -232,7 +232,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 <div id="slide1" className="carousel-item relative w-full">
                   <div className="flex items-center w-3/4 mx-auto p-12 bg-orange rounded-lg">
                     <p className="text-white text-xl lg:text-2xl font-medium">
-                      I’m a father two phenomenal daughters: Mabel and Ida.
+                      I’m a father to two phenomenal daughters: Mabel and Ida.
                     </p>
                   </div>
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
