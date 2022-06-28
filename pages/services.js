@@ -156,7 +156,7 @@ export default function Services({
           </Grid>
         </Container>
       </section>
-      <section className=" pb-16">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Testimonial
             name="Jennifer Briston"
@@ -170,7 +170,7 @@ export default function Services({
           </Testimonial>
         </Container>
       </section>
-      <section className="py-16">
+      <section className="py-24 dark:bg-gray-900">
         <Container>
           <Grid>
             <Ten className="hidden lg:block !col-start-2">

@@ -65,7 +65,7 @@ export default function Services({ content, projects, WorkLatest }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="mt-24 mb-12 dark:bg-gray-900">
         <Container>
           <Grid>
             <Eight>
@@ -81,7 +81,7 @@ export default function Services({ content, projects, WorkLatest }) {
           </Grid>
         </Container>
       </header>
-      <section className="mb-16">
+      {/* <section className="mb-16">
         <Container>
           <Grid>
             <Eight>
@@ -91,8 +91,8 @@ export default function Services({ content, projects, WorkLatest }) {
             </Eight>
           </Grid>
         </Container>
-      </section>
-      <section id="portfolio" className="mb-16">
+      </section> */}
+      <section id="portfolio" className="py-24 dark:bg-gray-900">
         <Container>
           <Grid className="items-stretch">
             {projects.map((project) => {
@@ -114,7 +114,7 @@ export default function Services({ content, projects, WorkLatest }) {
           </p>
         </Container>
       </section>
-      <section className="mb-16">
+      <section className="pb-24 dark:bg-gray-900">
         <Container>
           <Grid>
             <Eight>
@@ -125,9 +125,9 @@ export default function Services({ content, projects, WorkLatest }) {
           </Grid>
         </Container>
       </section>
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-24">
         <Container>
-          <Testimonial
+          <TestimonialHoriz
             name="Matt Connor"
             title="CEO, Strasmore &amp; SSD Nodes"
             img="matt-connor.jpg"
@@ -135,7 +135,7 @@ export default function Services({ content, projects, WorkLatest }) {
             Joel was our first marketing hire and has been a key member of our marketing team since
             2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I
             strongly recommend taking the opportunity to work with him.
-          </Testimonial>
+          </TestimonialHoriz>
         </Container>
       </section>
     </>

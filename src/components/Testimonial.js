@@ -16,18 +16,18 @@ export const Testimonial = ({ children, name, title, img }) => (
 
 export const TestimonialHoriz = ({ children, name, title, img }) => (
   <div className="flex flex-wrap items-center">
-    <div className="flex flex-col justify-items-start items-start content-start lg:w-1/3">
+    <div className="flex flex-col justify-items-start items-start content-start lg:w-1/4 mr-8">
       <Image
         className="grow-0 rounded-lg"
         src={`/static/testimonials/${img}`}
         width={128}
         height={128}
       />
-      <p className="font-mono text-lg font-bold text-center mt-4">
+      <p className="font-mono text-lg font-bold mt-4">
         {name} • {title}
       </p>
     </div>
-    <div className="w-full lg:w-2/3 text-purple font-medium prose prose-lg dark:prose-dark">
+    <div className="w-full lg:w-2/3 !text-purple dark:!text-sea font-medium prose prose-xl dark:prose-dark">
       <p>{children}</p>
     </div>
   </div>

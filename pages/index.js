@@ -50,7 +50,7 @@ export default function Home() {
       </header>
       <section
         id="portfolio"
-        className="py-16 bg-gray-50 dark:bg-gray-900 border-t border-gray-200"
+        className="py-16 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
       >
         <Container>
           <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
@@ -124,7 +124,7 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      <section className="relative z-10 py-24 bg-gray-100">
+      <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-900">
         <Container className="relative">
           <Grid>
             <Eight className="!col-start-3 text-center">
@@ -145,7 +145,7 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      <section className="py-24">
+      <section className="py-24 dark:bg-gray-800">
         <Container>
           <Grid>
             <Twelve>
@@ -201,7 +201,7 @@ export default function Home() {
           </div> */}
         </Container>
       </section>
-      <section className="py-24">
+      <section className="py-24 bg-gray-50 dark:bg-gray-700">
         <Container>
           <Grid>
             <Twelve>
