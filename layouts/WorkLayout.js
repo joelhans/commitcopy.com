@@ -6,7 +6,7 @@ import siteMetadata from '@data/siteMetadata'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
-import Testimonial from '@components/Testimonial'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 
 export default function WorkLayout({ children, frontMatter }) {
   return (
@@ -16,7 +16,7 @@ export default function WorkLayout({ children, frontMatter }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/work/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="py-24">
         <Container>
           <Grid>
             <Eight>
@@ -49,7 +49,7 @@ export default function WorkLayout({ children, frontMatter }) {
           </Grid>
         </Container>
       </header>
-      <section className="mb-16">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
             <Eight>
@@ -60,13 +60,13 @@ export default function WorkLayout({ children, frontMatter }) {
             <Twelve>
               <div>
                 {frontMatter.testimonial_full && (
-                  <Testimonial
+                  <TestimonialHoriz
                     name={frontMatter.testimonial_name}
                     title={frontMatter.testimonial_title}
                     img={frontMatter.testimonial_img}
                   >
                     {frontMatter.testimonial_full}
-                  </Testimonial>
+                  </TestimonialHoriz>
                 )}
               </div>
             </Twelve>

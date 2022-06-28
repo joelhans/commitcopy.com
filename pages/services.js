@@ -9,7 +9,7 @@ import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
-import Testimonial from '@components/Testimonial'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
@@ -156,9 +156,9 @@ export default function Services({
           </Grid>
         </Container>
       </section>
-      <section className=" pb-16">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
-          <Testimonial
+          <TestimonialHoriz
             name="Jennifer Briston"
             title="Marketing Manager, Netdata"
             img="jennifer-briston.jpg"
@@ -167,10 +167,18 @@ export default function Services({
             unique skillset of understanding technical products with the ability to translate the
             value to a wide range of audiences. I'd gladly work with Joel again&mdash;he goes out of
             his way to provide his team support and the materials needed to execute projects.
-          </Testimonial>
+            <br />
+            <br />
+            It was a pleasure working with Joel! Super professional, friendly, and overall
+            delightful to work with. He is really knowledgeable in the tech space with the skills of
+            a great writer, a rare gem.
+            <br />
+            <br />
+            Joel will go above and beyond your expectations!
+          </TestimonialHoriz>
         </Container>
       </section>
-      <section className="py-16">
+      <section className="py-24 dark:bg-gray-900">
         <Container>
           <Grid>
             <Ten className="hidden lg:block !col-start-2">
