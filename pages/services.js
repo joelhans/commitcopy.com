@@ -158,7 +158,7 @@ export default function Services({
       </section>
       <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
-          <Testimonial
+          <TestimonialHoriz
             name="Jennifer Briston"
             title="Marketing Manager, Netdata"
             img="jennifer-briston.jpg"
@@ -167,7 +167,15 @@ export default function Services({
             unique skillset of understanding technical products with the ability to translate the
             value to a wide range of audiences. I'd gladly work with Joel again&mdash;he goes out of
             his way to provide his team support and the materials needed to execute projects.
-          </Testimonial>
+            <br />
+            <br />
+            It was a pleasure working with Joel! Super professional, friendly, and overall
+            delightful to work with. He is really knowledgeable in the tech space with the skills of
+            a great writer, a rare gem.
+            <br />
+            <br />
+            Joel will go above and beyond your expectations!
+          </TestimonialHoriz>
         </Container>
       </section>
       <section className="py-24 dark:bg-gray-900">

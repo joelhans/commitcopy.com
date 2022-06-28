@@ -39,10 +39,9 @@ export default function Home() {
               </h1>
               <h2 className="text-2xl">
                 Put clarifying your vision, turning visitors into product champions, and building
-                evergreen growth on autopilot with ready-to-launch brand messaging and tech
-                copywriting that gets people to{' '}
-                <span className="text-sea font-medium italic">care</span> before they{' '}
-                <span className="text-orange font-medium italic">click</span>.
+                evergreen growth on autopilot. Ready-to-launch brand messaging and tech copywriting
+                that gets people to <span className="text-sea font-medium italic">care</span> before
+                they <span className="text-orange font-medium italic">click</span>.
               </h2>
             </Eight>
           </Grid>
@@ -64,8 +63,8 @@ export default function Home() {
       <section className="relative z-10 py-24 bg-purple overflow-hidden">
         <Container className="relative">
           <Grid>
-            <Eight>
-              <code className="lg:absolute lg:-left-8 lg:top-2 text-sm lg:text-base text-orange font-bold bg-gray-100 dark:bg-gray-900 px-2 py-1 rounded">
+            <Eight className="lg:!col-start-3 relative">
+              <code className="lg:absolute lg:-left-20 lg:top-2 text-sm lg:text-base text-orange font-bold bg-gray-100 dark:bg-gray-900 px-2 py-1 rounded">
                 Shh!
               </code>
               <h2 className="col-span-12 text-orange text-3xl lg:text-4xl font-medium !leading-tight mt-6 lg:mt-0 mb-12">
@@ -81,14 +80,14 @@ export default function Home() {
                   It's the <em>how</em> that gets tricky.
                 </p>
                 <p>
-                  Your readers are savvy and finicky, and they won't stand for being "converted"
-                  (aka being suckered into clicking on a call-to-action button or form). You need
-                  them to believe in your product so deeply they're willing do hard work, like write
-                  code or edit their production environment, for a chance to try your product.
+                  Your readers are smart, finicky, and won't stand for being "converted" (aka being
+                  suckered into clicking on a call-to-action button or form). You need them to
+                  believe in your product so deeply they're willing do hard work, like write code or
+                  reconfigure their production environment, just to <em>try</em> your product.
                 </p>
                 <p>
-                  You'd write this growth-creating, champion-building copy right now if you had
-                  confidence it would work, but…
+                  You'd write this growth-creating, product champion-building copy right now if you
+                  had confidence it would work, but…
                 </p>
               </div>
             </Eight>
@@ -98,7 +97,7 @@ export default function Home() {
       <section className="relative z-10 py-24 bg-orange dark:bg-gray-800">
         <Container className="relative">
           <Grid>
-            <Eight>
+            <Eight className="lg:!col-start-3">
               <h2 className="col-span-12 text-3xl lg:text-4xl font-medium !leading-tight mb-12">
                 You don't know how to get others to believe in your product the way you do.
               </h2>
@@ -116,9 +115,13 @@ export default function Home() {
                   copy, despite knowing how important it is.
                 </p>
                 <p>
-                  You can't stop thinking: Our product is so good we're growing despite not even
-                  having nailed down our messaging. What if we had copy that actually delivered?
+                  You can't stop thinking:{' '}
+                  <em>
+                    Our product is so good we're growing despite not even having nailed down our
+                    messaging…
+                  </em>
                 </p>
+                <p>What if we had copy that actually delivered?</p>
               </div>
             </Eight>
           </Grid>
@@ -127,11 +130,11 @@ export default function Home() {
       <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-900">
         <Container className="relative">
           <Grid>
-            <Eight className="!col-start-3 text-center">
-              <p className="text-orange text-2xl lg:text-3xl font-medium mb-6">
+            <Ten className="!col-start-1 text-center">
+              <p className="text-orange text-3xl lg:text-4xl font-medium mb-6">
                 If you're haunted by that what-if, let's talk.
               </p>
-              <p className="text-lg lg:text-xl mb-6">
+              <p className="text-lg lg:text-xl mb-8 !leading-relaxed">
                 I'll write you copy that generates commitment. VCs knocking on your inbox. Product
                 champions that sell your product for you. A consistent message that becomes your
                 growth flywheel.
@@ -141,7 +144,7 @@ export default function Home() {
                   Schedule a call
                 </Link>
               </button>
-            </Eight>
+            </Ten>
           </Grid>
         </Container>
       </section>
@@ -172,8 +175,8 @@ export default function Home() {
       <section id="portfolio" className="py-24 bg-gray-50 dark:bg-gray-900">
         <Container>
           <Grid>
-            <Eight>
-              <h2 className="text-sea dark:text-white text-2xl lg:text-3xl font-medium mb-8">
+            <Eight className="lg:!col-start-3">
+              <h2 className="text-sea dark:text-white text-2xl lg:text-3xl font-medium text-center mb-8">
                 Generating commitment with amazing tech brands&mdash;from enterprise SaaS to
                 developer-focused to open source to fully DAO'd
               </h2>
@@ -194,14 +197,9 @@ export default function Home() {
             <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
             <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
           </div>
-          {/* <div className="text-center mt-8">
-            <button className="text-white text-xl font-medium px-6 py-4 rounded bg-sea hover:bg-orange transition-all">
-              <Link href="/work">See my work</Link>
-            </button>
-          </div> */}
         </Container>
       </section>
-      <section className="py-24 bg-gray-50 dark:bg-gray-700">
+      <section className="py-24 bg-gray-100 dark:bg-gray-700">
         <Container>
           <Grid>
             <Twelve>
@@ -219,7 +217,7 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      <section className="py-24 bg-gray-100 dark:bg-gray-800">
+      <section className="py-24 dark:bg-gray-800">
         <Container>
           <Grid>
             <Twelve>
