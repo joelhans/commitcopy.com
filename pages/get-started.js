@@ -162,9 +162,9 @@ export default function GetStarted({ content }) {
                   </p>
                 </FAQItem>
                 <FAQItem title="Availability &amp; timelines">
-                  <p>
+                  {/* <p>
                     <strong>I'm currently booked until January 2023.</strong>
-                  </p>
+                  </p> */}
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
                     <Link className="text-orange font-medium" href="/services/#one-day-commit">
