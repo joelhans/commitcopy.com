@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'Commit Copy | Commitment-generating copy for B2B, B2D, and SaaS brands',
+  title: 'Commit Copy | Inspire developers and engineers to commit with content.',
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
-  description: 'Copywriting forB2B, B2D, and SaaS tech brands in need of generating commitment.',
+  description: 'Inspire developers and engineers to commit with content.',
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/joelhans.com',

@@ -12,19 +12,19 @@ const LayoutWrapper = ({ children }) => {
         <div className="flex-1 w-full mx-auto">
           <header className="relative z-40 lg:z-50 lg:mx-auto">
             <div className="max-w-screen-xl flex items-center justify-start pt-12 px-6 lg:px-12 mx-auto">
-              <div className="flex items-baseline mr-auto">
+              {/* <div className="flex items-baseline mr-auto">
                 <div className="mr-6 lg:mr-12">
                   <Link href="/" aria-label="Joel Hans">
-                    <div className="group text-3xl font-sans font-medium leading-none hover:text-sea transition-all">
-                      <span className="text-orange text-mono font-bold bg-gray-100 dark:bg-gray-800 mr-1 px-1 py-0.5 rounded-lg">
+                    <div className="group text-4xl font-sans leading-none">
+                      <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-3 py-1.5 rounded-lg hover:text-sea transition-all">
                         Commit
                       </span>
                       <span>Copy</span>
                     </div>
                   </Link>
                 </div>
-              </div>
-              <div className="flex items-center lg:mr-8">
+              </div> */}
+              <div className="flex items-center lg:ml-auto lg:mr-8">
                 <ThemeSwitch />
                 {/* <RSS /> */}
                 <MobileNav />
@@ -53,7 +53,7 @@ const LayoutWrapper = ({ children }) => {
                     )}
                   </div>
                 ))}
-                <button className="text-white font-bold bg-orange rounded hover:bg-sea transition-all">
+                <button className="text-white font-medium bg-sea rounded hover:bg-purple transition-all">
                   <Link className="block px-6 py-4" href="/get-started/">
                     Schedule a call
                   </Link>

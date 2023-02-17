@@ -4,8 +4,9 @@ import { PageSeo } from '@components/SEO'
 import siteMetadata from '@data/siteMetadata'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
-import { TestimonialHoriz } from '@components/Testimonial'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
+import WorkLink from '@components/WorkLink'
 
 export default function Home() {
   return (
@@ -23,136 +24,139 @@ export default function Home() {
       >
         <Container>
           <Grid>
-            <div className="col-span-12 lg:absolute lg:-top-12 xl:-top-20 lg:-left-64 h-auto lg:w-8/12">
-              <Image
-                className="z-0 rounded-lg"
-                src="/static/images/index_hero-2.jpg"
-                alt="Commit Copy: Product-led storytelling for B2B, B2D, and SaaS brands"
-                height={1200}
-                width={1798}
-              />
-            </div>
-            <Eight className="!col-start-6 relative z-20 p-12 -mx-12 bg-white dark:bg-gray-800 rounded-lg">
-              <h1 className="text-purple text-4xl xl:text-5xl !leading-tight font-medium mb-8 dark:text-gray-100">
-                Copywriting for tech that demands{' '}
-                <span className="text-sea font-bold">commitment</span>
+            <Six className="h-full flex flex-col">
+              <div className="mt-3">
+                <Image
+                  className="z-0 rounded"
+                  src="/static/images/index_hero-3.jpg"
+                  alt="Inspire developers and engineers to commit with content."
+                  height={1200}
+                  width={1200}
+                />
+              </div>
+            </Six>
+            <Six className="prose prose-lg dark:prose-dark">
+              <h1 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
+                Inspire developers and engineers to{' '}
+                <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
+                  commit
+                </span>{' '}
+                with content.
               </h1>
-              <h2 className="text-2xl">
-                Put clarifying your vision, turning visitors into product champions, and building
-                evergreen growth on autopilot. Ready-to-launch brand messaging and tech copywriting
-                that gets people to <span className="text-sea font-medium italic">care</span> before
-                they <span className="text-orange font-medium italic">click</span>.
+              <h2 className="!text-orange !text-xl lg:!text-2xl !font-medium">
+                When you build products for platform engineers, DevOps{' '}
+                <span className="font-mono font-bold text-purple dark:text-white">??</span> GitOps
+                practitioners, developers, and the leaders who manage them, you need them to trust
+                in your expertise and authority so profoundly they'll do difficult work, like
+                reconfigure their production environment, just to finish your <em>get started</em>{' '}
+                guide.
               </h2>
-            </Eight>
+              <p>You need their commitment from the very beginning.</p>
+              <p>
+                The answer is content that's rich in both technical prowess and well-researched
+                opinion, the formula for solving not just their day-to-day problems, but also
+                educating them on novel approaches to painful challenges around culture, process,
+                and talking about the value of the work they do. When you position your brand as a
+                leader in your industry's discourse, with plenty of research and valuable resources
+                to back up your claims, you build the trust and authority to inspire them to commit
+                to what you do.
+              </p>
+              <p>
+                That's where I come in, with more than ten years of experience in technical content
+                and copywriting for the most specialized audiences of brands like the Cloud Native
+                Computing Foundation, IBM, Red Hat, and more.
+              </p>
+              <div className="mt-8">
+                <button className="text-purple text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
+                  Email me
+                </button>
+                <span className="mx-4">or</span>
+                <button className="text-sea text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
+                  Schedule an introductory call
+                </button>
+              </div>
+            </Six>
           </Grid>
         </Container>
       </header>
-      <section
-        id="portfolio"
-        className="py-16 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
-      >
-        <Container>
-          <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
-            <ClientLogo className="" src="cncf.svg" name="CNCF" width="240" height="40" />
-            <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
-            <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
-            <ClientLogo className="" src="redhat.svg" name="Red Hat" width="106" height="30" />
-          </div>
-        </Container>
-      </section>
-      <section className="relative z-10 py-24 bg-purple overflow-hidden">
+      <section id="what-i-do" className="relative z-10 py-24 bg-gray-100 dark:bg-gray-800">
         <Container className="relative">
-          <Grid>
-            <Eight className="lg:!col-start-3 relative">
-              <code className="lg:absolute lg:-left-20 lg:top-2 text-sm lg:text-base text-orange font-bold bg-gray-100 dark:bg-gray-900 px-2 py-1 rounded">
-                Shh!
-              </code>
-              <h2 className="col-span-12 text-orange text-3xl lg:text-4xl font-medium !leading-tight mt-6 lg:mt-0 mb-12">
-                The secret to tech copywriting isn't clarity or conversion rates&mdash;it's how you
-                generate commitment.
+          <Grid className="mb-16">
+            <Six className="prose prose-lg dark:prose-dark">
+              <h2 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
+                What I do
               </h2>
-              <div className="col-span-12 lg:col-span-8 text-white prose prose-lg dark:prose-dark">
-                <p>
-                  You've done your research or have spent enough time in the marketing trenches to
-                  know exactly what you need your marketing to <em>do</em>.
-                </p>
-                <p>
-                  It's the <em>how</em> that gets tricky.
-                </p>
-                <p>
-                  Your readers are smart, finicky, and won't stand for being "converted" (aka being
-                  suckered into clicking on a call-to-action button or form). You need them to
-                  believe in your product so deeply they're willing do hard work, like write code or
-                  reconfigure their production environment, just to <em>try</em> your product.
-                </p>
-                <p>
-                  You'd write this growth-creating, product champion-building copy right now if you
-                  had confidence it would work, but…
-                </p>
-              </div>
-            </Eight>
+            </Six>
           </Grid>
-        </Container>
-      </section>
-      <section className="relative z-10 py-24 bg-orange dark:bg-gray-800">
-        <Container className="relative">
-          <Grid>
-            <Eight className="lg:!col-start-3">
-              <h2 className="col-span-12 text-3xl lg:text-4xl font-medium !leading-tight mb-12">
-                You don't know how to get others to believe in your product the way you do.
-              </h2>
-              <div className="col-span-12 lg:col-span-8 prose prose-lg dark:prose-dark">
-                <p>
-                  Maybe you're searching for a consistent brand message to use on your website,
-                  product marketing, Discord servers, and everywhere else you show up online.
-                </p>
-                <p>
-                  Or maybe you've already proven some value propositions that work, but don't know
-                  how to turn that into a website that gets readers to commit to becoming users.
-                </p>
-                <p>
-                  Or maybe you're just too busy running your company to spend time on brand and
-                  copy, despite knowing how important it is.
-                </p>
-                <p>
-                  You can't stop thinking:{' '}
-                  <em>
-                    Our product is so good we're growing despite not even having nailed down our
-                    messaging…
-                  </em>
-                </p>
-                <p>What if we had copy that actually delivered?</p>
-              </div>
-            </Eight>
-          </Grid>
-        </Container>
-      </section>
-      <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-900">
-        <Container className="relative">
-          <Grid>
-            <Ten className="!col-start-1 text-center">
-              <p className="text-orange text-3xl lg:text-4xl font-medium mb-6">
-                If you're haunted by that what-if, let's talk.
+          <Grid className="mb-16">
+            <Six className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">
+                Content journalism and editorial
+              </h3>
+              <p>
+                Go beyond "thought leadership" and truly stand out from the crowd with content
+                driven by your team's strongest opinions about your industry. Through original
+                research and interviews, I create authoritative content that simplifies complex
+                processes or mental models, then leverage storytelling to help them put leading
+                ideas into action today.
               </p>
-              <p className="text-lg lg:text-xl mb-8 !leading-relaxed">
-                I'll write you copy that generates commitment. VCs knocking on your inbox. Product
-                champions that sell your product for you. A consistent message that becomes your
-                growth flywheel.
+              <p>
+                It's your surest path to building trust, inspiring commitment, and delivering the
+                business results you need through content.
               </p>
-              <button className="!text-white text-xl font-medium rounded bg-purple hover:bg-orange transition-all">
-                <Link className="block !text-white px-6 py-4" href="/get-started/">
-                  Schedule a call
-                </Link>
-              </button>
-            </Ten>
+            </Six>
+            <Six>
+              <WorkLink
+                url="https://www.cncf.io/blog/2022/09/21/four-lessons-that-took-argo-from-first-commit-to-gitops-darling/"
+                title="CNCF: Four lessons that took Argo from first commit to GitOps darling"
+              />
+            </Six>
+          </Grid>
+          <Grid className="mb-16">
+            <Six className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">Technical how-tos</h3>
+              <p>
+                Instead of optimizing content around keywords, which results in content that's light
+                on value and feels like something your audience has read before, let's prioritize
+                solving genuine problems.
+              </p>
+              <p>
+                By leading with solutions, then bracing your content with your target keywords, I
+                help you capture new audiences while establishing your brand as authentic and worthy
+                of their commitment.
+              </p>
+            </Six>
+            <Six>
+              <WorkLink
+                url="https://tracetest.io/blog/the-difference-between-tdd-and-odd"
+                title="The difference between test-driven development and observability-driven development"
+              />
+            </Six>
+          </Grid>
+          <Grid>
+            <Six className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">Documentation</h3>
+              <p>
+                Documentation is the underrated marketing asset with unprecedented potential,
+                especially in open source and cloud native.
+              </p>
+              <p>
+                By establishing and maintaining a source of truth for your product, you project your
+                brand's willingness to provide continuous support, education, and inspiration for
+                your customers on their journey from visitor to product champion.
+              </p>
+            </Six>
+            <Six>
+              <WorkLink url="https://docs.radicle.community" title="RadicleDAO Documentation" />
+            </Six>
           </Grid>
         </Container>
       </section>
-      <section className="py-24 dark:bg-gray-800">
+      <section className="py-24 dark:bg-gray-900">
         <Container>
-          <Grid>
-            <Twelve>
-              <TestimonialHoriz name="Jeff Martens" title="CEO, Metrist" img="jeff-martens-2.jpg">
+          <Grid className="!items-start">
+            <Six>
+              <Testimonial name="Jeff Martens" title="CEO, Metrist" img="jeff-martens-2.jpg">
                 Joel was an absolute pleasure to work with and I couldn't be happier with the
                 results of our engagement. As a software company building products for software
                 developers, it is critical that we work with people that have a high aptitude for
@@ -167,23 +171,48 @@ export default function Home() {
                 <br />
                 Spend your time doing what you do best and let Joel save you a ton of time by doing
                 what he does best.
-              </TestimonialHoriz>
-            </Twelve>
+              </Testimonial>
+            </Six>
+            <Six>
+              <Testimonial
+                name="Jennifer Briston"
+                title="Marketing Manager, Netdata"
+                img="jennifer-briston.jpg"
+              >
+                Joel did an amazing job with collaborating on creating the Netdata website. He has a
+                unique skillset of understanding technical products with the ability to translate
+                the value to a wide range of audiences. I'd gladly work with Joel again&mdash;he
+                goes out of his way to provide his team support and the materials needed to execute
+                projects.
+                <br />
+                <br />
+                It was a pleasure working with Joel! Super professional, friendly, and overall
+                delightful to work with. He is really knowledgeable in the tech space with the
+                skills of a great writer, a rare gem.
+                <br />
+                <br />
+                Joel will go above and beyond your expectations!
+              </Testimonial>
+            </Six>
           </Grid>
         </Container>
       </section>
-      <section id="portfolio" className="py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
-            <Eight className="lg:!col-start-3">
-              <h2 className="text-sea dark:text-white text-2xl lg:text-3xl font-medium text-center mb-8">
+            <Six className="lg:!col-start-4">
+              <h2 className="text-sea dark:text-white text-xl lg:text-2xl font-medium text-center mb-8">
                 Generating commitment with amazing tech brands&mdash;from enterprise SaaS to
                 developer-focused to open source to fully DAO'd
               </h2>
-            </Eight>
+            </Six>
           </Grid>
           <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
-            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
+            <ClientLogo className="" src="cncf.svg" name="CNCF" width="240" height="40" />
+            <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
+            <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
+            <ClientLogo className="" src="redhat.svg" name="Red Hat" width="106" height="30" />
+            {/* <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
             <ClientLogo
               src="johnson-johnson.svg"
               name="Johnson &amp; Johnson"
@@ -195,8 +224,17 @@ export default function Home() {
             <ClientLogo src="opentext.svg" name="OpenText" width="137" height="28" />
             <ClientLogo src="sumo-logic.svg" name="Sumo Logic" width="161" height="30" />
             <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
-            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
+            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" /> */}
           </div>
+        </Container>
+      </section>
+      <section id="about-me" className="py-24 dark:bg-gray-900">
+        <Container>
+          <Grid>
+            <Six>
+              <h2>About me</h2>
+            </Six>
+          </Grid>
         </Container>
       </section>
       <section className="py-24 bg-gray-100 dark:bg-gray-700">
@@ -217,81 +255,6 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      <section className="py-24 dark:bg-gray-800">
-        <Container>
-          <Grid>
-            <Twelve>
-              <TestimonialHoriz name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
-                Joel took our content strategy into beautiful language! He was attentive, prompt and
-                genuinely cared about delivering high-quality work for our clients. If you need
-                someone both creatively strategic and executional to do good work, you're silly to
-                be on the fence!
-              </TestimonialHoriz>
-            </Twelve>
-          </Grid>
-        </Container>
-      </section>
-      {/* 
-      <section className="bg-white dark:bg-gray-800 py-16">
-        <Container>
-          <div className="carousel carousel-center w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-              <Testimonial name="Jeff Martens" title="CEO, Metrist" img="jeff-martens.jpg">
-                As a software company building products for software developers, it is critical that
-                we work with people that have a high aptitude for deeply technical topics, and that
-                is exactly what we got from Joel. He didn't just produce the work we asked him to
-                collaborate with us on, he got us to a better product by first laying the
-                foundations of our messaging and then applied that foundation to the rest of our
-                work together.
-              </Testimonial>
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide3" className="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide2" className="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-              <Testimonial name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
-                Joel helped bring new life into a drawn-out brand positioning project, helping guide
-                us towards a very strong brand story that was right under our nose the entire time.{' '}
-                <br />
-                <br />
-                Joel took time to listen, really research and drill down into our materials, then
-                and only then did he put pen to paper (so to speak). And Joel is a great partner,
-                easily receptive to feedback and willing to work together to achieve the best
-                output.
-              </Testimonial>
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide1" className="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide3" className="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-              <Testimonial name="Megan Duong" title="CEO, Sweater Story" img="megan-duong.png">
-                Joel took our content strategy into beautiful language! He was attentive, prompt and
-                genuinely cared about delivering high-quality work for our clients. If you need
-                someone both creatively strategic and executional to do good work, you're silly to
-                be on the fence!
-              </Testimonial>
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a href="#slide2" className="btn btn-circle">
-                  ❮
-                </a>
-                <a href="#slide1" className="btn btn-circle">
-                  ❯
-                </a>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section> */}
     </>
   )
 }
