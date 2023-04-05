@@ -33,12 +33,12 @@ export default function Home() {
                 with content.
               </h1>
               <h2 className="!text-orange !text-xl lg:!text-2xl !font-medium lg:!leading-relaxed">
-                When you build products for platform engineers, DevOps{' '}
-                <span className="font-mono font-bold text-purple dark:text-white">??</span> GitOps
-                practitioners, developers, and the engineering leaders/CTOs who manage them, you
-                need them to profoundly trust in your expertise and believe in your authority.
-                You're asking them to do difficult work, like reconfigure their production
-                environment, just to finish your <em>get started</em> guide.
+                Developers, platform engineers, GitOps{' '}
+                <span className="font-mono font-bold text-purple dark:text-white">??</span> DevOps
+                practitioners, and the engineering leaders who manage them are exhausted by the
+                pothole-ridden path of choosing the right tools for their stack. Great content makes
+                your brand shine as the <span className="text-purple">paved road experience</span>{' '}
+                they've been looking for all along.
               </h2>
             </Six>
             <Six className="h-full flex flex-col">
@@ -53,21 +53,20 @@ export default function Home() {
               </div>
             </Six>
             <Eight className="prose prose-lg dark:prose-dark">
-              <p>You need their commitment from the very beginning.</p>
               <p>
-                The answer is content that's rich in both technical prowess and well-researched
-                opinion. That's the formula these folks need to solve their day-to-day problems and
-                educate them on novel approaches to painful challenges around culture, process, and
-                talking about the value of the work they do. When you position your brand as a
-                leader in your industry's discourse, with plenty of research and valuable resources
-                to back up your claims, you build the trust and authority to inspire them to commit
-                to what you do.
+                You need developer marketing that merges technical prowess with potent, informed
+                opinions. When you prioritize solving the day-to-day problems these folks face in
+                their stacks, and educate them on novel opportunities in culture or process, you
+                stand out by delivering real-world value over hard sells. As a leader in your
+                industry's discourse, you build the trust and authority required to inspire that
+                first commitment.
               </p>
               <p>
-                That's where I come in. With more than ten years of experience in technical content
-                and copywriting for the most specialized and technical audiences of brands like the{' '}
+                With more than ten years of experience in technical content and copywriting for the
+                most specialized and technical audiences of brands like the{' '}
                 <strong>Cloud Native Computing Foundation</strong>, <strong>IBM</strong>,{' '}
-                <strong>Red Hat</strong>, and beyond.
+                <strong>Red Hat</strong>, and beyond, and beyond, I can reach technical folks with
+                purchasing power and steer them toward your paved road.
               </p>
               <div className="mt-8">
                 <Link href="mailto:joel@commitcopy.com">
@@ -127,8 +126,17 @@ export default function Home() {
           <Grid className="mb-16">
             <Eight className="prose prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Technical</h3>
-              <p>TK</p>
-              <p>TK</p>
+              <p>
+                Your fastest path to winning over managers and leaders with purchasing power is by
+                helping them solve a problem, right now, in as few steps as possible. I can dive
+                into your product and code to develop compelling how-to/tutorial content that
+                spotlights your key value propositions without it <em>feeling</em> like marketing at
+                all.
+              </p>
+              <p>
+                Once readers understand and trust in the value you create through content, they
+                become hot prospects and product champions.
+              </p>
               <div className="prose bg-gray-100 p-8">
                 <h4 className="!text-purple !mt-0">Example</h4>
                 <p>
