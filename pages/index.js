@@ -16,55 +16,58 @@ export default function Home() {
         description={siteMetadata.description}
         url={siteMetadata.siteUrl}
       />
-      <div className="z-30 absolute top-0 w-full h-32 bg-gray-50 dark:bg-gray-900"></div>
+      <div className="z-30 absolute top-0 w-full h-32 dark:bg-gray-900"></div>
 
       <header
         id="hero"
-        className="relative z-0 overflow-hidden mx-auto pt-24 lg:pt-36 pb-16 lg:pb-24 bg-white lg:bg-gray-50 dark:bg-gray-900"
+        className="relative z-0 overflow-hidden mx-auto pt-24 lg:pt-36 pb-16 lg:pb-24 bg-white dark:bg-gray-900"
       >
         <Container>
           <Grid>
-            <Six className="h-full flex flex-col">
-              <div className="mt-3">
-                <Image
-                  className="z-0 rounded"
-                  src="/static/images/index_hero-3.jpg"
-                  alt="Inspire developers and engineers to commit with content."
-                  height={1200}
-                  width={1200}
-                />
-              </div>
-            </Six>
             <Six className="prose prose-lg dark:prose-dark">
               <h1 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
-                Inspire developers and engineers to{' '}
+                Inspire developers and engineering leaders to{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
                 </span>{' '}
                 with content.
               </h1>
-              <h2 className="!text-orange !text-xl lg:!text-2xl !font-medium">
+              <h2 className="!text-orange !text-xl lg:!text-2xl !font-medium lg:!leading-relaxed">
                 When you build products for platform engineers, DevOps{' '}
                 <span className="font-mono font-bold text-purple dark:text-white">??</span> GitOps
-                practitioners, developers, and the leaders who manage them, you need them to trust
-                in your expertise and authority so profoundly they'll do difficult work, like
-                reconfigure their production environment, just to finish your <em>get started</em>{' '}
-                guide.
+                practitioners, developers, and the engineering leaders/CTOs who manage them, you
+                need them to profoundly trust in your expertise and believe in your authority.
+                You're asking them to do difficult work, like reconfigure their production
+                environment, just to finish your <em>get started</em> guide.
               </h2>
+            </Six>
+            <Six className="h-full flex flex-col">
+              <div className="mt-3">
+                <Image
+                  className="z-0 rounded"
+                  src="/static/images/hero.jpg"
+                  alt="Joel Hans @ Commit Copy: Inspire developers and engineering leaders to commit with content."
+                  height={1200}
+                  width={1200}
+                />
+              </div>
+            </Six>
+            <Eight className="prose prose-lg dark:prose-dark">
               <p>You need their commitment from the very beginning.</p>
               <p>
                 The answer is content that's rich in both technical prowess and well-researched
-                opinion, the formula for solving not just their day-to-day problems, but also
-                educating them on novel approaches to painful challenges around culture, process,
-                and talking about the value of the work they do. When you position your brand as a
+                opinion. That's the formula these folks need to solve their day-to-day problems and
+                educate them on novel approaches to painful challenges around culture, process, and
+                talking about the value of the work they do. When you position your brand as a
                 leader in your industry's discourse, with plenty of research and valuable resources
                 to back up your claims, you build the trust and authority to inspire them to commit
                 to what you do.
               </p>
               <p>
-                That's where I come in, with more than ten years of experience in technical content
-                and copywriting for the most specialized audiences of brands like the Cloud Native
-                Computing Foundation, IBM, Red Hat, and more.
+                That's where I come in. With more than ten years of experience in technical content
+                and copywriting for the most specialized and technical audiences of brands like the{' '}
+                <strong>Cloud Native Computing Foundation</strong>, <strong>IBM</strong>,{' '}
+                <strong>Red Hat</strong>, and beyond.
               </p>
               <div className="mt-8">
                 <button className="text-purple text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
@@ -75,24 +78,22 @@ export default function Home() {
                   Schedule an introductory call
                 </button>
               </div>
-            </Six>
+            </Eight>
           </Grid>
         </Container>
       </header>
-      <section id="what-i-do" className="relative z-10 py-24 bg-gray-100 dark:bg-gray-800">
+      <section id="what-i-do" className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container className="relative">
           <Grid className="mb-16">
-            <Six className="prose prose-lg dark:prose-dark">
+            <Twelve className="prose prose-lg dark:prose-dark">
               <h2 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
-                What I do
+                Content I use to inspire commitment
               </h2>
-            </Six>
+            </Twelve>
           </Grid>
           <Grid className="mb-16">
-            <Six className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">
-                Content journalism and editorial
-              </h3>
+            <Eight className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Editorial</h3>
               <p>
                 Go beyond "thought leadership" and truly stand out from the crowd with content
                 driven by your team's strongest opinions about your industry. Through original
@@ -104,17 +105,48 @@ export default function Home() {
                 It's your surest path to building trust, inspiring commitment, and delivering the
                 business results you need through content.
               </p>
-            </Six>
-            <Six>
-              <WorkLink
-                url="https://www.cncf.io/blog/2022/09/21/four-lessons-that-took-argo-from-first-commit-to-gitops-darling/"
-                title="CNCF: Four lessons that took Argo from first commit to GitOps darling"
-              />
-            </Six>
+              <div className="prose bg-gray-100 p-8">
+                <h4 className="!text-purple !mt-0">Example</h4>
+                <p>
+                  When the product managers at Testkube wanted to spark controversy and lay the
+                  groundwork for a new paradigm in CI/CD pipelines, they tapped me to write{' '}
+                  <Link href="https://thenewstack.io/are-monolith-ci-cd-pipelines-killing-quality-in-your-software/">
+                    Are Monolith CI/CD Pipelines Killing Quality in Your Software?
+                  </Link>
+                  .
+                </p>
+                <p>
+                  This article has generated tens of thousands of pageviews and hundreds of signups
+                  for Testkube's SaaS web app for testing cloud native, Kubernetes-first
+                  applications.
+                </p>
+              </div>
+            </Eight>
           </Grid>
           <Grid className="mb-16">
-            <Six className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">Technical how-tos</h3>
+            <Eight className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Technical</h3>
+              <p>TK</p>
+              <p>TK</p>
+              <div className="prose bg-gray-100 p-8">
+                <h4 className="!text-purple !mt-0">Example</h4>
+                <p>
+                  To help DevRel leaders at Tracetest better position their cloud native testing
+                  product as a paradigm-shifter, I wrote{' '}
+                  <Link href="https://tracetest.io/blog/the-difference-between-tdd-and-odd">
+                    <em>The difference between test-driven & observability-driven development</em>
+                  </Link>
+                  . I married thought leadership on testing culture with technical details on
+                  distributed tracing to showcase the product's value proposition, then validated
+                  every claim with real-world code samples and in-product processes for back-end
+                  developers to follow.
+                </p>
+              </div>
+            </Eight>
+          </Grid>
+          <Grid className="mb-16">
+            <Eight className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Search optimized</h3>
               <p>
                 Instead of optimizing content around keywords, which results in content that's light
                 on value and feels like something your audience has read before, let's prioritize
@@ -125,17 +157,25 @@ export default function Home() {
                 help you capture new audiences while establishing your brand as authentic and worthy
                 of their commitment.
               </p>
-            </Six>
-            <Six>
-              <WorkLink
-                url="https://tracetest.io/blog/the-difference-between-tdd-and-odd"
-                title="The difference between test-driven development and observability-driven development"
-              />
-            </Six>
+              <div className="prose bg-gray-100 p-8">
+                <h4 className="!text-purple !mt-0">Example</h4>
+                <p>
+                  In{' '}
+                  <Link href="https://www.graphgrid.com/blog/graph-thinking-a-simple-explainer-for-connected-data/">
+                    <em>Graph Thinking: A Simple Explainer for Connected Data</em>
+                  </Link>
+                  , I targeted a high-opportunity keyword to capture searches from developers and
+                  engineers eager to grasp a new paradigm. I did comprehensive research on the
+                  origins of graph thinking and interview multiple GraphGrid experts to synthesize a
+                  complex idea into a relatable metaphor backed by technical context. This article
+                  is now <em>the</em> cornerstone of GraphGrid's ongoing content strategy.
+                </p>
+              </div>
+            </Eight>
           </Grid>
           <Grid>
-            <Six className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-2xl !font-medium">Documentation</h3>
+            <Eight className="prose prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Documentation</h3>
               <p>
                 Documentation is the underrated marketing asset with unprecedented potential,
                 especially in open source and cloud native.
@@ -145,10 +185,12 @@ export default function Home() {
                 brand's willingness to provide continuous support, education, and inspiration for
                 your customers on their journey from visitor to product champion.
               </p>
-            </Six>
-            <Six>
-              <WorkLink url="https://docs.radicle.community" title="RadicleDAO Documentation" />
-            </Six>
+              <div className="prose bg-gray-100 p-8">
+                <h4 className="!text-purple !mt-0">Example</h4>
+                <p>This is some example copy.</p>
+                <WorkLink url="https://docs.radicle.community" title="RadicleDAO Documentation" />
+              </div>
+            </Eight>
           </Grid>
         </Container>
       </section>
@@ -197,13 +239,12 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      <section className="py-24 bg-gray-50 dark:bg-gray-800">
+      {/* <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
             <Six className="lg:!col-start-4">
               <h2 className="text-sea dark:text-white text-xl lg:text-2xl font-medium text-center mb-8">
-                Generating commitment with amazing tech brands&mdash;from enterprise SaaS to
-                developer-focused to open source to fully DAO'd
+                Inspiring commitment with amazing brands 
               </h2>
             </Six>
           </Grid>
@@ -212,7 +253,7 @@ export default function Home() {
             <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
             <ClientLogo className="" src="redhat.svg" name="Red Hat" width="106" height="30" />
-            {/* <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
+            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
             <ClientLogo
               src="johnson-johnson.svg"
               name="Johnson &amp; Johnson"
@@ -224,15 +265,18 @@ export default function Home() {
             <ClientLogo src="opentext.svg" name="OpenText" width="137" height="28" />
             <ClientLogo src="sumo-logic.svg" name="Sumo Logic" width="161" height="30" />
             <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
-            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" /> */}
+            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
           </div>
         </Container>
-      </section>
-      <section id="about-me" className="py-24 dark:bg-gray-900">
+      </section> */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
             <Six>
-              <h2>About me</h2>
+              <p>hi</p>
+            </Six>
+            <Six>
+              <p>hi</p>
             </Six>
           </Grid>
         </Container>

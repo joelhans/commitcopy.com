@@ -1,15 +1,15 @@
 const siteMetadata = {
-  title: 'Commit Copy | Inspire developers and engineers to commit with content.',
+  title: 'Commit Copy | Inspire developers and engineering leaders to commit with content.',
   author: 'Commit Copy & Joel Hans',
   headerTitle: 'Commit Copy',
-  description: 'Inspire developers and engineers to commit with content.',
+  description: 'Inspire developers and engineering leaders to commit with content.',
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
-  siteRepo: 'https://github.com/joelhans/joelhans.com',
+  siteRepo: 'https://github.com/joelhans/commitcopy',
   siteLogo: '/static/favicons/favicon-512x512.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'j@joelhans.com',
+  email: 'joel@commitcopy.com',
   github: 'https://github.com/joelhans',
   twitter: 'https://twitter.com/joelhans',
   // facebook: 'https://facebook.com',
@@ -25,7 +25,7 @@ const siteMetadata = {
   newsletter: {
     // supports mailchimp, buttondown, convertkit
     // Please add your .env file and modify it according to your selection
-    provider: 'convertkit',
+    // provider: 'convertkit',
   },
 }
 
