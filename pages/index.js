@@ -70,13 +70,17 @@ export default function Home() {
                 <strong>Red Hat</strong>, and beyond.
               </p>
               <div className="mt-8">
-                <button className="text-purple text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
-                  Email me
-                </button>
+                <Link href="mailto:joel@commitcopy.com">
+                  <button className="text-purple text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
+                    Email me
+                  </button>
+                </Link>
                 <span className="mx-4">or</span>
-                <button className="text-sea text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
-                  Schedule an introductory call
-                </button>
+                <Link href="https://app.hellobonsai.com/s/commit-copy/introduction">
+                  <button className="text-sea text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
+                    Schedule an introduction
+                  </button>
+                </Link>
               </div>
             </Eight>
           </Grid>
@@ -108,17 +112,14 @@ export default function Home() {
               <div className="prose bg-gray-100 p-8">
                 <h4 className="!text-purple !mt-0">Example</h4>
                 <p>
-                  When the product managers at Testkube wanted to spark controversy and lay the
-                  groundwork for a new paradigm in CI/CD pipelines, they tapped me to write{' '}
+                  When the product managers at Testkube wanted to spark controversy and establish a
+                  new paradigm in CI/CD pipelines, they tapped me to write{' '}
                   <Link href="https://thenewstack.io/are-monolith-ci-cd-pipelines-killing-quality-in-your-software/">
                     Are Monolith CI/CD Pipelines Killing Quality in Your Software?
                   </Link>
-                  .
-                </p>
-                <p>
-                  This article has generated tens of thousands of pageviews and hundreds of signups
-                  for Testkube's SaaS web app for testing cloud native, Kubernetes-first
-                  applications.
+                  . With an evidence-based breakdown of why the status quo isn't working, this
+                  article has generated tens of thousands of pageviews and a surge of signups for
+                  their Kubernetes-native testing platform.
                 </p>
               </div>
             </Eight>
@@ -166,14 +167,15 @@ export default function Home() {
                   </Link>
                   , I targeted a high-opportunity keyword to capture searches from developers and
                   engineers eager to grasp a new paradigm. I did comprehensive research on the
-                  origins of graph thinking and interview multiple GraphGrid experts to synthesize a
-                  complex idea into a relatable metaphor backed by technical context. This article
-                  is now <em>the</em> cornerstone of GraphGrid's ongoing content strategy.
+                  origins of graph thinking and interviewed multiple GraphGrid experts to synthesize
+                  a complex idea into a relatable metaphor, all backed by real-world technical
+                  context. This article is now <em>the</em> cornerstone of GraphGrid's ongoing
+                  content strategy.
                 </p>
               </div>
             </Eight>
           </Grid>
-          <Grid>
+          {/* <Grid>
             <Eight className="prose prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Documentation</h3>
               <p>
@@ -187,11 +189,13 @@ export default function Home() {
               </p>
               <div className="prose bg-gray-100 p-8">
                 <h4 className="!text-purple !mt-0">Example</h4>
+
+
                 <p>This is some example copy.</p>
                 <WorkLink url="https://docs.radicle.community" title="RadicleDAO Documentation" />
               </div>
             </Eight>
-          </Grid>
+          </Grid> */}
         </Container>
       </section>
       <section className="py-24 dark:bg-gray-900">
@@ -239,12 +243,44 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      {/* <section className="py-24 bg-gray-50 dark:bg-gray-800">
+      <section id="get-started" className="py-24 bg-gray-50 dark:bg-gray-800">
+        <Container>
+          <Grid className="mb-16">
+            <Twelve className="prose prose-lg dark:prose-dark">
+              <h2 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
+                Ready to inspire the{' '}
+                <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
+                  commit
+                </span>{' '}
+                you need from developers and engineering leaders?
+              </h2>
+            </Twelve>
+          </Grid>
+          <Grid>
+            <Twelve>
+              <div>
+                <Link href="mailto:joel@commitcopy.com">
+                  <button className="text-purple text-xl font-medium px-6 py-4 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
+                    Email me
+                  </button>
+                </Link>
+                <span className="mx-4">or</span>
+                <Link href="https://app.hellobonsai.com/s/commit-copy/introduction">
+                  <button className="text-sea text-xl font-medium px-6 py-4 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
+                    Schedule an introduction
+                  </button>
+                </Link>
+              </div>
+            </Twelve>
+          </Grid>
+        </Container>
+      </section>
+      <section className="py-24 dark:bg-gray-900">
         <Container>
           <Grid>
             <Six className="lg:!col-start-4">
               <h2 className="text-sea dark:text-white text-xl lg:text-2xl font-medium text-center mb-8">
-                Inspiring commitment with amazing brands 
+                Inspiring commitment with open source, cloud native, and technically-rich brands
               </h2>
             </Six>
           </Grid>
@@ -268,20 +304,8 @@ export default function Home() {
             <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
           </div>
         </Container>
-      </section> */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-800">
-        <Container>
-          <Grid>
-            <Six>
-              <p>hi</p>
-            </Six>
-            <Six>
-              <p>hi</p>
-            </Six>
-          </Grid>
-        </Container>
       </section>
-      <section className="py-24 bg-gray-100 dark:bg-gray-700">
+      {/* <section className="py-24 bg-gray-100 dark:bg-gray-700">
         <Container>
           <Grid>
             <Twelve>
@@ -298,7 +322,7 @@ export default function Home() {
             </Twelve>
           </Grid>
         </Container>
-      </section>
+      </section> */}
     </>
   )
 }

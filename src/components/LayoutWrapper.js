@@ -54,7 +54,7 @@ const LayoutWrapper = ({ children }) => {
                   </div>
                 ))}
                 <button className="text-white font-medium bg-sea rounded hover:bg-purple transition-all">
-                  <Link className="block px-6 py-4" href="/get-started/">
+                  <Link className="block px-6 py-4" href="#get-started">
                     Schedule a call
                   </Link>
                 </button>
