@@ -130,7 +130,7 @@ export default function Home() {
                   When the product managers at Testkube wanted to spark controversy and establish a
                   new paradigm in CI/CD pipelines, they tapped me to write{' '}
                   <Link href="https://thenewstack.io/are-monolith-ci-cd-pipelines-killing-quality-in-your-software/">
-                    Are Monolith CI/CD Pipelines Killing Quality in Your Software?
+                    <em>Are Monolith CI/CD Pipelines Killing Quality in Your Software?</em>
                   </Link>
                   . With an evidence-based breakdown of why the status quo isn't working, this
                   article has generated tens of thousands of pageviews and a surge of signups for
@@ -243,7 +243,7 @@ export default function Home() {
                 what he does best.
               </Testimonial>
             </Six>
-            <Six className="mt-16">
+            <Six className="mt-16 lg:mt-0">
               <Testimonial
                 name="Jennifer Briston"
                 title="Marketing Manager, Netdata"
