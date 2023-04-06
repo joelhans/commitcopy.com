@@ -24,10 +24,8 @@ const LayoutWrapper = ({ children }) => {
                   </Link>
                 </div>
               </div> */}
-              <div className="flex items-center lg:ml-auto lg:mr-8">
+              <div className="flex items-center ml-auto md:mr-8">
                 <ThemeSwitch />
-                {/* <RSS /> */}
-
                 <MobileNav />
               </div>
               <div className="hidden md:flex items-center justify-end">

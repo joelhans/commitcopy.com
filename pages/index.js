@@ -24,7 +24,7 @@ export default function Home() {
         <Container>
           <Grid>
             <Six>
-              <h1 className="text-purple text-3xl lg:text-5xl font-bold leading-tight lg:leading-tight dark:text-gray-100">
+              <h1 className="text-purple text-3xl lg:text-[2.8rem] font-bold leading-tight lg:leading-tight dark:text-gray-100">
                 Inspire the developers and engineering leaders of cloud native to{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
