@@ -6,7 +6,6 @@ import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
 import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 import ClientLogo from '@components/ClientLogo'
-import WorkLink from '@components/WorkLink'
 
 export default function Home() {
   return (
@@ -24,24 +23,25 @@ export default function Home() {
       >
         <Container>
           <Grid>
-            <Six className="prose prose-lg dark:prose-dark">
-              <h1 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
-                Inspire developers and engineering leaders to{' '}
+            <Six>
+              <h1 className="text-purple text-3xl lg:text-5xl font-bold leading-tight lg:leading-tight dark:text-gray-100">
+                Inspire the developers and engineering leaders of cloud native to{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
                 </span>{' '}
                 with content.
               </h1>
-              <h2 className="!text-orange !text-xl lg:!text-2xl !font-medium lg:!leading-relaxed">
+              <h2 className="text-orange text-lg lg:!text-2xl font-medium leading-relaxed mt-8">
                 Developers, platform engineers, GitOps{' '}
                 <span className="font-mono font-bold text-purple dark:text-white">??</span> DevOps
                 practitioners, and the engineering leaders who manage them are exhausted by the
                 pothole-ridden path of choosing the right tools for their stack. Great content makes
-                your brand shine as the <span className="text-purple">paved road experience</span>{' '}
-                they've been looking for all along.
+                your brand shine as the{' '}
+                <span className="text-purple dark:text-white">paved road experience</span> they've
+                been looking for all along.
               </h2>
             </Six>
-            <Six className="h-full flex flex-col">
+            <Six className="hidden lg:flex h-full flex flex-col">
               <div className="mt-3">
                 <Image
                   className="z-0 rounded"
@@ -52,31 +52,31 @@ export default function Home() {
                 />
               </div>
             </Six>
-            <Eight className="prose prose-lg dark:prose-dark">
+            <Eight className="prose lg:prose-lg dark:prose-dark mt-0">
               <p>
-                You need developer marketing that merges technical prowess with potent, informed
-                opinions. When you prioritize solving the day-to-day problems these folks face in
-                their stacks, and educate them on novel opportunities in culture or process, you
-                stand out by delivering real-world value over hard sells. As a leader in your
-                industry's discourse, you build the trust and authority required to inspire that
-                first commitment.
+                Marketing to the cloud native ecosystem isn't the same as other developer marketing.
+                This community opts for sharing information over hard marketing sells, which means
+                your content needs to provide real-world value every time. When you prioritize
+                solving the day-to-day problems these folks face in their stacks, and educate them
+                on novel opportunities in culture or process, you start building the trust and
+                authority required to inspire that first commitment.
               </p>
               <p>
-                With more than ten years of experience in technical content and copywriting for the
-                most specialized and technical audiences of brands like the{' '}
-                <strong>Cloud Native Computing Foundation</strong>, <strong>IBM</strong>,{' '}
-                <strong>Red Hat</strong>, and beyond, and beyond, I can reach technical folks with
-                purchasing power and steer them toward your paved road.
+                With more than ten years of experience in open source and cloud native technology,
+                plus a portfolio of successful content and copywriting projects for specialized
+                audiences of brands like the <strong>Cloud Native Computing Foundation</strong>,{' '}
+                <strong>IBM</strong>, <strong>Red Hat</strong>, and beyond, and beyond, I can reach
+                technical folks with purchasing power and steer them toward your paved road.
               </p>
               <div className="mt-8">
                 <Link href="mailto:joel@commitcopy.com">
-                  <button className="text-purple text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
+                  <button className="text-purple text-lg font-medium px-4 py-3 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
                     Email me
                   </button>
                 </Link>
                 <span className="mx-4">or</span>
                 <Link href="https://app.hellobonsai.com/s/commit-copy/introduction">
-                  <button className="text-sea text-lg font-medium px-4 py-3 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
+                  <button className="text-sea text-lg font-medium px-4 py-3 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
                     Schedule an introduction
                   </button>
                 </Link>
@@ -87,16 +87,32 @@ export default function Home() {
       </header>
       <section id="what-i-do" className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container className="relative">
-          <Grid className="mb-16">
-            <Twelve className="prose prose-lg dark:prose-dark">
-              <h2 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
+          <Grid className="mb-24">
+            <Ten className="prose prose-lg dark:prose-dark">
+              <h2 className="!text-purple !text-3xl !lg:text-5xl !leading-tight font-medium dark:!text-gray-100">
                 Content I use to inspire commitment
               </h2>
-            </Twelve>
+              <p>
+                Designed for cloud native, open source, and niche technological audiences at the
+                merge of merge of{' '}
+                <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 px-2 py-0.5 rounded-lg">
+                  technical
+                </span>
+                ,{' '}
+                <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 mr-1 px-2 py-0.5 rounded-lg">
+                  opinionated
+                </span>
+                , and{' '}
+                <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 mr-1 px-2 py-0.5 rounded-lg">
+                  story-driven
+                </span>
+                .
+              </p>
+            </Ten>
           </Grid>
           <Grid className="mb-16">
-            <Eight className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Editorial</h3>
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h3>
               <p>
                 Go beyond "thought leadership" and truly stand out from the crowd with content
                 driven by your team's strongest opinions about your industry. Through original
@@ -108,8 +124,8 @@ export default function Home() {
                 It's your surest path to building trust, inspiring commitment, and delivering the
                 business results you need through content.
               </p>
-              <div className="prose bg-gray-100 p-8">
-                <h4 className="!text-purple !mt-0">Example</h4>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">Testkube</h4>
                 <p>
                   When the product managers at Testkube wanted to spark controversy and establish a
                   new paradigm in CI/CD pipelines, they tapped me to write{' '}
@@ -124,8 +140,8 @@ export default function Home() {
             </Eight>
           </Grid>
           <Grid className="mb-16">
-            <Eight className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Technical</h3>
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Technical</h3>
               <p>
                 Your fastest path to winning over managers and leaders with purchasing power is by
                 helping them solve a problem, right now, in as few steps as possible. I can dive
@@ -137,8 +153,8 @@ export default function Home() {
                 Once readers understand and trust in the value you create through content, they
                 become hot prospects and product champions.
               </p>
-              <div className="prose bg-gray-100 p-8">
-                <h4 className="!text-purple !mt-0">Example</h4>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">Tracetest</h4>
                 <p>
                   To help DevRel leaders at Tracetest better position their cloud native testing
                   product as a paradigm-shifter, I wrote{' '}
@@ -154,8 +170,8 @@ export default function Home() {
             </Eight>
           </Grid>
           <Grid className="mb-16">
-            <Eight className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Search optimized</h3>
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Search optimized</h3>
               <p>
                 Instead of optimizing content around keywords, which results in content that's light
                 on value and feels like something your audience has read before, let's prioritize
@@ -166,8 +182,8 @@ export default function Home() {
                 help you capture new audiences while establishing your brand as authentic and worthy
                 of their commitment.
               </p>
-              <div className="prose bg-gray-100 p-8">
-                <h4 className="!text-purple !mt-0">Example</h4>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">GraphGrid</h4>
                 <p>
                   In{' '}
                   <Link href="https://www.graphgrid.com/blog/graph-thinking-a-simple-explainer-for-connected-data/">
@@ -227,7 +243,7 @@ export default function Home() {
                 what he does best.
               </Testimonial>
             </Six>
-            <Six>
+            <Six className="mt-16">
               <Testimonial
                 name="Jennifer Briston"
                 title="Marketing Manager, Netdata"
@@ -255,27 +271,39 @@ export default function Home() {
         <Container>
           <Grid className="mb-16">
             <Twelve className="prose prose-lg dark:prose-dark">
-              <h2 className="!text-purple !text-5xl !leading-tight font-medium dark:!text-gray-100">
-                Ready to inspire the{' '}
+              <h2 className="!text-purple !text-3xl !lg:text-5xl !leading-tight font-medium dark:!text-gray-100">
+                Ready to inspire that first{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
                 </span>{' '}
-                you need from developers and engineering leaders?
+                from developers and engineering leaders in cloud native?
               </h2>
             </Twelve>
           </Grid>
           <Grid>
             <Twelve>
-              <div>
-                <Link href="mailto:joel@commitcopy.com">
-                  <button className="text-purple text-xl font-medium px-6 py-4 bg-white border shadow-sm rounded transition-all hover:bg-purple hover:text-white">
+              <div className="">
+                <Link className="block lg:inline-block mb-4" href="mailto:joel@commitcopy.com">
+                  <button className="text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
                     Email me
                   </button>
                 </Link>
-                <span className="mx-4">or</span>
-                <Link href="https://app.hellobonsai.com/s/commit-copy/introduction">
-                  <button className="text-sea text-xl font-medium px-6 py-4 bg-white border shadow-sm rounded transition-all hover:bg-sea hover:text-white">
+                <span className="hidden lg:inline-block mx-4">or</span>
+                <Link
+                  className="block lg:inline-block mb-4"
+                  href="https://app.hellobonsai.com/s/commit-copy/introduction"
+                >
+                  <button className="text-sea text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
                     Schedule an introduction
+                  </button>
+                </Link>
+                <span className="hidden lg:inline-block mx-4">or</span>
+                <Link
+                  className="block lg:inline-block"
+                  href="https://www.linkedin.com/in/joel-hans/"
+                >
+                  <button className="text-orange text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-orange hover:text-white dark:text-white dark:bg-orange dark:hover:bg-purple">
+                    Connect on LinkedIn
                   </button>
                 </Link>
               </div>

@@ -27,6 +27,7 @@ const LayoutWrapper = ({ children }) => {
               <div className="flex items-center lg:ml-auto lg:mr-8">
                 <ThemeSwitch />
                 {/* <RSS /> */}
+
                 <MobileNav />
               </div>
               <div className="hidden md:flex items-center justify-end">
@@ -54,7 +55,10 @@ const LayoutWrapper = ({ children }) => {
                   </div>
                 ))}
                 <button className="text-white font-medium bg-sea rounded hover:bg-purple transition-all">
-                  <Link className="block px-6 py-4" href="#get-started">
+                  <Link
+                    className="block px-6 py-4"
+                    href="https://app.hellobonsai.com/s/commit-copy/introduction"
+                  >
                     Schedule an introduction
                   </Link>
                 </button>
