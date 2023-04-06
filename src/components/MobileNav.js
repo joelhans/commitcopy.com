@@ -70,8 +70,11 @@ const MobileNav = () => {
             </div>
           ))}
           <button className="text-white font-bold bg-orange mt-4 rounded hover:bg-sea transition-all">
-            <Link className="block px-6 py-4" href="/get-started/">
-              Start a project
+            <Link
+              className="block px-6 py-4"
+              href="https://app.hellobonsai.com/s/commit-copy/introduction"
+            >
+              Schedule an introduction
             </Link>
           </button>
         </nav>
