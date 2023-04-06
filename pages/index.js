@@ -65,8 +65,8 @@ export default function Home() {
                 With more than ten years of experience in open source and cloud native technology,
                 plus a portfolio of successful content and copywriting projects for specialized
                 audiences of brands like the <strong>Cloud Native Computing Foundation</strong>,{' '}
-                <strong>IBM</strong>, <strong>Red Hat</strong>, and beyond, and beyond, I can reach
-                technical folks with purchasing power and steer them toward your paved road.
+                <strong>IBM</strong>, <strong>Red Hat</strong>, and beyond, I can reach technical
+                folks with purchasing power and steer them toward your paved road.
               </p>
               <div className="mt-8">
                 <Link href="mailto:joel@commitcopy.com">
@@ -94,7 +94,7 @@ export default function Home() {
               </h2>
               <p>
                 Designed for cloud native, open source, and niche technological audiences at the
-                merge of merge of{' '}
+                merge of{' '}
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 px-2 py-0.5 rounded-lg">
                   technical
                 </span>
@@ -114,11 +114,11 @@ export default function Home() {
             <Eight className="prose lg:prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h3>
               <p>
-                Go beyond "thought leadership" and truly stand out from the crowd with content
-                driven by your team's strongest opinions about your industry. Through original
-                research and interviews, I create authoritative content that simplifies complex
-                processes or mental models, then leverage storytelling to help them put leading
-                ideas into action today.
+                Go beyond &ldquo;thought leadership&rdquo; and truly stand out from the crowd with
+                content driven by your team's strongest opinions about your industry. Through
+                original research and interviews, I create authoritative content that simplifies
+                complex processes or mental models, then leverage storytelling to help them put
+                leading ideas into action today.
               </p>
               <p>
                 It's your surest path to building trust, inspiring commitment, and delivering the
