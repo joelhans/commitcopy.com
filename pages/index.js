@@ -282,31 +282,35 @@ export default function Home() {
           </Grid>
           <Grid>
             <Twelve>
-              <div className="">
-                <Link className="block lg:inline-block mb-4" href="mailto:joel@commitcopy.com">
-                  <button className="text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
-                    Email me
-                  </button>
-                </Link>
-                <span className="hidden lg:inline-block mx-4">or</span>
-                <Link
-                  className="block lg:inline-block mb-4"
-                  href="https://app.hellobonsai.com/s/commit-copy/introduction"
-                >
-                  <button className="text-sea text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
-                    Schedule an introduction
-                  </button>
-                </Link>
-                <span className="hidden lg:inline-block mx-4">or</span>
-                <Link
-                  className="block lg:inline-block"
-                  href="https://www.linkedin.com/in/joel-hans/"
-                >
-                  <button className="text-orange text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-orange hover:text-white dark:text-white dark:bg-orange dark:hover:bg-purple">
-                    Connect on LinkedIn
-                  </button>
-                </Link>
-              </div>
+              <Link className="block lg:inline-block mb-4" href="mailto:joel@commitcopy.com">
+                <button className="text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
+                  Email me
+                </button>
+              </Link>
+              <span className="hidden lg:inline-block mx-4">or</span>
+              <Link
+                className="block lg:inline-block mb-4"
+                href="https://app.hellobonsai.com/s/commit-copy/introduction"
+              >
+                <button className="text-sea text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
+                  Schedule an introduction
+                </button>
+              </Link>
+            </Twelve>
+            <Twelve>
+              <Link
+                className="block lg:inline-block font-medium text-purple hover:text-orange transition-all dark:text-white"
+                href="http://portfolio.commitcopy.com/"
+              >
+                View my full portfolio on Authory
+              </Link>
+              <span className="hidden lg:inline-block mx-4">or</span>
+              <Link
+                className="block lg:inline-block font-medium text-purple hover:text-orange transition-all dark:text-white"
+                href="https://www.linkedin.com/in/joel-hans/"
+              >
+                Connect on LinkedIn
+              </Link>
             </Twelve>
           </Grid>
         </Container>
