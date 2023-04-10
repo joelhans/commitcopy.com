@@ -110,7 +110,7 @@ export default function Home() {
               </p>
             </Ten>
           </Grid>
-          <Grid className="mb-16">
+          <Grid className="!items-start mb-16">
             <Eight className="prose lg:prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h3>
               <p>
@@ -124,22 +124,50 @@ export default function Home() {
                 It's your surest path to building trust, inspiring commitment, and delivering the
                 business results you need through content.
               </p>
+            </Eight>
+            <Six className="align-start">
               <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Testkube</h4>
                 <p>
                   When the product managers at Testkube wanted to spark controversy and establish a
-                  new paradigm in CI/CD pipelines, they tapped me to write{' '}
+                  new paradigm in CI/CD pipelines, they tapped me to (ghost)write{' '}
                   <Link href="https://thenewstack.io/are-monolith-ci-cd-pipelines-killing-quality-in-your-software/">
                     <em>Are Monolith CI/CD Pipelines Killing Quality in Your Software?</em>
                   </Link>
-                  . With an evidence-based breakdown of why the status quo isn't working, this
-                  article has generated tens of thousands of pageviews and a surge of signups for
-                  their Kubernetes-native testing platform.
+                  .
+                </p>
+                <p>
+                  With an evidence-based breakdown of why the status quo isn't working, this article
+                  has generated tens of thousands of pageviews and a surge of signups for their
+                  Kubernetes-native testing platform.
                 </p>
               </div>
-            </Eight>
+            </Six>
+            <Six>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">CNCF &amp; Argo</h4>
+                <p>
+                  The open source Argo project was eager to reach <em>Graduating</em> status in the
+                  Cloud Native Computing Foundation (CNCF). To showcase their value to the cloud
+                  native community, they partnered with me on a comprehensive{' '}
+                  <Link href="https://www.cncf.io/reports/argo-project-journey-report/">
+                    project journey report
+                  </Link>
+                  , which detailed community health, development velocity, and contributor
+                  diversity.
+                </p>
+                <p>
+                  As part of the report's promotional push, I interviewed Argo's founders and
+                  synthesized their experiences into an educational piece,{' '}
+                  <Link href="https://www.cncf.io/blog/2022/09/21/four-lessons-that-took-argo-from-first-commit-to-gitops-darling/">
+                    <em>Four lessons that took Argo from first commit to GitOps darling</em>
+                  </Link>
+                  , to spotlight their expertise as open source innovators.
+                </p>
+              </div>
+            </Six>
           </Grid>
-          <Grid className="mb-16">
+          <Grid className="!items-start mb-24">
             <Eight className="prose lg:prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Technical</h3>
               <p>
@@ -153,6 +181,8 @@ export default function Home() {
                 Once readers understand and trust in the value you create through content, they
                 become hot prospects and product champions.
               </p>
+            </Eight>
+            <Six>
               <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Tracetest</h4>
                 <p>
@@ -162,14 +192,37 @@ export default function Home() {
                     <em>The difference between test-driven & observability-driven development</em>
                   </Link>
                   . I married thought leadership on testing culture with technical details on
-                  distributed tracing to showcase the product's value proposition, then validated
-                  every claim with real-world code samples and in-product processes for back-end
-                  developers to follow.
+                  distributed tracing to showcase the product's value proposition.
+                </p>
+                <p>
+                  But simply <em>talking</em> about features isn't enough for developers&mdash;I
+                  wrote real-world code in Node.js to validate every step and showcase in-product
+                  processes other back-end developers can follow.
                 </p>
               </div>
-            </Eight>
+            </Six>
+            <Six>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">Kubefirst</h4>
+                <p>
+                  I plucked the idea behind{' '}
+                  <Link href="https://kubefirst.io/blog/leveraging-external-secrets-operator">
+                    <em>Leveraging External Secrets Operator</em>{' '}
+                  </Link>
+                  from an interview with a Kubefirst founder, then developed the danger of
+                  'secret-scattering' in Kubernetes into a technical article that shows how platform
+                  engineers and GitOps teams <em>could</em> avoid the danger with cloud native
+                  tooling.
+                </p>
+                <p>
+                  For Kubefirst, an article like this is the best of both worlds: They get to
+                  spotlight their opinions and expertise while demonstrating the value of choosing
+                  their platform over reinventing the wheel.
+                </p>
+              </div>
+            </Six>
           </Grid>
-          <Grid className="mb-16">
+          <Grid className="!items-start mb-24">
             <Eight className="prose lg:prose-lg dark:prose-dark">
               <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Search optimized</h3>
               <p>
@@ -182,6 +235,8 @@ export default function Home() {
                 help you capture new audiences while establishing your brand as authentic and worthy
                 of their commitment.
               </p>
+            </Eight>
+            <Six>
               <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
                 <h4 className="!text-xl text-purple !mt-0">GraphGrid</h4>
                 <p>
@@ -193,11 +248,33 @@ export default function Home() {
                   engineers eager to grasp a new paradigm. I did comprehensive research on the
                   origins of graph thinking and interviewed multiple GraphGrid experts to synthesize
                   a complex idea into a relatable metaphor, all backed by real-world technical
-                  context. This article is now <em>the</em> cornerstone of GraphGrid's ongoing
-                  content strategy.
+                  context.
+                </p>
+                <p>
+                  This article is now <em>the</em> cornerstone of GraphGrid's ongoing content
+                  strategy.
                 </p>
               </div>
-            </Eight>
+            </Six>
+            <Six>
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+                <h4 className="!text-xl text-purple !mt-0">Kusk</h4>
+                <p>
+                  The Kusk team, eager to brand their project with the influential "APIOps" keyword,
+                  asked me to write this primer with one important caveat: It needed to respect the
+                  reader's time by being as short as possible.
+                </p>
+                <p>
+                  After pitching the "500 words" part of{' '}
+                  <Link href="https://thenewstack.io/what-is-apiops-in-less-than-500-words/">
+                    <em>What Is APIOps? (In Less than 500 Words)</em>
+                  </Link>
+                  , I turned around an article, ready for syndication on <em>The New Stack</em>,
+                  that lives up to its promise, pitches the value prop of Kusk, and has sparked
+                  hundreds of responses on social media.
+                </p>
+              </div>
+            </Six>
           </Grid>
           {/* <Grid>
             <Eight className="prose prose-lg dark:prose-dark">
