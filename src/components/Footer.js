@@ -6,7 +6,7 @@ import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
 
 export default function Footer() {
   return (
-    <footer className="font-sans bg-purple dark:bg-gray-900 px-6 lg:px-12 py-16">
+    <footer className="font-sans bg-purple dark:bg-gray-900 py-16">
       <Container>
         <Grid>
           <Twelve>

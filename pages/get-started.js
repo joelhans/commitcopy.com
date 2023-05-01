@@ -9,7 +9,8 @@ import siteMetadata from '@data/siteMetadata'
 import Link from '@components/Link'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
+import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 import {
   Accordion,
   AccordionItem,
@@ -25,31 +26,31 @@ export async function getStaticProps() {
   return { props: { content } }
 }
 
-const FAQItem = ({ title, children }) => (
-  <>
-    <AccordionItem className="relative mb-6 px-6 py-4 bg-purple bg-opacity-5 dark:bg-gray-900 rounded">
-      <AccordionItemHeading>
-        <AccordionItemButton className="flex items-center justify-between dark:text-gray-100 lg:text-lg font-medium">
-          {title}
-          <div className="flex-0 justify-self-end">
-            <AccordionItemState>
-              {(state) => {
-                return state.expanded ? (
-                  <VscTriangleDown className="flex-0 w-4 h-4" />
-                ) : (
-                  <VscTriangleRight className="flex-0 w-4 h-4" />
-                )
-              }}
-            </AccordionItemState>
-          </div>
-        </AccordionItemButton>
-      </AccordionItemHeading>
-      <AccordionItemPanel className="prose dark:prose-dark prose-sm mt-4">
-        {children}
-      </AccordionItemPanel>
-    </AccordionItem>
-  </>
-)
+// const FAQItem = ({ title, children }) => (
+//   <>
+//     <AccordionItem className="relative mb-6 px-6 py-4 bg-purple bg-opacity-5 dark:bg-gray-900 rounded">
+//       <AccordionItemHeading>
+//         <AccordionItemButton className="flex items-center justify-between dark:text-gray-100 lg:text-lg font-medium">
+//           {title}
+//           <div className="flex-0 justify-self-end">
+//             <AccordionItemState>
+//               {(state) => {
+//                 return state.expanded ? (
+//                   <VscTriangleDown className="flex-0 w-4 h-4" />
+//                 ) : (
+//                   <VscTriangleRight className="flex-0 w-4 h-4" />
+//                 )
+//               }}
+//             </AccordionItemState>
+//           </div>
+//         </AccordionItemButton>
+//       </AccordionItemHeading>
+//       <AccordionItemPanel className="prose dark:prose-dark prose-sm mt-4">
+//         {children}
+//       </AccordionItemPanel>
+//     </AccordionItem>
+//   </>
+// )
 
 export default function GetStarted({ content }) {
   const { mdxSource, frontMatter } = content
@@ -61,33 +62,51 @@ export default function GetStarted({ content }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="mt-48 mb-24">
         <Container>
           <Grid>
-            <Six className="hidden lg:block">
-              <Image
-                className="rounded-lg"
-                src="/static/images/index_hero-3.jpg"
-                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
-                height={1200}
-                width={1200}
-              />
-            </Six>
             <Six>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
-                <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
+                <p className="text-sea text-2xl lg:text-3xl font-medium !leading-snug">
                   {frontMatter.summary}
                 </p>
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
             </Six>
+            <Six>
+              <div className="relative min-h-max col-span-12 lg:col-span-8 border border-gray-400 rounded-lg">
+                <Widget
+                  id="kyVqRz9I"
+                  style={{ position: 'relative', width: '100%', height: 500 }}
+                  className="my-form"
+                />
+              </div>
+            </Six>
           </Grid>
         </Container>
       </header>
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      <section className="py-24 bg-gray-100 dark:bg-gray-800">
+        <Container>
+          <Grid>
+            <Twelve>
+              <TestimonialHoriz name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
+                Joel helped bring new life into a drawn-out brand positioning project, helping guide
+                us towards a very strong brand story that was right under our nose the entire time.{' '}
+                <br />
+                <br />
+                Joel took time to listen, really research and drill down into our materials, then
+                and only then did he put pen to paper (so to speak). And Joel is a great partner,
+                easily receptive to feedback and willing to work together to achieve the best
+                output.
+              </TestimonialHoriz>
+            </Twelve>
+          </Grid>
+        </Container>
+      </section>
+      {/* <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <div className="grid grid-cols-12 gap-8">
             <div className="prose col-span-12 lg:col-span-4 order-last lg:order-first mb-24 lg:mb-0">
@@ -162,9 +181,9 @@ export default function GetStarted({ content }) {
                   </p>
                 </FAQItem>
                 <FAQItem title="Availability &amp; timelines">
-                  {/* <p>
-                    <strong>I'm currently booked until January 2023.</strong>
-                  </p> */}
+                  <p>
+                    <strong>I'm typically booked out 2-3 months in advance.</strong>
+                  </p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
                     <Link className="text-orange font-medium" href="/services/#one-day-commit">
@@ -186,16 +205,10 @@ export default function GetStarted({ content }) {
                 </FAQItem>
               </Accordion>
             </div>
-            <div className="relative min-h-max col-span-12 lg:col-span-8 border border-gray-400 rounded-lg">
-              <Widget
-                id="kyVqRz9I"
-                style={{ position: 'relative', width: '100%', height: 500 }}
-                className="my-form"
-              />
-            </div>
+            
           </div>
         </Container>
-      </section>
+      </section> */}
     </>
   )
 }
