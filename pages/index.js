@@ -68,13 +68,13 @@ export default function Home() {
                 folks with purchasing power and steer them toward your paved road.
               </p>
               <p>
-                I work on copy <strong>and</strong> content&mdash;explore to figure out which will
-                drive the commitment you need.
+                I work across messaging/copywriting <strong>and</strong> content&mdash;let's figure
+                how the perfect balance that drives the commitment you need.
               </p>
               <div className="mt-8">
                 <Link href="/copy">
                   <button className="text-purple  text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
-                    Copy
+                    Messaging/copywriting
                   </button>
                 </Link>
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mx-4 px-2 py-0.5 rounded-lg">

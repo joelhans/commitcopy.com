@@ -9,7 +9,8 @@ import siteMetadata from '@data/siteMetadata'
 import Link from '@components/Link'
 import { MDXLayoutRenderer } from '@components/MDXComponents'
 import Container from '@components/Container'
-import { Grid, Ten, Eight, Six, Four, Two } from '@components/Grid'
+import { Grid, Twelve, Ten, Eight, Six, Four, Two } from '@components/Grid'
+import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
 import {
   Accordion,
   AccordionItem,
@@ -25,31 +26,31 @@ export async function getStaticProps() {
   return { props: { content } }
 }
 
-const FAQItem = ({ title, children }) => (
-  <>
-    <AccordionItem className="relative mb-6 px-6 py-4 bg-purple bg-opacity-5 dark:bg-gray-900 rounded">
-      <AccordionItemHeading>
-        <AccordionItemButton className="flex items-center justify-between dark:text-gray-100 lg:text-lg font-medium">
-          {title}
-          <div className="flex-0 justify-self-end">
-            <AccordionItemState>
-              {(state) => {
-                return state.expanded ? (
-                  <VscTriangleDown className="flex-0 w-4 h-4" />
-                ) : (
-                  <VscTriangleRight className="flex-0 w-4 h-4" />
-                )
-              }}
-            </AccordionItemState>
-          </div>
-        </AccordionItemButton>
-      </AccordionItemHeading>
-      <AccordionItemPanel className="prose dark:prose-dark prose-sm mt-4">
-        {children}
-      </AccordionItemPanel>
-    </AccordionItem>
-  </>
-)
+// const FAQItem = ({ title, children }) => (
+//   <>
+//     <AccordionItem className="relative mb-6 px-6 py-4 bg-purple bg-opacity-5 dark:bg-gray-900 rounded">
+//       <AccordionItemHeading>
+//         <AccordionItemButton className="flex items-center justify-between dark:text-gray-100 lg:text-lg font-medium">
+//           {title}
+//           <div className="flex-0 justify-self-end">
+//             <AccordionItemState>
+//               {(state) => {
+//                 return state.expanded ? (
+//                   <VscTriangleDown className="flex-0 w-4 h-4" />
+//                 ) : (
+//                   <VscTriangleRight className="flex-0 w-4 h-4" />
+//                 )
+//               }}
+//             </AccordionItemState>
+//           </div>
+//         </AccordionItemButton>
+//       </AccordionItemHeading>
+//       <AccordionItemPanel className="prose dark:prose-dark prose-sm mt-4">
+//         {children}
+//       </AccordionItemPanel>
+//     </AccordionItem>
+//   </>
+// )
 
 export default function GetStarted({ content }) {
   const { mdxSource, frontMatter } = content
@@ -61,7 +62,7 @@ export default function GetStarted({ content }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-48">
+      <header className="mt-48 mb-24">
         <Container>
           <Grid>
             <Six className="hidden lg:block">
@@ -87,6 +88,24 @@ export default function GetStarted({ content }) {
           </Grid>
         </Container>
       </header>
+      <section className="py-24 bg-gray-100 dark:bg-gray-800">
+        <Container>
+          <Grid>
+            <Twelve>
+              <TestimonialHoriz name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
+                Joel helped bring new life into a drawn-out brand positioning project, helping guide
+                us towards a very strong brand story that was right under our nose the entire time.{' '}
+                <br />
+                <br />
+                Joel took time to listen, really research and drill down into our materials, then
+                and only then did he put pen to paper (so to speak). And Joel is a great partner,
+                easily receptive to feedback and willing to work together to achieve the best
+                output.
+              </TestimonialHoriz>
+            </Twelve>
+          </Grid>
+        </Container>
+      </section>
       {/* <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <div className="grid grid-cols-12 gap-8">

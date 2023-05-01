@@ -276,47 +276,34 @@ export default function Content({
               </div>
             </Six>
           </Grid>
-          {/* <Grid>
-            <Eight className="prose prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-xl lg:!text-3xl !font-medium">Documentation</h3>
-              <p>
-                Documentation is the underrated marketing asset with unprecedented potential,
-                especially in open source and cloud native.
-              </p>
-              <p>
-                By establishing and maintaining a source of truth for your product, you project your
-                brand's willingness to provide continuous support, education, and inspiration for
-                your customers on their journey from visitor to product champion.
-              </p>
-              <div className="prose bg-gray-100 p-8">
-                <h4 className="!text-purple !mt-0">Example</h4>
+        </Container>
+      </section>
 
-
-                <p>This is some example copy.</p>
-                <WorkLink url="https://docs.radicle.community" title="RadicleDAO Documentation" />
+      {/* <Grid>
+            <Eight
+              id="content"
+              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
+            >
+              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
+                Content strategy &amp; execution
+              </h3>
+              <div className="prose dark:prose-dark mb-8">
+                <MDXExport code={mdxServiceContent} />
               </div>
+              <ServiceGo>
+                <ServiceButton to="/get-started/">Commit to content</ServiceButton>
+              </ServiceGo>
             </Eight>
+            <Four className="hidden md:block text-center">
+              <Image
+                className="opacity-75"
+                src="/static/images/services-waves.svg"
+                alt="Content strategy &amp; execution"
+                width={150}
+                height={300}
+              />
+            </Four>
           </Grid> */}
-        </Container>
-      </section>
-      <section className="py-24 bg-gray-100 dark:bg-gray-700">
-        <Container>
-          <Grid>
-            <Twelve>
-              <TestimonialHoriz name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
-                Joel helped bring new life into a drawn-out brand positioning project, helping guide
-                us towards a very strong brand story that was right under our nose the entire time.{' '}
-                <br />
-                <br />
-                Joel took time to listen, really research and drill down into our materials, then
-                and only then did he put pen to paper (so to speak). And Joel is a great partner,
-                easily receptive to feedback and willing to work together to achieve the best
-                output.
-              </TestimonialHoriz>
-            </Twelve>
-          </Grid>
-        </Container>
-      </section>
     </>
   )
 }

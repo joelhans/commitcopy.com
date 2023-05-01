@@ -39,37 +39,61 @@ export default function Copy({
   return (
     <>
       <PageSeo
-        title="Copywriting for open source && cloud native"
+        title="Messaging + copywriting for open source && cloud native"
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/copy`}
       />
-      <header className="mt-24 mb-20">
+      <header className="mt-48 mb-20">
         <Container>
-          <Grid>
-            <Six>
-              <h1 className="text-purple dark:text-gray-50 text-lg lg:text-xl font-bold uppercase leading-snug mb-8">
-                Copywriting for open source{' '}
+          <Grid className="mb-24">
+            <Ten className="prose prose-lg dark:prose-dark">
+              <h1 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
+                Scale your open source{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">
                   &&
                 </span>{' '}
-                cloud native
+                cloud native startup with messaging and copywriting
               </h1>
-              <div className="prose prose-md lg:prose-lg dark:prose-dark">
-                <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
-                  {frontMatter.summary}
-                </p>
-                <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
+              <p>
+                Most open source && cloud native projects and products require a heavy dose of
+                commitment just to <span>get through the "getting started" guide</span>. We're
+                talking big steps, like reconfiguring a production environment or CI/CD workflow,
+                for your target audience get a proper demo and figure out whether what you do is
+                right for them.
+              </p>
+              <p>Inspiring that first commitment can go wrong in so many ways:</p>
+              <div className="lg:grid grid-cols-2 gap-4">
+                <ul className="text-base !my-0">
+                  <li>
+                    Your project doesn't stand out among the crowded landscape of open source &&
+                    cloud native
+                  </li>
+                  <li>
+                    Users don't understand the difference between your open source project and
+                    commercial product
+                  </li>
+                </ul>
+                <ul className="text-base !my-0">
+                  <li>
+                    A vague monetization strategy and ongoing commitment to open source tarnishes
+                    developer trust
+                  </li>
+                  <li>A fourth point</li>
+                </ul>
               </div>
-            </Six>
-            <Six className="hidden md:block">
-              <Image
-                className="rounded-lg"
-                src="/static/images/services_hero.jpg"
-                alt="Joel Hans, B2B copywriter for generating commitment"
-                height={1200}
-                width={800}
-              />
-            </Six>
+              <p>
+                If any of these sound familiar, messaging and copywriting are your path toward
+                generating commitment. We're not talking hard-sell "conversion copywriting" (aka
+                suckering your target audience into clicking on a call-to-action button or filling
+                out a form), but rather
+              </p>
+              <p>
+                Put clarifying your vision, turning visitors into product champions, and building
+                evergreen growth on autopilot with ready-to-launch messaging and copywriting that
+                gets developers and engineers to <span className="text-sea font-bold">care</span>{' '}
+                about what you do before they <span className="text-orange font-bold">click</span>.
+              </p>
+            </Ten>
           </Grid>
         </Container>
       </header>
@@ -133,48 +157,8 @@ export default function Copy({
               </ServiceGo>
             </Eight>
           </Grid>
-          <Grid>
-            <Eight
-              id="content"
-              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
-            >
-              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Content strategy &amp; execution
-              </h3>
-              <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceContent} />
-              </div>
-              <ServiceGo>
-                <ServiceButton to="/get-started/">Commit to content</ServiceButton>
-              </ServiceGo>
-            </Eight>
-            <Four className="hidden md:block text-center">
-              <Image
-                className="opacity-75"
-                src="/static/images/services-waves.svg"
-                alt="Content strategy &amp; execution"
-                width={150}
-                height={300}
-              />
-            </Four>
-          </Grid>
         </Container>
       </section>
-      {/* <section className="py-24 dark:bg-gray-900">
-        <Container>
-          <Grid>
-            <Ten className="hidden lg:block !col-start-2">
-              <Image
-                className="rounded-lg"
-                src="/static/images/joel-computer.jpg"
-                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
-                height={1200}
-                width={1800}
-              />
-            </Ten>
-          </Grid>
-        </Container>
-      </section> */}
       <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
@@ -208,15 +192,20 @@ export default function Copy({
         <Container>
           <Grid>
             <Twelve>
-              <TestimonialHoriz name="Naor Chazan" title="CMO, Myndshft" img="naor-chazan.jpg">
-                Joel helped bring new life into a drawn-out brand positioning project, helping guide
-                us towards a very strong brand story that was right under our nose the entire time.{' '}
+              <TestimonialHoriz
+                name="Jennifer Briston"
+                title="Marketing Manager, Netdata"
+                img="jennifer-briston.jpg"
+              >
+                Joel did an amazing job with collaborating on creating the Netdata website. He has a
+                unique skillset of understanding technical products with the ability to translate
+                the value to a wide range of audiences. I'd gladly work with Joel again, he goes out
+                of his way to provide his team support and the materials needed to execute projects.{' '}
                 <br />
                 <br />
-                Joel took time to listen, really research and drill down into our materials, then
-                and only then did he put pen to paper (so to speak). And Joel is a great partner,
-                easily receptive to feedback and willing to work together to achieve the best
-                output.
+                Super professional, friendly, and overall delightful to work with. He is really
+                knowledgeable in the tech space with the skills of a great writer, a rare gem. He'll
+                go above and beyond your expectations!
               </TestimonialHoriz>
             </Twelve>
           </Grid>
