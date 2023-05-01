@@ -61,33 +61,33 @@ export default function GetStarted({ content }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-24 mb-12">
+      <header className="mt-48">
         <Container>
           <Grid>
             <Six className="hidden lg:block">
-              <Image
-                className="rounded-lg"
-                src="/static/images/index_hero-3.jpg"
-                alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
-                height={1200}
-                width={1200}
-              />
-            </Six>
-            <Six>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>
               <div className="prose prose-md lg:prose-lg dark:prose-dark">
-                <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
+                <p className="text-sea text-2xl lg:text-3xl font-medium !leading-snug">
                   {frontMatter.summary}
                 </p>
                 <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
               </div>
             </Six>
+            <Six>
+              <div className="relative min-h-max col-span-12 lg:col-span-8 border border-gray-400 rounded-lg">
+                <Widget
+                  id="kyVqRz9I"
+                  style={{ position: 'relative', width: '100%', height: 500 }}
+                  className="my-form"
+                />
+              </div>
+            </Six>
           </Grid>
         </Container>
       </header>
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      {/* <section className="bg-gray-50 dark:bg-gray-800 py-16">
         <Container>
           <div className="grid grid-cols-12 gap-8">
             <div className="prose col-span-12 lg:col-span-4 order-last lg:order-first mb-24 lg:mb-0">
@@ -162,9 +162,9 @@ export default function GetStarted({ content }) {
                   </p>
                 </FAQItem>
                 <FAQItem title="Availability &amp; timelines">
-                  {/* <p>
-                    <strong>I'm currently booked until January 2023.</strong>
-                  </p> */}
+                  <p>
+                    <strong>I'm typically booked out 2-3 months in advance.</strong>
+                  </p>
                   <p>
                     If you need help <em>right now</em>, might I recommend a{' '}
                     <Link className="text-orange font-medium" href="/services/#one-day-commit">
@@ -186,16 +186,10 @@ export default function GetStarted({ content }) {
                 </FAQItem>
               </Accordion>
             </div>
-            <div className="relative min-h-max col-span-12 lg:col-span-8 border border-gray-400 rounded-lg">
-              <Widget
-                id="kyVqRz9I"
-                style={{ position: 'relative', width: '100%', height: 500 }}
-                className="my-form"
-              />
-            </div>
+            
           </div>
         </Container>
-      </section>
+      </section> */}
     </>
   )
 }

@@ -1,8 +1,10 @@
 const headerNavLinks = [
-  { href: '#what-i-do', title: 'What I do' },
+  // { href: '/', title: 'What I do' },
+  { href: '/copy', title: 'Copy' },
+  { href: '/content', title: 'Content' },
   // { href: '/work', title: 'Work' },
   // { href: '/articles', title: 'Articles' },
-  // { href: '/about-me', title: 'About me' },
+  { href: '/about', title: 'About' },
 ]
 
 export default headerNavLinks

@@ -20,14 +20,14 @@ export const TestimonialHoriz = ({ children, name, title, img }) => (
       <Image
         className="grow-0 rounded"
         src={`/static/testimonials/${img}`}
-        width={128}
-        height={128}
+        width={192}
+        height={192}
       />
       <p className="font-mono text-lg font-bold mt-4">
         {name} • {title}
       </p>
     </div>
-    <div className="w-full lg:w-2/3 prose dark:prose-dark">
+    <div className="w-full lg:w-2/3 prose prose-lg dark:prose-dark">
       <p className="text-purple dark:text-gray-100">{children}</p>
     </div>
   </div>
