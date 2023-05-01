@@ -78,44 +78,61 @@ export default function Copy({
                     A vague monetization strategy and ongoing commitment to open source tarnishes
                     developer trust
                   </li>
-                  <li>A fourth point</li>
+                  <li>
+                    You're getting free users, but not product champions within external developer
+                    communities
+                  </li>
                 </ul>
               </div>
               <p>
                 If any of these sound familiar, messaging and copywriting are your path toward
                 generating commitment. We're not talking hard-sell "conversion copywriting" (aka
                 suckering your target audience into clicking on a call-to-action button or filling
-                out a form), but rather
+                out a form), but rather messaging and copywriting that captures and uplevels your
+                your stand-out product vision for the unique qualities of the open source && cloud
+                native communities.
               </p>
               <p>
-                Put clarifying your vision, turning visitors into product champions, and building
-                evergreen growth on autopilot with ready-to-launch messaging and copywriting that
-                gets developers and engineers to <span className="text-sea font-bold">care</span>{' '}
-                about what you do before they <span className="text-orange font-bold">click</span>.
+                Let's start increasing conversions and growing your startup with ready-to-launch
+                messaging and copywriting that gets developers and engineering leaders to{' '}
+                <span className="text-sea font-bold">care</span> about what you do before they{' '}
+                <span className="text-orange font-bold">click</span>.
               </p>
             </Ten>
           </Grid>
         </Container>
       </header>
-      <section id="services" className="pb-16 dark:bg-gray-900">
+      <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
-          <h2 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium text-center mb-16">
-            Here's how I help:
-          </h2>
-          <Grid className="mb-16">
-            <Eight
-              id="source-story"
-              className="px-8 py-12 bg-orange bg-opacity-5 dark:bg-opacity-20 rounded"
-            >
-              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Brand messaging
-              </h3>
-              <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceSourceStory} />
-              </div>
-              <ServiceGo>
-                <ServiceButton to="/get-started/">Discover your source</ServiceButton>
-              </ServiceGo>
+          <Grid>
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
+                Brand and product messaging
+              </h2>
+              <p>
+                Not sure how to talk about your tech? Let's find the source of what makes you unique
+                and develop a messaging playbook that defines why people need to commit.
+              </p>
+              <p>
+                You walk away with ready-for-you brand messaging that all your people, whether
+                they're developers in your community or brand marketers creating outbound content,
+                can rely on.
+              </p>
+              <p>A brand strategy project includes a branding playbook with the following:</p>
+              <ul className="text-base">
+                <li>
+                  Brand story && company values && mission/vision statements &&
+                  tone/voice/personality standards
+                </li>
+                <li>
+                  Customer, contributor, and community personas based on Voice of Customer/Voice of
+                  Developer research
+                </li>
+                <li>
+                  Ready-for-you marketing boilerplate to use on your website, GitHub, ProductHunt,
+                  Hacker News, or anywhere else your tech brand shows up
+                </li>
+              </ul>
             </Eight>
             <Four className="hidden md:block text-center">
               <Image
@@ -127,7 +144,39 @@ export default function Copy({
               />
             </Four>
           </Grid>
-          <Grid className="mb-16">
+        </Container>
+      </section>
+      <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-900">
+        <Container>
+          <Grid>
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
+                Website copywriting
+              </h2>
+              <p>
+                Let's transform your tech- and features-driven website into an engaging vision of
+                what your ideal customers become when they have your product in their back pocket.
+              </p>
+              <p>
+                When you lead with inspiration, education, and problem-solving—not marketing
+                gimmicks—you generate the commitment your marketing plans demand. Commitment to
+                signing up. To championing your product. To not just be a one-off conversion, but a
+                long-term partner.
+              </p>
+              <p>A website copy project includes:</p>
+              <ul className="text-base">
+                <li>
+                  Exhaustive research into the real business problems your ideal customers face via
+                  competitive research and interviews with internal stakeholders and existing
+                  customers
+                </li>
+                <li>Copywriting for all of your key pages, including two rounds of revision</li>
+                <li>
+                  Full coordination with your marketing and/or development teams to properly
+                  implement your new messaging
+                </li>
+              </ul>
+            </Eight>
             <Four className="hidden md:block text-center">
               <Image
                 className="opacity-50"
@@ -137,58 +186,10 @@ export default function Copy({
                 height={165}
               />
             </Four>
-            <Eight
-              id="website-copy"
-              className="px-8 py-12 bg-purple bg-opacity-5 dark:bg-opacity-20 rounded"
-            >
-              <h3 className="text-purple dark:text-white text-3xl lg:text-4xl font-medium mb-4">
-                Website copy
-              </h3>
-              <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceWebsiteCopy} />
-              </div>
-              <ServiceGo>
-                <ServiceButton to="/get-started/">
-                  <code className="text-lg text-orange font-bold bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded">
-                    init
-                  </code>{' '}
-                  a new website
-                </ServiceButton>
-              </ServiceGo>
-            </Eight>
           </Grid>
         </Container>
       </section>
-      <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
-        <Container>
-          <Grid>
-            <Eight>
-              <h2 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mr-6">
-                Need copy <em>right now</em>? Not ready for a full copywriting project?
-              </h2>
-              <h3 className="text-orange text-4xl lg:text-5xl font-mono font-bold mt-4 mb-4">
-                The One-Day Commit
-              </h3>
-              <div className="prose dark:prose-dark mb-8">
-                <MDXExport code={mdxServiceOneDay} />
-              </div>
-              <ServiceGo>
-                <ServicePrice>$1,495</ServicePrice>
-                <ServiceButton to="/get-started/">Commit to it</ServiceButton>
-              </ServiceGo>
-            </Eight>
-            <div className="hidden lg:block col-span-4 opacity-20">
-              <Image
-                src="/static/images/services-one-day.svg"
-                alt="The One-Day Commit"
-                height={512}
-                width={512}
-              />
-            </div>
-          </Grid>
-        </Container>
-      </section>
-      <section className="py-24 bg-gray-100 dark:bg-gray-700">
+      <section className="py-24 dark:bg-gray-700">
         <Container>
           <Grid>
             <Twelve>
@@ -208,6 +209,35 @@ export default function Copy({
                 go above and beyond your expectations!
               </TestimonialHoriz>
             </Twelve>
+          </Grid>
+        </Container>
+      </section>
+      <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
+        <Container>
+          <Grid>
+            <Eight>
+              <h2 className="text-purple dark:text-gray-50 text-lg lg:text-xl font-bold uppercase leading-snug">
+                Need copy <em>right now</em>? Not ready for a full copywriting project?
+              </h2>
+              <h3 className="text-orange text-4xl lg:text-5xl font-mono font-bold mt-8 mb-8">
+                The One-Day Commit
+              </h3>
+              <div className="prose dark:prose-dark mb-8">
+                <MDXExport code={mdxServiceOneDay} />
+              </div>
+              <ServiceGo>
+                <ServicePrice>$1,495</ServicePrice>
+                <ServiceButton to="/get-started/">Commit to it</ServiceButton>
+              </ServiceGo>
+            </Eight>
+            <div className="hidden lg:block col-span-4 opacity-20">
+              <Image
+                src="/static/images/services-one-day.svg"
+                alt="The One-Day Commit"
+                height={512}
+                width={512}
+              />
+            </div>
           </Grid>
         </Container>
       </section>

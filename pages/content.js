@@ -55,7 +55,14 @@ export default function Content({
                 cloud native
               </h1>
               <p>
-                I employ three styles of content:{' '}
+                A big moment in startup maturity is feeling confident your{' '}
+                <Link href="/copy">messaging + copywriting</Link> resonates with your target
+                audiences. You're finally ready to distribute your value propositions and innovative
+                vision wide across the open source and cloud native ecosystems through content.
+              </p>
+              <p>
+                For these clients, I employ three styles of developer- and engineer-focused
+                content&mdash;{' '}
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 px-2 py-0.5 rounded-lg">
                   editorial
                 </span>
@@ -67,8 +74,36 @@ export default function Content({
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 mr-1 px-2 py-0.5 rounded-lg">
                   search optimized
                 </span>
-                .
+                &mdash;across any asset that supports the KPIs of your developer marketing strategy
+                and your organization's go-to-market motion. We can build a reliable pipeline for
+                your product blog, stack up contributions to your industry's leading publications,
+                or target leaders/CTOs with case studies, white papers, product briefs, and beyond.
               </p>
+              <p>Content is your path to:</p>
+              <div className="lg:grid grid-cols-2 gap-4">
+                <ul className="text-base !my-0">
+                  <li>
+                    Build the required trust and authority to inspire readers to do difficult work,
+                    like reconfigure their production environment, just to finish a 'get started'
+                    guide
+                  </li>
+                  <li>
+                    Transform skeptical developers into product champions by solving their
+                    day-to-day technical concerns
+                  </li>
+                </ul>
+                <ul className="text-base !my-0">
+                  <li>
+                    Play to the algorithm's demands while captivating developer/engineering readers
+                    into learning about novel approaches to big-picture technical and cultural
+                    decisions
+                  </li>
+                  <li>
+                    Stand out in crowded fields with developer- and engineer-focused content that
+                    feels less like a hard sell and more like a helpful friend
+                  </li>
+                </ul>
+              </div>
             </Ten>
           </Grid>
           {/* <Grid>
@@ -104,7 +139,7 @@ export default function Content({
         <Container className="relative">
           <Grid className="!items-start mb-16">
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h3>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h2>
               <p>
                 Go beyond &ldquo;thought leadership&rdquo; and truly stand out from the crowd with
                 content driven by your team's strongest opinions about your industry. Through
@@ -161,11 +196,11 @@ export default function Content({
           </Grid>
         </Container>
       </section>
-      <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-800">
+      <section className="relative z-10 py-24 bg-gray-100 dark:bg-gray-900">
         <Container className="relative">
-          <Grid className="!items-start mb-24">
+          <Grid className="!items-start">
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Technical</h3>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Technical</h2>
               <p>
                 Your fastest path to winning over managers and leaders with purchasing power is by
                 helping them solve a problem, right now, in as few steps as possible. I can dive
@@ -179,7 +214,7 @@ export default function Content({
               </p>
             </Eight>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-200 dark:bg-gray-900 p-8">
+              <div className="prose dark:prose-dark bg-gray-200 dark:bg-gray-800 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Tracetest</h4>
                 <p>
                   To help DevRel leaders at Tracetest better position their cloud native testing
@@ -198,7 +233,7 @@ export default function Content({
               </div>
             </Six>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-200 dark:bg-gray-900 p-8">
+              <div className="prose dark:prose-dark bg-gray-200 dark:bg-gray-800 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Kubefirst</h4>
                 <p>
                   I plucked the idea behind{' '}
@@ -220,11 +255,11 @@ export default function Content({
           </Grid>
         </Container>
       </section>
-      <section className="relative z-10 py-24 bg-white dark:bg-gray-800">
+      <section className="relative z-10 py-24 bg-white dark:bg-gray-700">
         <Container>
-          <Grid className="!items-start mb-24">
+          <Grid className="!items-start">
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h3 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Search optimized</h3>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Search optimized</h2>
               <p>
                 Instead of optimizing content around keywords, which results in content that's light
                 on value and feels like something your audience has read before, let's prioritize
@@ -237,7 +272,7 @@ export default function Content({
               </p>
             </Eight>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-800 p-8">
                 <h4 className="!text-xl text-purple !mt-0">GraphGrid</h4>
                 <p>
                   In{' '}
@@ -257,7 +292,7 @@ export default function Content({
               </div>
             </Six>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-800 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Kusk</h4>
                 <p>
                   The Kusk team, eager to brand their project with the influential "APIOps" keyword,
@@ -275,6 +310,23 @@ export default function Content({
                 </p>
               </div>
             </Six>
+          </Grid>
+        </Container>
+      </section>
+      <section id="get-started" className="py-24 bg-gray-50 dark:bg-gray-800">
+        <Container>
+          <Grid>
+            <Ten className="prose prose-lg dark:prose-dark">
+              <h2 className="!text-purple !text-3xl !lg:text-5xl !leading-normal font-medium dark:!text-gray-100">
+                Ready to scale <span className="text-orange font-bold">commitment</span> from
+                developers and engineering leaders in open source && cloud native with content?
+              </h2>
+              <Link className="block lg:inline-block" href="/get-started">
+                <button className="text-sea text-2xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
+                  Schedule an introduction
+                </button>
+              </Link>
+            </Ten>
           </Grid>
         </Container>
       </section>

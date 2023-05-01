@@ -41,7 +41,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
               <h3 className="!text-purple dark:!text-gray-200 !text-4xl lg:!text-5xl !font-bold !mb-4">
                 Hey, I&rsquo;m Joel.
               </h3>
-              <h1 className="!text-sea lg:!text-lg !italic !leading-snug !mb-12">
+              <h1 className="!text-sea !text-base lg:!text-lg !italic !leading-snug !mb-12">
                 Writer for open source && cloud native
               </h1>
               <p className="text-xl lg:text-2xl font-medium">
@@ -65,11 +65,11 @@ export default function About({ content, AboutCreative, AboutTech }) {
           </Grid>
         </Container>
       </header>
-      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid>
             <Eight className="prose prose-lg dark:prose-dark">
-              <h2 className="!text-purple">
+              <h2 className="!text-purple dark:!text-sea">
                 Once upon a time, you committed to the work you're doing today.
               </h2>
               <p>
@@ -79,7 +79,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 the next few months or years of your working life.
               </p>
               <p>&ldquo;Today is the day. That's the direction I'm headed.&rdquo;</p>
-              <h2 className="!text-purple">
+              <h2 className="!text-purple dark:!text-sea">
                 A moment that's equal parts thrilling, terrifying, and necessary.
               </h2>
               <p>
@@ -91,7 +91,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 Instead, you have an opportunity to be a guiding force. To inspire them, through
                 honesty, to make their best possible decision.
               </p>
-              <h2 className="!text-purple">
+              <h2 className="!text-purple dark:!text-sea">
                 Commit to others the way you want to them to commit to you… right?
               </h2>
               <p>
@@ -168,9 +168,9 @@ export default function About({ content, AboutCreative, AboutTech }) {
           </Grid>
         </Container>
       </section>
-      <section className="py-24 dark:bg-gray-800">
+      <section className="py-24 dark:bg-gray-900">
         <Container>
-          <Grid className="!items-start">
+          <Grid>
             <Twelve className="mb-12">
               <p className="text-purple dark:text-gray-50 text-lg lg:text-xl font-bold leading-snug">
                 Some fun{' '}
@@ -180,13 +180,15 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 odd facts about me:
               </p>
             </Twelve>
-            <Four>
-              <p className="text-purple text-lg lg:text-xl font-medium">
+          </Grid>
+          <Grid className="!items-start gap-y-12 md:!gap-y-12">
+            <Four className="">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 I'm a father to two phenomenal daughters: Mabel and Ida.
               </p>
             </Four>
-            <Four className="mb-8">
-              <p className="text-purple text-lg lg:text-xl font-medium">
+            <Four className="">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 I'm an avid (and published, but who's counting) fiction writer. Check out a personal
                 favorite:{' '}
                 <Link
@@ -198,29 +200,35 @@ export default function About({ content, AboutCreative, AboutTech }) {
               </p>
             </Four>
             <Four>
-              <p className="text-purple text-lg lg:text-xl font-medium">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 I mountain bike through the Sonoran desert no less than twice a week and I have the
                 scars to prove it.
               </p>
             </Four>
             <Four>
-              <p className="text-purple text-lg lg:text-xl font-medium">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 I'm fostering a desert tortoise named Amaranth.
               </p>
             </Four>
             <Four>
-              <p className="text-purple text-lg lg:text-xl font-medium">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 Two decades after falling in love with HTML and CSS for the first time, I still
                 build for the web—this website runs on a custom, open-source stack with NextJS, MDX,
                 Tailwind, and Vercel.
               </p>
             </Four>
             <Four>
-              <p className="text-purple text-lg lg:text-xl font-medium">
+              <p className="text-purple dark:text-gray-100 text-lg lg:text-xl font-medium">
                 I genuinely love commitment&mdash;<em>see below for proof</em>.
               </p>
             </Four>
-            <Twelve className="mt-24">
+          </Grid>
+        </Container>
+      </section>
+      <section className="py-24 bg-gray-50 dark:bg-gray-800">
+        <Container>
+          <Grid>
+            <Twelve>
               <Image
                 className="rounded-lg"
                 src="/static/images/joel-bike-riding-01.jpg"

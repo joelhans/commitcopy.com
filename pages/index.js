@@ -167,7 +167,9 @@ export default function Home() {
               </Link>
             </Ten>
           </Grid>
-          {/* <Grid>
+        </Container>
+      </section>
+      {/* <Grid>
             <Twelve>
               <Link className="block lg:inline-block mb-4" href="mailto:joel@commitcopy.com">
                 <button className="text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
@@ -193,8 +195,6 @@ export default function Home() {
               </Link>
             </Twelve>
           </Grid> */}
-        </Container>
-      </section>
     </>
   )
 }
