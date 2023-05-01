@@ -43,10 +43,10 @@ export default function Content({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/content`}
       />
-      <header className="mt-48 mb-20">
+      <header className="mt-24 lg:mt-48 mb-20">
         <Container>
           <Grid className="mb-24">
-            <Ten className="prose prose-lg dark:prose-dark">
+            <Ten className="prose lg:prose-lg dark:prose-dark">
               <h1 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
                 Content to inspire commitment in open source{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">
@@ -317,12 +317,12 @@ export default function Content({
         <Container>
           <Grid>
             <Ten className="prose prose-lg dark:prose-dark">
-              <h2 className="!text-purple !text-3xl !lg:text-5xl !leading-normal font-medium dark:!text-gray-100">
+              <h2 className="!text-purple !text-2xl !lg:text-5xl !leading-normal font-medium dark:!text-gray-100">
                 Ready to scale <span className="text-orange font-bold">commitment</span> from
                 developers and engineering leaders in open source && cloud native with content?
               </h2>
               <Link className="block lg:inline-block" href="/get-started">
-                <button className="text-sea text-2xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
+                <button className="text-sea text-xl lg:text-2xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
                   Schedule an introduction
                 </button>
               </Link>

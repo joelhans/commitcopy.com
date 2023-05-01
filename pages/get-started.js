@@ -65,7 +65,7 @@ export default function GetStarted({ content }) {
       <header className="mt-48 mb-24">
         <Container>
           <Grid>
-            <Six className="hidden lg:block">
+            <Six>
               <h1 className="text-purple dark:text-gray-50 text-xl lg:text-2xl font-bold uppercase leading-snug mb-8">
                 {frontMatter.title}
               </h1>

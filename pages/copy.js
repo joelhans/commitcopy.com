@@ -43,10 +43,10 @@ export default function Copy({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/copy`}
       />
-      <header className="mt-48 mb-20">
+      <header className="mt-24 lg:mt-48 mb-20">
         <Container>
           <Grid className="mb-24">
-            <Ten className="prose prose-lg dark:prose-dark">
+            <Ten className="prose lg:prose-lg dark:prose-dark">
               <h1 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
                 Scale your open source{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">

@@ -75,15 +75,15 @@ export default function Home() {
               </p>
               <div className="mt-8">
                 <Link href="/copy">
-                  <button className="text-purple  text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
+                  <button className="block md:inline-block text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
                     Messaging/copywriting
                   </button>
                 </Link>
-                <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mx-4 px-2 py-0.5 rounded-lg">
+                <span className="inline-block text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 my-4 md:my-0 mx-4 px-2 py-0.5 rounded-lg">
                   ??
                 </span>
                 <Link href="/content">
-                  <button className="text-sea text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
+                  <button className="block md:inline-block text-sea text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-900 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
                     Content
                   </button>
                 </Link>
@@ -130,7 +130,7 @@ export default function Home() {
               </h2>
             </Six>
           </Grid>
-          <div className="relative grid grid-cols-12 gap-x-6 gap-y-4 justify-around py-6 dark:rounded dark:bg-gray-800">
+          <div className="relative grid grid-cols-6 lg:grid-cols-12 gap-x-6 gap-y-4 justify-around p-6 dark:rounded dark:bg-gray-800">
             <ClientLogo className="" src="cncf.svg" name="CNCF" width="240" height="40" />
             <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
@@ -155,7 +155,7 @@ export default function Home() {
         <Container>
           <Grid>
             <Ten className="prose prose-lg dark:prose-dark">
-              <h2 className="!text-purple !text-3xl !lg:text-5xl !leading-normal font-medium dark:!text-gray-100">
+              <h2 className="!text-purple !text-2xl !lg:text-5xl !leading-normal font-medium dark:!text-gray-100">
                 Ready to inspire that first{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
@@ -163,7 +163,7 @@ export default function Home() {
                 from developers and engineering leaders in open source && cloud native?
               </h2>
               <Link className="block lg:inline-block" href="/get-started">
-                <button className="text-sea text-2xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
+                <button className="text-sea text-xl lg:text-2xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-sea hover:text-white dark:text-white dark:bg-sea dark:hover:bg-purple">
                   Schedule an introduction
                 </button>
               </Link>
