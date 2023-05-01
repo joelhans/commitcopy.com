@@ -56,7 +56,7 @@ export default function Content({
               </h1>
               <p>
                 A big moment in startup maturity is feeling confident your{' '}
-                <Link href="/copy">messaging + copywriting</Link> resonates with your target
+                <Link href="/copy">messaging + copywriting</Link> resonate with your target
                 audiences. You're finally ready to distribute your value propositions and innovative
                 vision wide across the open source and cloud native ecosystems through content.
               </p>

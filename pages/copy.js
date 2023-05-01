@@ -89,8 +89,8 @@ export default function Copy({
                 generating commitment. We're not talking hard-sell "conversion copywriting" (aka
                 suckering your target audience into clicking on a call-to-action button or filling
                 out a form), but rather messaging and copywriting that captures and uplevels your
-                your stand-out product vision for the unique qualities of the open source && cloud
-                native communities.
+                stand-out product vision for the unique qualities of the open source && cloud native
+                communities.
               </p>
               <p>
                 Let's start increasing conversions and growing your startup with ready-to-launch
@@ -111,12 +111,14 @@ export default function Copy({
               </h2>
               <p>
                 Not sure how to talk about your tech? Let's find the source of what makes you unique
-                and develop a messaging playbook that defines why people need to commit.
+                and develop a messaging playbook that defines what makes your products
+                commit-worthy.
               </p>
               <p>
                 You walk away with ready-for-you brand messaging that all your people, whether
-                they're developers in your community or brand marketers creating outbound content,
-                can rely on.
+                they're developers in your community, brand marketers creating outbound content, or
+                developer advocates promoting your projects at talks and conference booths, can rely
+                on.
               </p>
               <p>A brand strategy project includes a branding playbook with the following:</p>
               <ul className="text-base">
@@ -159,9 +161,9 @@ export default function Copy({
               </p>
               <p>
                 When you lead with inspiration, education, and problem-solving—not marketing
-                gimmicks—you generate the commitment your marketing plans demand. Commitment to
-                signing up. To championing your product. To not just be a one-off conversion, but a
-                long-term partner.
+                gimmicks—you generate the commitment your developer marketing plans demand.
+                Commitment to sign up. To champion your product. To not just be a one-off
+                conversion, but a long-term partner.
               </p>
               <p>A website copy project includes:</p>
               <ul className="text-base">

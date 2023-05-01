@@ -65,11 +65,11 @@ export default function Home() {
                 plus a portfolio of successful content and copywriting projects for specialized
                 audiences of brands like the <strong>Cloud Native Computing Foundation</strong>,{' '}
                 <strong>IBM</strong>, <strong>Red Hat</strong>, and beyond, I can reach technical
-                folks with purchasing power and steer them toward your paved road.
+                folks with purchasing power and steer them toward the paved road of your product.
               </p>
               <p>
-                I work across messaging/copywriting <strong>and</strong> content&mdash;let's figure
-                how the perfect balance that drives the commitment you need.
+                I work across messaging/copywriting <strong>and</strong> content&mdash;let's find
+                the perfect path for inspiring the commitment you need.
               </p>
               <div className="mt-8">
                 <Link href="/copy">
