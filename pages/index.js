@@ -51,7 +51,9 @@ export default function Home() {
                 />
               </div>
             </Six>
-            <Eight className="prose lg:prose-lg dark:prose-dark mt-0">
+          </Grid>
+          <Grid className="mt-12">
+            <Ten className="prose lg:prose-lg dark:prose-dark mt-0">
               <p>
                 Marketing to the open source and cloud native communities isn't the same as other
                 developer marketing. These folks opt for sharing information over hard marketing
@@ -86,7 +88,7 @@ export default function Home() {
                   </button>
                 </Link>
               </div>
-            </Eight>
+            </Ten>
           </Grid>
         </Container>
       </header>

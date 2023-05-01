@@ -42,7 +42,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 Hey, I&rsquo;m Joel.
               </h3>
               <h1 className="!text-sea !text-base lg:!text-lg !italic !leading-snug !mb-12">
-                Writer for open source && cloud native
+                Full-service writer for open source && cloud native
               </h1>
               <p className="text-xl lg:text-2xl font-medium">
                 I help technical startups and established companies create{' '}
