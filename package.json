@@ -12,12 +12,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@formspree/react": "^2.2.4",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.9",
     "@typeform/embed-react": "^1.2.6",
     "autoprefixer": "^10.2.5",
-    "daisyui": "^2.15.2",
     "esbuild": "^0.12.15",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
@@ -31,7 +28,6 @@
     "prism-react-renderer": "^1.2.0",
     "react": "17.0.2",
     "react-accessible-accordion": "^4.0.0",
-    "react-calendly": "^2.2.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-select": "^4.3.0",
@@ -44,7 +40,7 @@
     "remark-math": "^5.0.0",
     "remark-slug": "^7.0.0",
     "sharp": "^0.30.5",
-    "tailwindcss": "^2.2.7",
+    "tailwindcss": "3.3.2",
     "unist-util-visit": "^4.0.0"
   },
   "devDependencies": {

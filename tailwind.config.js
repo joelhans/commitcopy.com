@@ -2,19 +2,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './content/**/*.mdx',
-      './pages/**/*.js',
-      './src/components/**/*.js',
-      './layouts/**/*.js',
-      './lib/**/*.js',
-    ],
-    // options: {
-    //   safelist: ['type'], // [type='checkbox']
-    // },
-  },
+  content: [
+    './content/**/*.mdx',
+    './pages/**/*.js',
+    './src/components/**/*.js',
+    './src/components/**/*.tsx',
+    './layouts/**/*.js',
+    './lib/**/*.js',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -170,5 +165,5 @@ module.exports = {
     typography: ['dark'],
     modifiers: ['md', 'lg', 'xl'],
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography')],
 }
