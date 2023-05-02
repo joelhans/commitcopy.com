@@ -1,4 +1,4 @@
-import fs from 'fs'
+// import fs from 'fs'
 import { getFrontMatter, getSingleContent } from '@/lib/mdx'
 import generateRss from '@/lib/generate-rss'
 import { ARTICLES_CONTENT_PATH } from '@config/constants'
@@ -22,9 +22,9 @@ export async function getStaticProps({ params: { slug } }) {
   const postSlug = slug.join('/')
   const content = await getSingleContent(ARTICLES_CONTENT_PATH, postSlug)
 
-  const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
-  const rss = generateRss(posts)
-  fs.writeFileSync('./public/index.xml', rss)
+  // const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
+  // const rss = generateRss(posts)
+  // fs.writeFileSync('./public/index.xml', rss)
   // const postsSorted = posts.sort((a, b) => dateSortDesc(a.date, b.date))
   // const postIndex = postsSorted.findIndex((post) => post.slug === postSlug)
   // const prev = postsSorted[postIndex + 1] || null
