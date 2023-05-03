@@ -62,7 +62,7 @@ export default function GetStarted({ content }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="mt-48 mb-24">
+      <header className="mt-24 lg:mt-32 mb-20">
         <Container>
           <Grid>
             <Six>
