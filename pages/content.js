@@ -255,7 +255,7 @@ export default function Content({
           </Grid>
         </Container>
       </section>
-      <section className="relative z-10 py-24 bg-white dark:bg-gray-700">
+      <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid className="!items-start">
             <Eight className="prose lg:prose-lg dark:prose-dark">
@@ -272,7 +272,7 @@ export default function Content({
               </p>
             </Eight>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-800 p-8">
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
                 <h4 className="!text-xl text-purple !mt-0">GraphGrid</h4>
                 <p>
                   In{' '}
@@ -292,7 +292,7 @@ export default function Content({
               </div>
             </Six>
             <Six>
-              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-800 p-8">
+              <div className="prose dark:prose-dark bg-gray-100 dark:bg-gray-900 p-8">
                 <h4 className="!text-xl text-purple !mt-0">Kusk</h4>
                 <p>
                   The Kusk team, eager to brand their project with the influential "APIOps" keyword,
@@ -310,6 +310,30 @@ export default function Content({
                 </p>
               </div>
             </Six>
+          </Grid>
+        </Container>
+      </section>
+      <section className="py-24 bg-white dark:bg-gray-900">
+        <Container>
+          <Grid>
+            <Twelve>
+              <TestimonialHoriz
+                name="Abdallah Abedraba"
+                title="Associate Product Manager, Testkube && Kubeshop"
+                img="abdallah-abedraba.jpg"
+              >
+                With most writers I had to adapt to the writer's technique, process, or their
+                existing knowledge on the topic. Not with Joel. Joel enabled me to explore different
+                ideas that fitted with various experiments I was running, and he adapted to achieve
+                whatever the goal was. I would absolutely work with Joel again whenever I'm looking
+                to create well researched technical content or have a content strategy I want to
+                nail! <br />
+                <br />
+                If you want to up your content game while having a content writer that adapts and
+                supports your style/vision/knowledge depth/workflow, Joel is the perfect person for
+                it.
+              </TestimonialHoriz>
+            </Twelve>
           </Grid>
         </Container>
       </section>
