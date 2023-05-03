@@ -34,7 +34,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/${frontMatter.slug}`}
       />
-      <header className="relative z-10 mt-48 pb-24">
+      <header className="relative z-10 mt-24 lg:mt-32 mb-20">
         <Container>
           <Grid className="">
             <Six className="prose prose-lg dark:prose-dark">

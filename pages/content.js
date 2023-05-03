@@ -43,7 +43,7 @@ export default function Content({
         description={frontMatter.summary}
         url={`${siteMetadata.siteUrl}/content`}
       />
-      <header className="mt-24 lg:mt-48 mb-20">
+      <header className="mt-24 lg:mt-32 mb-20">
         <Container>
           <Grid className="mb-24">
             <Ten className="prose lg:prose-lg dark:prose-dark">
