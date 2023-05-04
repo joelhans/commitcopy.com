@@ -6,11 +6,13 @@ import PostLayout from '@/layouts/PostLayout'
 
 export async function getStaticPaths() {
   const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, false)
-  const paths = posts.map(({ slug }) => ({
-    params: {
-      slug: slug.split('/'),
-    },
-  }))
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+    }
+  })
 
   return {
     paths,
@@ -19,8 +21,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const postSlug = slug.join('/')
-  const content = await getSingleContent(ARTICLES_CONTENT_PATH, postSlug)
+  const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, false)
+  const post = posts.filter((a) => a.slug == slug)
+  const postUrl = post[0].publishedOn + '_' + slug
+  const content = await getSingleContent(ARTICLES_CONTENT_PATH, postUrl)
 
   // const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
   // const rss = generateRss(posts)
@@ -31,7 +35,7 @@ export async function getStaticProps({ params: { slug } }) {
   // const next = postsSorted[postIndex - 1] || null
 
   if (!content) {
-    console.warn(`No content found for slug ${postSlug}`)
+    console.warn(`No content found for slug ${postUrl}`)
   }
 
   return { props: { content } }
