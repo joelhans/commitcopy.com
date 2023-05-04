@@ -3,7 +3,7 @@ const headerNavLinks = [
   { href: '/copy', title: 'Messaging/copywriting' },
   { href: '/content', title: 'Content' },
   // { href: '/work', title: 'Work' },
-  // { href: '/articles', title: 'Articles' },
+  { href: '/articles', title: 'Articles' },
   { href: '/about', title: 'About' },
 ]
 

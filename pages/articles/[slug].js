@@ -1,4 +1,4 @@
-import fs from 'fs'
+// import fs from 'fs'
 import { getFrontMatter, getSingleContent } from '@/lib/mdx'
 import generateRss from '@/lib/generate-rss'
 import { ARTICLES_CONTENT_PATH } from '@config/constants'
@@ -6,11 +6,13 @@ import PostLayout from '@/layouts/PostLayout'
 
 export async function getStaticPaths() {
   const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, false)
-  const paths = posts.map(({ slug }) => ({
-    params: {
-      slug: slug.split('/'),
-    },
-  }))
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+    }
+  })
 
   return {
     paths,
@@ -19,19 +21,21 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const postSlug = slug.join('/')
-  const content = await getSingleContent(ARTICLES_CONTENT_PATH, postSlug)
+  const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, false)
+  const post = posts.filter((a) => a.slug == slug)
+  const postUrl = post[0].publishedOn + '_' + slug
+  const content = await getSingleContent(ARTICLES_CONTENT_PATH, postUrl)
 
-  const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
-  const rss = generateRss(posts)
-  fs.writeFileSync('./public/index.xml', rss)
+  // const posts = await getFrontMatter(ARTICLES_CONTENT_PATH, true)
+  // const rss = generateRss(posts)
+  // fs.writeFileSync('./public/index.xml', rss)
   // const postsSorted = posts.sort((a, b) => dateSortDesc(a.date, b.date))
   // const postIndex = postsSorted.findIndex((post) => post.slug === postSlug)
   // const prev = postsSorted[postIndex + 1] || null
   // const next = postsSorted[postIndex - 1] || null
 
   if (!content) {
-    console.warn(`No content found for slug ${postSlug}`)
+    console.warn(`No content found for slug ${postUrl}`)
   }
 
   return { props: { content } }
