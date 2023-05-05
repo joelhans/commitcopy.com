@@ -61,25 +61,22 @@ export default function ListLayout({ posts, title, summary }) {
               const { slug, title, summary, tags, featuredImage } = frontMatter
               return (
                 <Four key={slug} className="block mb-16">
-                  <Image src={featuredImage} width={1200} height={627} />
-                  <CustomLink href={`/articles/${slug}`} className="block mt-4">
-                    <h3 className="text-xl lg:text-2xl font-display font-bold mb-2 hover:text-sea transition-all">
+                  <CustomLink href={`/articles/${slug}`} className="block group">
+                    <Image src={featuredImage} width={1200} height={627} />
+                    <h3 className="text-xl lg:text-2xl font-display font-bold mt-4 mb-2 group-hover:text-sea transition-all">
                       {title}
                     </h3>
-                  </CustomLink>
-                  <div className="flex flex-wrap mt-4">
-                    {tags.map((tag) => (
-                      <Tag key={tag} text={tag} />
-                    ))}
-                  </div>
-                  <p className="prose prose-md dark:prose-dark text-gray-500 dark:text-gray-400 my-4">
-                    {summary}
-                  </p>
-                  <CustomLink
-                    href={`/articles/${slug}`}
-                    className="text-sm font-bold hover:text-sea transition-all"
-                  >
-                    Read more &rarr;
+                    <div className="flex flex-wrap mt-4">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                    </div>
+                    <p className="prose prose-md dark:prose-dark text-gray-500 dark:text-gray-400 my-4">
+                      {summary}
+                    </p>
+                    <p className="text-sm font-bold group-hover:text-sea transition-all">
+                      Read more &rarr;
+                    </p>
                   </CustomLink>
                 </Four>
               )
