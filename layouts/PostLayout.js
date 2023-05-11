@@ -9,7 +9,13 @@ import { MDXLayoutRenderer } from '@components/MDXComponents'
 
 import LinkData from '@data/links.json'
 
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const postDateTemplate = {
+  timeZone: 'UTC',
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}
 
 export default function PostLayout({ children, frontMatter }) {
   const { slug, title, publishedOn, updatedOn, tags } = frontMatter
