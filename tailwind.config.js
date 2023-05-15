@@ -10,6 +10,7 @@ module.exports = {
     './layouts/**/*.js',
     './lib/**/*.js',
   ],
+  mode: 'jit',
   darkMode: 'class',
   theme: {
     extend: {

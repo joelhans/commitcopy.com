@@ -26,7 +26,7 @@ export default function ListLayout({ posts, title, summary }) {
           <Ten>
             <PageTitle>{title}</PageTitle>
             <div className="prose prose-md lg:prose-lg dark:prose-dark">
-              <p className="text-xl lg:text-2xl text-steel">{summary}</p>
+              <p className="text-xl lg:text-2xl text-purple">{summary}</p>
               <div className="relative max-w-lg">
                 <input
                   aria-label="Search articles"
