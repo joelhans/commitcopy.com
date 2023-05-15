@@ -23,14 +23,14 @@ export default function Home() {
         <Container>
           <Grid>
             <Six>
-              <h1 className="text-purple text-3xl lg:text-[2.8rem] font-bold leading-tight lg:leading-tight dark:text-gray-100">
+              <h1 className="text-purple text-3xl lg:!text-[2.8rem] font-bold leading-tight lg:leading-tight dark:text-gray-100">
                 Inspire the developers and engineering leaders of open source and cloud native to{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 mr-1 px-2 py-0.5 rounded-lg">
                   commit
                 </span>
                 .
               </h1>
-              <h2 className="text-orange text-lg lg:!text-2xl font-medium leading-relaxed mt-8">
+              <h2 className="text-orange text-lg lg:text-2xl font-medium leading-relaxed mt-8">
                 Developers, platform engineers, GitOps{' '}
                 <span className="font-mono font-bold text-purple dark:text-white">??</span> DevOps
                 practitioners, and the engineering leaders who manage them are exhausted by the

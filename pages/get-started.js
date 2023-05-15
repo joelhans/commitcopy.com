@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { Widget } from '@typeform/embed-react'
-import { InlineWidget } from 'react-calendly'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
