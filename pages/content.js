@@ -1,40 +1,23 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from '@components/Link'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
 import { BASE_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
-import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
-import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
-import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
+import { TestimonialHoriz } from '@components/Testimonial'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
-  const ServiceWebsiteCopy = await getSingleContent(BASE_CONTENT_PATH, 'services/website-copy')
-  const ServiceContent = await getSingleContent(BASE_CONTENT_PATH, 'services/content')
-  const ServiceSourceStory = await getSingleContent(BASE_CONTENT_PATH, 'services/source-story')
-  const ServiceOneDay = await getSingleContent(BASE_CONTENT_PATH, 'services/one-day-commit')
 
   return {
-    props: { content, ServiceWebsiteCopy, ServiceContent, ServiceSourceStory, ServiceOneDay },
+    props: { content },
   }
 }
 
-export default function Content({
-  content,
-  ServiceWebsiteCopy,
-  ServiceContent,
-  ServiceSourceStory,
-  ServiceOneDay,
-}) {
-  const { mdxSource, frontMatter } = content
-  const { mdxSource: mdxServiceWebsiteCopy } = ServiceWebsiteCopy
-  const { mdxSource: mdxServiceSourceStory } = ServiceSourceStory
-  const { mdxSource: mdxServiceContent } = ServiceContent
-  const { mdxSource: mdxServiceOneDay } = ServiceOneDay
+export default function Content({ content }) {
+  const { frontMatter } = content
 
   return (
     <>
@@ -47,7 +30,7 @@ export default function Content({
         <Container>
           <Grid className="mb-24">
             <Ten className="prose lg:prose-lg dark:prose-dark">
-              <h1 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
+              <h1 className="!text-purple !leading-tight !font-bold dark:!text-gray-100">
                 Content to inspire commitment in open source{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">
                   &&

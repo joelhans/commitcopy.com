@@ -1,53 +1,71 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from '@components/Link'
-import { getSingleContent } from '@/lib/mdx'
+import { getSingleContent, getFrontMatter } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
-import { BASE_CONTENT_PATH } from '@config/constants'
+import { BASE_CONTENT_PATH, WORK_CONTENT_PATH } from '@config/constants'
 import siteMetadata from '@data/siteMetadata'
-import { MDXLayoutRenderer, MDXExport } from '@components/MDXComponents'
+import { MDXExport } from '@components/MDXComponents'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
-import { Testimonial, TestimonialHoriz } from '@components/Testimonial'
+import { TestimonialHoriz } from '@components/Testimonial'
+import ClientLogo from '@components/ClientLogo'
 
 export async function getStaticProps() {
-  const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
-  const ServiceWebsiteCopy = await getSingleContent(BASE_CONTENT_PATH, 'services/website-copy')
-  const ServiceContent = await getSingleContent(BASE_CONTENT_PATH, 'services/content')
-  const ServiceSourceStory = await getSingleContent(BASE_CONTENT_PATH, 'services/source-story')
   const ServiceOneDay = await getSingleContent(BASE_CONTENT_PATH, 'services/one-day-commit')
+  const projects = await getFrontMatter(WORK_CONTENT_PATH)
 
   return {
-    props: { content, ServiceWebsiteCopy, ServiceContent, ServiceSourceStory, ServiceOneDay },
+    props: { ServiceOneDay, projects },
   }
 }
 
-export default function Copy({
-  content,
-  ServiceWebsiteCopy,
-  ServiceContent,
-  ServiceSourceStory,
-  ServiceOneDay,
-}) {
-  const { mdxSource, frontMatter } = content
-  const { mdxSource: mdxServiceWebsiteCopy } = ServiceWebsiteCopy
-  const { mdxSource: mdxServiceSourceStory } = ServiceSourceStory
-  const { mdxSource: mdxServiceContent } = ServiceContent
+const WorkItemFull = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) => (
+  <Six
+    key={title}
+    className="bg-gray-50 dark:bg-gray-700 hover:bg-purple hover:bg-opacity-5 dark:hover:bg-gray-600 rounded-lg transition-all"
+  >
+    <Link className="block p-8" href={`/work/${slug}`}>
+      <Image
+        className="rounded-lg -ml-8"
+        src={`/static/projects/${slug}/hero.png`}
+        width="1440"
+        height="755"
+        alt={`Copywriting and content work for ${title}`}
+      />
+      <h2 className="mt-4 mb-4 h-20">
+        <span className="absolute invisible">{title}</span>
+        <ClientLogo
+          className="!justify-start"
+          src={logoSrc}
+          name={title}
+          width={logoWidth}
+          height={logoHeight}
+        />
+      </h2>
+      <article className="prose dark:prose-dark mb-4">
+        <p className="text-purple dark:text-white text-xl lg:text-2xl font-medium">{summary}</p>
+      </article>
+    </Link>
+  </Six>
+)
+
+export default function Copy({ ServiceOneDay, projects }) {
   const { mdxSource: mdxServiceOneDay } = ServiceOneDay
 
   return (
     <>
       <PageSeo
         title="Messaging + copywriting for open source && cloud native"
-        description={frontMatter.summary}
+        description="Scale your open source && cloud native startup with brand and product messaging to align your business units on what you do and why, or tactical copywriting for your website."
         url={`${siteMetadata.siteUrl}/copy`}
       />
       <header className="mt-24 lg:mt-32 mb-20">
         <Container>
           <Grid className="mb-24">
             <Ten className="prose lg:prose-lg dark:prose-dark">
-              <h1 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
+              <h1 className="!text-purple !leading-tight !font-bold dark:!text-gray-100">
                 Scale your open source{' '}
                 <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">
                   &&
@@ -191,7 +209,36 @@ export default function Copy({
           </Grid>
         </Container>
       </section>
-      <section className="py-24 dark:bg-gray-700">
+      <section id="portfolio" className="py-24 dark:bg-gray-800">
+        <Container>
+          <Grid className="prose lg:prose-lg dark:prose-dark mb-12">
+            <Twelve>
+              <h2 className="!text-purple !leading-tight font-medium dark:!text-gray-100">
+                Key samples of my messaging and copywriting work:
+              </h2>
+            </Twelve>
+          </Grid>
+          <Grid className="items-stretch">
+            {projects.map((project) => {
+              return (
+                <WorkItemFull
+                  key={project.slug}
+                  title={project.title}
+                  slug={project.slug}
+                  summary={project.summary}
+                  logoSrc={project.logoSrc}
+                  logoWidth={project.logoWidth}
+                  logoHeight={project.logoHeight}
+                />
+              )
+            })}
+          </Grid>
+          <p className="text-purple dark:text-gray-50 text-lg font-medium mt-8 italic text-center">
+            More samples available upon request.
+          </p>
+        </Container>
+      </section>
+      <section className="py-24 bg-gray-50 dark:bg-gray-700">
         <Container>
           <Grid>
             <Twelve>
@@ -214,7 +261,7 @@ export default function Copy({
           </Grid>
         </Container>
       </section>
-      <section id="one-day-commit" className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section id="one-day-commit" className="py-16 bg-gray-100 dark:bg-gray-800">
         <Container>
           <Grid>
             <Eight>
