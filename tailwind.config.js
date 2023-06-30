@@ -76,11 +76,11 @@ module.exports = {
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            'code:before': {
-              content: 'none',
+            'code::before': {
+              content: '""',
             },
-            'code:after': {
-              content: 'none',
+            'code::after': {
+              content: '""',
             },
             hr: { borderColor: theme('colors.gray.200') },
             'ol li:before': {
