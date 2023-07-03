@@ -58,11 +58,11 @@ export default function ListLayout({ posts, title, summary }) {
           <Grid className="!items-start">
             {!filteredBlogPosts.length && 'No articles found.'}
             {filteredBlogPosts.map((frontMatter) => {
-              const { slug, title, summary, tags, featuredImage } = frontMatter
+              const { slug, title, summary, tags, images } = frontMatter
               return (
                 <Four key={slug} className="block mb-16">
                   <CustomLink href={`/articles/${slug}`} className="block group">
-                    <Image src={featuredImage} width={1200} height={627} />
+                    <Image src={images[0]} width={1200} height={627} />
                     <h3 className="text-xl lg:text-2xl font-display font-bold mt-4 mb-2 group-hover:text-sea transition-all">
                       {title}
                     </h3>
