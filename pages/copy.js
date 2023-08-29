@@ -51,6 +51,36 @@ const WorkItemFull = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) 
   </Six>
 )
 
+const WorkItemFeatured = ({ title, slug, summary, logoSrc, logoWidth, logoHeight }) => (
+  <Eight
+    key={title}
+    className="bg-gray-100 dark:bg-gray-700 hover:bg-purple hover:bg-opacity-5 dark:hover:bg-gray-600 rounded-lg transition-all"
+  >
+    <Link className="block p-8" href={`/work/${slug}`}>
+      <Image
+        className="rounded-lg -ml-8"
+        src={`/static/projects/${slug}/hero.png`}
+        width="1440"
+        height="755"
+        alt={`Copywriting and content work for ${title}`}
+      />
+      <h2 className="mt-4 mb-4 h-20">
+        <span className="absolute invisible">{title}</span>
+        <ClientLogo
+          className="!justify-start"
+          src={logoSrc}
+          name={title}
+          width={logoWidth}
+          height={logoHeight}
+        />
+      </h2>
+      <article className="prose dark:prose-dark mb-4">
+        <p className="text-purple dark:text-white text-xl lg:text-2xl font-medium">{summary}</p>
+      </article>
+    </Link>
+  </Eight>
+)
+
 export default function Copy({ ServiceOneDay, projects }) {
   const { mdxSource: mdxServiceOneDay } = ServiceOneDay
 
@@ -138,7 +168,10 @@ export default function Copy({ ServiceOneDay, projects }) {
                 developer advocates promoting your projects at talks and conference booths, can rely
                 on.
               </p>
-              <p>A brand strategy project includes a branding playbook with the following:</p>
+              <p>
+                A messaging strategy project includes a comprehensive famework document with the
+                following:
+              </p>
               <ul className="text-base">
                 <li>
                   Brand story && company values && mission/vision statements &&
@@ -163,6 +196,23 @@ export default function Copy({ ServiceOneDay, projects }) {
                 height={142}
               />
             </Four>
+          </Grid>
+          <Grid className="items-center mt-16">
+            <Four className="">
+              <h3 className="text-sea text-3xl lg:text-5xl font-medium leading-tight">
+                Featured messaging project:
+              </h3>
+            </Four>
+            <WorkItemFeatured
+              key={projects[0].slug}
+              title={projects[0].title}
+              slug={projects[0].slug}
+              summary={projects[0].summary}
+              logoSrc={projects[0].logoSrc}
+              logoWidth={projects[0].logoWidth}
+              logoHeight={projects[0].logoHeight}
+              className="bg-black"
+            />
           </Grid>
         </Container>
       </section>
@@ -219,7 +269,7 @@ export default function Copy({ ServiceOneDay, projects }) {
             </Twelve>
           </Grid>
           <Grid className="items-stretch">
-            {projects.map((project) => {
+            {projects.slice(1).map((project) => {
               return (
                 <WorkItemFull
                   key={project.slug}
