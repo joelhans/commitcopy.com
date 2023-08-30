@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from '@components/Link'
 import { getSingleContent } from '@/lib/mdx'
 import { PageSeo } from '@components/SEO'
@@ -7,6 +8,7 @@ import siteMetadata from '@data/siteMetadata'
 import Container from '@components/Container'
 import { Grid, Twelve, Ten, Eight, Four, Six, Two } from '@components/Grid'
 import { TestimonialHoriz } from '@components/Testimonial'
+import ClientLogo from '@components/ClientLogo'
 
 export async function getStaticProps() {
   const content = await getSingleContent(BASE_CONTENT_PATH, 'services')
@@ -47,15 +49,15 @@ export default function Content({ content }) {
                 For these clients, I employ three styles of developer- and engineer-focused
                 content&mdash;{' '}
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 px-2 py-0.5 rounded-lg">
-                  editorial
+                  technical commentary
                 </span>
                 ,{' '}
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 mr-1 px-2 py-0.5 rounded-lg">
-                  technical
+                  cornerstone resources
                 </span>
                 , and{' '}
                 <span className="text-base text-orange text-mono font-bold bg-gray-200 dark:bg-gray-900 mr-1 px-2 py-0.5 rounded-lg">
-                  search optimized
+                  how-to guides
                 </span>
                 &mdash;across any asset that supports the KPIs of your developer marketing strategy
                 and your organization's go-to-market motion. We can build a reliable pipeline for
@@ -89,46 +91,21 @@ export default function Content({ content }) {
               </div>
             </Ten>
           </Grid>
-          {/* <Grid>
-            <Six>
-              <h1 className="text-purple dark:text-gray-50 text-lg lg:text-xl font-bold uppercase leading-snug mb-8">
-                Content for open source{' '}
-                <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-2 py-0.5 rounded-lg">
-                  &&
-                </span>{' '}
-                cloud native
-              </h1>
-              <div className="prose prose-md lg:prose-lg dark:prose-dark">
-                <p className="text-sea text-3xl lg:text-4xl font-medium !leading-snug">
-
-                  {frontMatter.summary}
-                </p>
-                <MDXLayoutRenderer mdxSource={mdxSource} frontMatter={frontMatter} />
-              </div>
-            </Six>
-            <Six className="hidden md:block">
-              <Image
-                className="rounded-lg"
-                src="/static/images/services_hero.jpg"
-                alt="Joel Hans, B2B copywriter for generating commitment"
-                height={1200}
-                width={800}
-              />
-            </Six>
-          </Grid> */}
         </Container>
       </header>
       <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container className="relative">
           <Grid className="!items-start mb-16">
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Editorial</h2>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
+                Technical commentary
+              </h2>
               <p>
-                Go beyond &ldquo;thought leadership&rdquo; and truly stand out from the crowd with
-                content driven by your team's strongest opinions about your industry. Through
-                original research and interviews, I create authoritative content that simplifies
-                complex processes or mental models, then leverage storytelling to help them put
-                leading ideas into action today.
+                Go beyond standard-issue &ldquo;thought leadership&rdquo; and truly stand out from
+                the crowd with articles that merge your team's strongest-held opinions with their
+                technical expertise. Through original research and interviews, I create
+                authoritative content that simplifies complex processes or mental models, then
+                leverage storytelling to help readers put leading ideas into action today.
               </p>
               <p>
                 It's your surest path to building trust, inspiring commitment, and delivering the
@@ -183,17 +160,73 @@ export default function Content({ content }) {
         <Container className="relative">
           <Grid className="!items-start">
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Technical</h2>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
+                Cornerstone resources
+              </h2>
+              <p>TK</p>
+            </Eight>
+            <Twelve className="prose prose-lg dark:prose-dark bg-gray-200 dark:bg-gray-800 p-8">
+              <Grid>
+                <Six>
+                  <Image
+                    className="dark:filter dark:invert dark:brightness-0"
+                    src={`/static/clients/cncf.svg`}
+                    width={200}
+                    height={40}
+                    alt={`Logo for CNCF`}
+                  />
+                  <p>
+                    Twice a year, the brightest CTOs and engineering leadership from the CNCF's End
+                    User community get together during KubeCon+CloudNativeCon for an intensive,
+                    no-holds-barred conversation about the state of cloud native.
+                  </p>
+                  <p>
+                    My mission? Turn hours of vibrant conversation into an insightful, actionable
+                    report that helps other end users within the cloud native ecosystem better
+                    understand the current maturity of their Kubernetes provisioning platforms and
+                    chart a more precise course for improvement and innovation.
+                  </p>
+                </Six>
+                <Six>
+                  <Link
+                    className="group transition-all "
+                    href="https://www.cncf.io/reports/cto-summit-na-2022/"
+                  >
+                    <Image
+                      className="rounded-lg transition-all group-hover:filter group-hover:brightness-150"
+                      src={`/static/projects/cncf/cncf_cto-report.png`}
+                      width={778}
+                      height={556}
+                      alt={`CTO Summit: Exploring the Foundations of Cloud Native Maturity`}
+                    />
+                    <p>
+                      Read the full report:{' '}
+                      <em>Exploring The Foundations Of Cloud Native Maturity</em> &rarr;
+                    </p>
+                  </Link>
+                </Six>
+              </Grid>
+            </Twelve>
+          </Grid>
+        </Container>
+      </section>
+      <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
+        <Container className="relative">
+          <Grid className="!items-start">
+            <Eight className="prose lg:prose-lg dark:prose-dark">
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">How-to guides</h2>
               <p>
                 Your fastest path to winning over managers and leaders with purchasing power is by
-                helping them solve a problem, right now, in as few steps as possible. I can dive
-                into your product and code to develop compelling how-to/tutorial content that
-                spotlights your key value propositions without it <em>feeling</em> like marketing at
-                all.
+                helping them solve a problem, right now, in as few steps as possible using your
+                product. I can dive into your product and code to develop compelling how-to/tutorial
+                content that spotlights your key value pillars or open up new co-marketing
+                opportunities without it <em>feeling</em> like marketing at all.
               </p>
               <p>
-                Once readers understand and trust in the value you create through content, they
-                become hot prospects and product champions.
+                Throw your most technical concepts and challenges my way&mdash;I'm comfortable in
+                the CLI, spinning up Kubernetes clusters, and writing all the code necessary for
+                readers to recreate each step locally. Precision how-tos with less work on your
+                part.
               </p>
             </Eight>
             <Six>
@@ -238,7 +271,7 @@ export default function Content({ content }) {
           </Grid>
         </Container>
       </section>
-      <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
+      {/* <section className="relative z-10 py-24 bg-gray-50 dark:bg-gray-800">
         <Container>
           <Grid className="!items-start">
             <Eight className="prose lg:prose-lg dark:prose-dark">
@@ -295,7 +328,7 @@ export default function Content({ content }) {
             </Six>
           </Grid>
         </Container>
-      </section>
+      </section> */}
       <section className="py-24 bg-white dark:bg-gray-900">
         <Container>
           <Grid>
