@@ -171,32 +171,6 @@ export default function Home() {
           </Grid>
         </Container>
       </section>
-      {/* <Grid>
-            <Twelve>
-              <Link className="block lg:inline-block mb-4" href="mailto:joel@commitcopy.com">
-                <button className="text-purple text-xl font-medium px-4 py-3 lg:px-6 lg:py-4 bg-white border dark:border-gray-800 shadow-sm rounded transition-all hover:bg-purple hover:text-white dark:text-white dark:bg-purple dark:hover:bg-orange">
-                  Email me
-                </button>
-              </Link>
-              <span className="hidden lg:inline-block mx-4">or</span>
-              
-            </Twelve>
-            <Twelve>
-              <Link
-                className="block lg:inline-block font-medium text-purple hover:text-orange transition-all dark:text-white"
-                href="http://portfolio.commitcopy.com/"
-              >
-                View my full portfolio on Authory
-              </Link>
-              <span className="hidden lg:inline-block mx-4">or</span>
-              <Link
-                className="block lg:inline-block font-medium text-purple hover:text-orange transition-all dark:text-white"
-                href="https://www.linkedin.com/in/joel-hans/"
-              >
-                Connect on LinkedIn
-              </Link>
-            </Twelve>
-          </Grid> */}
     </>
   )
 }
