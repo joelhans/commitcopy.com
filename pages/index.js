@@ -66,7 +66,7 @@ export default function Home() {
                 With more than ten years of experience in open source and cloud native technology,
                 plus a portfolio of successful content and copywriting projects for specialized
                 audiences of brands like the <strong>Cloud Native Computing Foundation</strong>,{' '}
-                <strong>IBM</strong>, <strong>Red Hat</strong>, and beyond, I can reach technical
+                <strong>ngrok</strong>, <strong>Devtron</strong>, and beyond, I can reach technical
                 folks with purchasing power and steer them toward the paved road of your product.
               </p>
               <p>
@@ -132,22 +132,22 @@ export default function Home() {
           </Grid>
           <div className="relative grid grid-cols-6 lg:grid-cols-12 gap-x-6 gap-y-4 justify-around p-6 dark:rounded dark:bg-gray-800">
             <ClientLogo className="" src="cncf.svg" name="CNCF" width="240" height="40" />
-            <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
+            <ClientLogo src="ngrok.svg" name="ngrok" width="133" height="50" />
+            <ClientLogo src="devtron.svg" name="Devtron" width="133" height="50" />
+            <ClientLogo src="dockyard.svg" name="Devtron" width="136" height="35" />
+            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
             <ClientLogo src="ibm.svg" name="IBM" width="100" height="40" />
-            <ClientLogo className="" src="redhat.svg" name="Red Hat" width="106" height="30" />
-            <ClientLogo src="autodesk.svg" name="Autodesk" width="193" height="25" />
+            <ClientLogo src="redhat.svg" name="Red Hat" width="106" height="30" />
+            <ClientLogo src="radicle.svg" name="Radicle" width="235" height="36" />
             <ClientLogo
-              src="johnson-johnson.svg"
-              name="Johnson &amp; Johnson"
-              width="198"
-              height="36"
+              className="col-start-3"
+              src="autodesk.svg"
+              name="Autodesk"
+              width="193"
+              height="25"
             />
             <ClientLogo src="urbit.svg" name="Urbit" width="136" height="60" />
             <ClientLogo src="metrist.svg" name="Metrist" width="116" height="32" />
-            <ClientLogo src="opentext.svg" name="OpenText" width="137" height="28" />
-            <ClientLogo src="sumo-logic.svg" name="Sumo Logic" width="161" height="30" />
-            <ClientLogo src="raygun.svg" name="Raygun" width="140" height="40" />
-            <ClientLogo src="netdata.svg" name="Netdata" width="164" height="32" />
           </div>
         </Container>
       </section>
