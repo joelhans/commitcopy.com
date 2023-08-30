@@ -1,8 +1,9 @@
 const siteMetadata = {
-  title: 'Commit Copy | Inspire developers and engineering leaders to commit.',
-  author: 'Commit Copy & Joel Hans',
-  headerTitle: 'Commit Copy',
-  description: 'Inspire developers and engineering leaders to commit.',
+  title: 'Commit | Inspire developers and engineering leaders to commit.',
+  author: 'Commit & Joel Hans',
+  headerTitle: 'Commit',
+  description:
+    'Inspire the developers and engineering leaders of open source and cloud native to commit with messaging and content.',
   language: 'en-us',
   siteUrl: 'https://commitcopy.com',
   siteRepo: 'https://github.com/joelhans/commitcopy',
