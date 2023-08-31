@@ -133,7 +133,7 @@ export default function Services({ content, projects, WorkLatest }) {
             img="matt-connor.jpg"
           >
             Joel was our first marketing hire and has been a key member of our marketing team since
-            2016. Joel is deeply and uniquely talented in voice, branding, and copywriting. I
+            2016. Joel is deeply and uniquely talented in voice, messaging, and copywriting. I
             strongly recommend taking the opportunity to work with him.
           </TestimonialHoriz>
         </Container>

@@ -158,28 +158,69 @@ export default function Copy({ ServiceOneDay, projects }) {
                 Brand and product messaging
               </h2>
               <p>
-                Not sure how to talk about your tech? Let's find the source of what makes you unique
-                and develop a messaging playbook that defines what makes your products
-                commit-worthy.
+                <span className="text-xl font-medium">
+                  Not sure how to talk about your tech? Let's find the source of what makes you
+                  unique and develop a messaging playbook that defines what makes your products
+                  worthy of immediate committment.
+                </span>
               </p>
               <p>
-                You walk away with ready-for-you brand messaging that all your people, whether
-                they're developers in your community, brand marketers creating outbound content, or
-                developer advocates promoting your projects at talks and conference booths, can rely
-                on.
-              </p>
-              <p>
-                A messaging strategy project includes a comprehensive famework document with the
-                following:
+                You walk away with ready-to-deploy messaging your people can leverage to communicate
+                cohesively no matter their role or where they show up:
               </p>
               <ul className="text-base">
                 <li>
-                  Brand story && company values && mission/vision statements &&
-                  tone/voice/personality standards
+                  <span className="text-purple font-medium">Developers</span> engaging with your
+                  open source community through GitHub issues and Slack/Discord messages.
                 </li>
                 <li>
-                  Customer, contributor, and community personas based on Voice of Customer/Voice of
-                  Developer research
+                  <span className="text-purple font-medium">
+                    Salespeople and technical engineers
+                  </span>{' '}
+                  demo-ing your open source project and commercial counterpart to prospects.
+                </li>
+                <li>
+                  <span className="text-purple font-medium">Product marketers</span> writing
+                  consistent copy in high-value assets like your homepage, GitHub README, and
+                  landing pages.
+                </li>
+                <li>
+                  <span className="text-purple font-medium">Content leads</span> developing
+                  product-led strategies that highlight product pillars in{' '}
+                  <Link href="/content/">technical essays and tactical how-tos</Link>.
+                </li>
+                <li>
+                  <span className="text-purple font-medium">DevRels and advocates</span> presenting
+                  about your open source ethos and technical prowess at conferences or in podcasts.
+                </li>
+                <li>
+                  <span className="text-purple font-medium">Founders and executives</span> pitching
+                  your product for venture capital and strategic partnerships.
+                </li>
+              </ul>
+              <p>
+                A messaging project results in research collateral and a comprehensive framework
+                document with the following strategic assets:
+              </p>
+              <ul className="text-base">
+                <li>
+                  A guiding and inspiring <Link href="/articles/brand-story/">brand story</Link>
+                </li>
+                <li>
+                  Company values, mission{' '}
+                  <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-1 py-0.5 rounded-lg">
+                    &&
+                  </span>{' '}
+                  vision statements, and voice{' '}
+                  <span className="text-orange text-mono font-bold bg-gray-200 dark:bg-gray-800 px-1 py-0.5 rounded-lg">
+                    &&
+                  </span>{' '}
+                  tone standards
+                </li>
+                <li>Detailed personas based on Voice of Customer/Developer research</li>
+                <li>
+                  Example messaging built on your value pillars, supporting evidence from your
+                  project/product, and reflected through the needs of each persona
                 </li>
                 <li>
                   Ready-for-you marketing boilerplate to use on your website, GitHub, ProductHunt,
@@ -220,9 +261,7 @@ export default function Copy({ ServiceOneDay, projects }) {
         <Container>
           <Grid>
             <Eight className="prose lg:prose-lg dark:prose-dark">
-              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
-                Website copywriting
-              </h2>
+              <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">Copywriting</h2>
               <p>
                 Let's transform your tech- and features-driven website into an engaging vision of
                 what your ideal customers become when they have your product in their back pocket.
