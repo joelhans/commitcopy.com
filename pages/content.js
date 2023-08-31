@@ -108,8 +108,8 @@ export default function Content({ content }) {
                 leverage storytelling to help readers put leading ideas into action today.
               </p>
               <p>
-                It's your surest path to building trust, inspiring commitment, and delivering the
-                business results you need through content.
+                It's your surest path to building trust, showcasing your internal expertise, and
+                delivering on your content goals by inspiring commitment.
               </p>
             </Eight>
             <Six className="align-start">
@@ -163,7 +163,19 @@ export default function Content({ content }) {
               <h2 className="!text-orange !text-2xl lg:!text-3xl !font-medium">
                 Cornerstone resources
               </h2>
-              <p>TK</p>
+              <p>
+                Ground your quarterly or semi-annual content marketing goals with the "big rocks"
+                that pay long-term dividends by anchoring your content calendar and are infinitely
+                repurposeable. Must-bookmark templates and checklists. Interactive content. How-tos
+                that solve enormous problems with extraordinary depth. Reference documents your
+                technical readers will carry with them as they grow in their careers. Independent
+                research and story-driven reports they can't help but share.
+              </p>
+              <p>
+                I work with you to conceptualize assets that differentiate your product, then handle
+                all research, engineering interviews, and coordination of technical assets to let
+                you focus on making a splash.
+              </p>
             </Eight>
             <Twelve className="prose prose-lg dark:prose-dark bg-gray-200 dark:bg-gray-800 p-8">
               <Grid>
