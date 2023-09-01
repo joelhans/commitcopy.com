@@ -5,6 +5,7 @@ import CustomLink from './Link'
 import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Service'
 import { Grid, Eight } from '@components/Grid'
 import FullImage from '@components/mdx/FullImage'
+import Aside from '@components/mdx/Aside'
 
 export const MDXComponents = {
   Image,
@@ -16,6 +17,7 @@ export const MDXComponents = {
   Grid,
   Eight,
   FullImage,
+  Aside,
 }
 
 export const MDXExport = ({ code }) => {

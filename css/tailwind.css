@@ -76,3 +76,13 @@ html {
 .katex-html {
   @apply hidden;
 }
+
+.icon {
+  position: relative;
+}
+
+.icon::after {
+  content: '❤';
+  position: absolute;
+  left: -32px;
+}
