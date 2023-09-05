@@ -8,7 +8,7 @@ tags:
   - 'cloud native'
   - 'kubernetes'
 images: 
-  - /static/articles/2023-09-05_minikue.jpg
+  - /static/articles/2023-09-05_minikube.jpg
 ---
 
 <Aside>
@@ -17,26 +17,107 @@ images:
   1. [Introduction](#introduction)
   2. [Software delivery today: Kubernetes](#software-delivery-today-kubernetes)
 
+  Your prerequisites:
+  - A local system running macOS or Linux.
+  - An understanding of how to open and use your OS' terminal feature.
+
 </Aside>
 
 ## Introduction
 
-TK
+Recently I [shared on
+LinkedIn](https://www.linkedin.com/posts/joel-hans_opensource-cloudnative-opensource-activity-7102290779787726848-sINF)
+my recommendations on what someone new to open source `&&` cloud native, with a responsibility to actively _write_ about
+the ecosystem, should learn first.
 
-## Software delivery today: Kubernetes
+While I'd love for you to read the [whole
+post](https://www.linkedin.com/posts/joel-hans_opensource-cloudnative-opensource-activity-7102290779787726848-sINF) and
+chime in with your recommendations and additions over there, we're focused on a single item here:
+
+> 8. Spin up a local Kubernetes cluster to see the fundamentals of software delivery in cloud native. Launch with
+>    minikube and use kubectl to poke at it. Install a sample app with Helm, then add ingress with nginx or ngrok.
+
+My reasoning here isn't that writers/educators necessarily need a high degree of practical working knowledge&mdash;most
+folks in open source or cloud native won't need to leverage these skills regularly&mdash;but rather discovering empathy
+through awareness. When you've experienced the pipeline yourself, you can better write to and for those who live it day
+to day.
+
+_Writer_ is, admittedly, an imprecise description of who I believe should have this fundamental knowledge. I'm not
+limiting my definition to only those with _writer_ or _content_ in their titles, as pretty much every marketing, DevRel,
+or product-centric role requires a non-zero amount of public-facing writing. The net is wider than you might assume&mdash;do you fit into one of these personas?
+
+- **Content leads** building relevant and captivating funnels.
+- **Technical writers &amp; documentation leads** drafting cloud native how-to guides or reference documentation.
+- **Product marketing managers** owning product messaging across many channels.
+- **DevRels** creating educational content for developer audiences in talks, on video, and beyond.
+- **Copywriters** crafting more commitment-worthy landing pages, ads, and more.
+- **Freelancers** of all walks honing their relevant and differentiating technical chops.
+
+If so, let's take a journey through how the vast majority of end user applications are deployed to the cloud today. What
+you use here won't make you a software developer or DevOps engineer, but it will give you insights into software
+development in the cloud native era.
+
+## Software delivery today: containers and clouds and Kubernetes
 
 TK
 
 ## The minimally viable know-how for open source && cloud native writers
 
-TK
 
-## Step 1: Set up the prerequisites
 
-TK
-
-## Step 2: Install Minikube
+### Step 1: Get your prerequisites
 
 TK
 
-## Step 3: 
+1. **If on macOS, install Homebrew**.
+
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+1. **Install kubectl**. 
+
+   ```bash
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   ```
+
+   ```bash
+   brew install kubectl
+   ```
+
+1. **Install Helm**.
+
+   ```bash
+   curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+   ```
+
+   ```bash
+   brew install helm
+   ```
+
+### Step 2: Install Minikube
+
+TK
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
+
+### Step 3: Deploy your first app to Kubernetes
+
+TK
+
+### Step 4: Add ingress
+
+TK
+
+## What's next?
+
+I love to end my how-to guides with this section.

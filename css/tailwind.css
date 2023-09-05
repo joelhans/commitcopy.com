@@ -77,12 +77,30 @@ html {
   @apply hidden;
 }
 
+.prose h2:hover,
+.prose h3:hover,
+.prose h4:hover {
+  /* cursor: pointer; */
+}
+
+.prose h2:hover .icon,
+.prose h3:hover .icon,
+.prose h4:hover .icon {
+  /* left: -20px; */
+  display: block;
+}
+
 .icon {
   position: relative;
+  display: none;
 }
 
 .icon::after {
-  content: '❤';
+  content: '🔗';
   position: absolute;
   left: -32px;
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  /* top: 50%;
+  transform: translateY(-50%); */
 }
