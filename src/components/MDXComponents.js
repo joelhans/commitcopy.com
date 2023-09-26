@@ -6,6 +6,7 @@ import { Service, ServiceGo, ServicePrice, ServiceButton } from '@components/Ser
 import { Grid, Eight } from '@components/Grid'
 import FullImage from '@components/mdx/FullImage'
 import Aside from '@components/mdx/Aside'
+import OsSwitchProvider, { OsSwitch, OsWrapper } from '@components/mdx/osSwitchProvider'
 
 export const MDXComponents = {
   Image,
@@ -18,6 +19,9 @@ export const MDXComponents = {
   Eight,
   FullImage,
   Aside,
+  OsSwitchProvider,
+  OsSwitch,
+  OsWrapper,
 }
 
 export const MDXExport = ({ code }) => {

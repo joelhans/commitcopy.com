@@ -11,6 +11,8 @@ images:
   - /static/articles/2023-09-05_minikube.jpg
 ---
 
+<OsSwitchProvider>
+
 <Aside>
   **TLDR;**
 
@@ -61,6 +63,11 @@ development in the cloud native era.
 
 TK
 
+
+Kubernetes is a container orchestrator, not a software delivery tool. It accepts configurations and containerized applications and 
+
+Software delivery itself happens 
+
 ## The minimally viable know-how for open source && cloud native writers
 
 
@@ -71,15 +78,24 @@ TK
 
 Pick your operating system (OS).
 
-**macOS** / **Linux**
+<OsSwitch options={['macOS', 'Linux']}>
+</OsSwitch>
+
 
 --
 
+<OsWrapper>
+<span key="macos">
 1. **Install Homebrew**.
 
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
+</span>
+<span key="linux">
+1. Skip this step!
+</span>
+</OsWrapper>
 
 1. **Install kubectl**. 
 
@@ -127,3 +143,5 @@ TK
 ## What's next?
 
 I love to end my how-to guides with this section.
+
+</OsSwitchProvider>
