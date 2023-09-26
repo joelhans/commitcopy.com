@@ -76,33 +76,22 @@ Software delivery itself happens
 
 TK
 
-Pick your operating system (OS).
+Pick your operating system (OS):
 
-<OsSwitch options={['macOS', 'Linux']}>
-</OsSwitch>
-
+<OsSwitch options={['macOS', 'Linux']} />
 
 --
 
 <OsWrapper>
-<span key="macos">
+<div key="macos">
+
 1. **Install Homebrew**.
 
    ```bash
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
-</span>
-<span key="linux">
-1. Skip this step!
-</span>
-</OsWrapper>
 
-1. **Install kubectl**. 
-
-   ```bash
-   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-   ```
+1. **Install `kubectl`**.
 
    ```bash
    brew install kubectl
@@ -111,26 +100,54 @@ Pick your operating system (OS).
 1. **Install Helm**.
 
    ```bash
+   brew install helm
+   ```
+
+</div>
+<div key="linux">
+
+1. **Install kubectl**. 
+
+   ```bash
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   ```
+
+1. **Install Helm**.
+
+   ```bash
    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
    ```
 
-   ```bash
-   brew install helm
-   ```
+</div>
+</OsWrapper>
 
 ### Step 2: Install Minikube
 
 TK
+
+<OsWrapper>
+<div key="macos">
+
+```bash
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+```
+
+</div>
+<div key="linux">
 
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
-```bash
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
-sudo install minikube-darwin-amd64 /usr/local/bin/minikube
-```
+</div>
+</OsWrapper>
+
+
+
+
 
 ### Step 3: Deploy your first app to Kubernetes
 

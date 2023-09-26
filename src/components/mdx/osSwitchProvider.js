@@ -1,40 +1,43 @@
-import React from 'react'
+// import React from 'react'
 import { useState, createContext, useContext } from 'react'
 
-const OsContext = createContext(null)
+const OsContext = createContext({ os: '', setOs: () => {} })
 
 const OsSwitchProvider = ({ children }) => {
-  return <OsContext.Provider value="">{children}</OsContext.Provider>
+  const [os, setOs] = useState('macos')
+
+  return <OsContext.Provider value={{ os, setOs }}>{children}</OsContext.Provider>
 }
 
 export default OsSwitchProvider
 
 export const OsSwitch = ({ options }) => {
-  const [os, setOs] = useState('macos')
-  // const os = useContext(OsContext)
-
-  const handleChange = (event) => {
-    console.log(event.target.innerText)
-    setOs(() => event.target.key)
-  }
+  const { os, setOs } = useContext(OsContext)
+  const changeHandler = (event) => setOs(event.target.innerText.toLowerCase())
 
   return (
     <>
-      <OsContext.Provider value={os}>
+      <div className="flex space-between">
         {options.map((option) => {
           return (
-            <div key={option}>
-              <button key={option} onClick={handleChange}>
-                {option}
-              </button>
-            </div>
+            <button className="bg-sea hover:bg-purple" key={option} onClick={changeHandler}>
+              {option}
+            </button>
           )
         })}
-      </OsContext.Provider>
+      </div>
     </>
   )
 }
 
 export const OsWrapper = ({ children }) => {
-  return children
+  const { os } = useContext(OsContext)
+
+  console.log(children)
+
+  const content = children.filter((item) => {
+    return item.key === os
+  })
+
+  return <>{content}</>
 }
