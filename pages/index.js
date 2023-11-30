@@ -44,7 +44,7 @@ export default function Home() {
               <div className="mt-3">
                 <Image
                   className="z-0 rounded"
-                  src="/static/images/hero.jpg"
+                  src="/static/images/joel_headshot-2023.jpeg"
                   alt="Joel Hans @ Commit Copy: Inspire developers and engineering leaders to commit with content."
                   height={1200}
                   width={1200}

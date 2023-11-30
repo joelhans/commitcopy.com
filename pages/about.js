@@ -42,7 +42,8 @@ export default function About({ content, AboutCreative, AboutTech }) {
                 Hey, I&rsquo;m Joel.
               </h3>
               <h1 className="!text-sea !text-base lg:!text-lg !italic !leading-snug !mb-12">
-                Full-service writer for open source && cloud native
+                Full-service writer for open source && cloud native... who also really likes
+                mountain biking.
               </h1>
               <p className="text-xl lg:text-2xl font-medium">
                 I help technical startups and established companies create{' '}
@@ -56,7 +57,7 @@ export default function About({ content, AboutCreative, AboutTech }) {
             <Six className="hidden lg:block">
               <Image
                 className="rounded-lg"
-                src="/static/images/index_hero-3.jpg"
+                src="/static/images/joel-bike-riding-02.jpg"
                 alt="Start a copywriting project with Joel Hans, SaaS and tech copywriter for generating commitment"
                 height={1200}
                 width={1200}
